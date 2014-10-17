@@ -39,3 +39,8 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'foundation-rails'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
