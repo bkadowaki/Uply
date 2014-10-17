@@ -1,9 +1,11 @@
 require 'rails_helper'
+require 'spec_helper'
 
 describe WebsitesController do
 	describe 'GET index' do
 		it 'assigns @websites' do
 			website = Website.create(:website)
+			get :index
 			expect(assigns(:websites)).to eq([website])
 		end
 	end
@@ -38,6 +40,12 @@ describe WebsitesController do
 		end
 	end
 
-
+	describe 'GET show' do
+		it 'should assign @website' do
+			website = create(:website)
+			get :show, id: website.id
+			expect(assigns(:website)).to eq(website)
+		end
+	end
 
 end
