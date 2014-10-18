@@ -23,9 +23,10 @@ describe WebsitesController do
 				expect(response).to redirect_to website_path
 			end
 		end	
+
 		context 'with invalid input' do
 			before do
-				website = attributes_for(:website, title: nil, url: nil)
+				website = attributes_for(:website, title: 1234, url: 1234)
 				post :create, website 
 			end
 			it 'should not be saved in the database' do
@@ -38,6 +39,21 @@ describe WebsitesController do
 				expect(assigns(:website)).to be_instance_of(Website)
 			end 
 		end
+
+    context 'with nil values of title, desc, and category' do
+      before do
+        @website = create(:website, title: nil, url: nil, description: nil)
+      end
+      it 'should generate the title if title is nil' do
+        expect(@website.title).to be_truthy 
+      end
+      it 'should generate the desc if desc is nil' do
+        expect(@website.description).to be_truthy 
+      end
+      it 'should generate the category if category is nil' do
+        expect(@website.category).to be_truthy
+      end
+    end
 	end
 
 	describe 'GET show' do
@@ -47,5 +63,4 @@ describe WebsitesController do
 			expect(assigns(:website)).to eq(website)
 		end
 	end
-
 end
