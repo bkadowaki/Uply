@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   devise_for :companies
   devise_for :users
+    
+  resources :websites
   # root 'static_pages#front'
 
   # The priority is based upon order of creation: first created -> highest priority.

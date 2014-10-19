@@ -39,13 +39,13 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'foundation-rails'
+gem 'mechanize'
+gem 'devise'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails', '~> 4.0'
 end
-
-gem 'devise'
 
 group :development do
 	gem 'better_errors'
