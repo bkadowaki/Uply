@@ -1,4 +1,5 @@
 class WebsitesController < ApplicationController
+  before_action :set_website, only:[:show, :edit, :update]
 
   def index
     @websites = Website.all
@@ -9,7 +10,7 @@ class WebsitesController < ApplicationController
   end
   
   def create
-    @website = Website.new(params.require(:website).permit!)
+    @website = Website.new(website_params)
     
     @website.title = scrape_title(@website.url) unless @website.title.is_a? String
     @website.description = scrape_description(@website.url) unless @website.description.is_a? String
@@ -22,18 +23,27 @@ class WebsitesController < ApplicationController
     end
   end
   
-  def show
-    @website = Website.find(params[:id])
-  end
+  def show; end
   
-  def edit
-    @website = Website.find(params[:id])
-  end
+  def edit; end
   
   def update
+    if @website.update_attributes(website_params)
+      redirect_to website_path(@website)
+    else
+      render :edit
+    end
+  end
+   
+  private
+  
+  def set_website
+    @website = Website.find(params[:id]) 
   end
   
-  private
+  def website_params
+    params.require(:website).permit(:title, :url, :description, :category_id)
+  end
   
   def scrape_title(url)
     if checkURL(url)
@@ -94,5 +104,4 @@ class WebsitesController < ApplicationController
       category.id
     end
   end
-
 end

@@ -81,29 +81,31 @@ describe WebsitesController do
   describe 'PUT Update' do
     context 'with valid input' do
       before do
-        website = create(:website)
-        put :edit, website: (title: 'Techcrunch')
+        @website = create(:website)
+        @website.title = "Techcrunch"
+        put :update, id: @website.id, website: @website.attributes
       end
       it 'should save the changes from the update' do
-        expect(website.title).to eq('Techcrunch')
+        expect(@website.title).to eq('Techcrunch')
       end
       it 'should redirect to website show page' do
-        expect(response).to redirect_to(website_path(website))
+        expect(response).to redirect_to(website_path(@website))
       end
     end
     
     context 'with invalid input' do
       before do
-        website = create(:website)
-        put :edit, website: (title: nil)
+        @website = create(:website)
+        @website.title = ""
+        put :update, id: @website.id, website: @website.attributes
+        @website.reload
       end
       it 'should not save the changes from the update' do
-        expect(website.title).to eq('Techcrunchie')
+        expect(@website.title).to eq('Techcrunchie')
       end
       it 'should render the edit template' do
         expect(response).to render_template(:edit)
       end
     end
   end
-  
 end
