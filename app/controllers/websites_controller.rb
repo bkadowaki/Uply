@@ -12,9 +12,9 @@ class WebsitesController < ApplicationController
   def create
     @website = Website.new(website_params)
     
-    @website.title = scrape_title(@website.url) unless @website.title.is_a? String
-    @website.description = scrape_description(@website.url) unless @website.description.is_a? String
-    @website.category_id = generate_category(@website.url) unless @website.category_id.is_a? Integer
+    @website.title         = scrape_title(@website.url) unless @website.title.is_a? String
+    @website.description   = scrape_description(@website.url) unless @website.description.is_a? String
+    @website.category_ids << generate_category(@website.url) unless @website.category_ids.select{ |i| i.class == Fixnum }.count != @website.category_ids.count
      
     if @website.save
       redirect_to website_path(@website)
@@ -42,7 +42,7 @@ class WebsitesController < ApplicationController
   end
   
   def website_params
-    params.require(:website).permit(:title, :url, :description, :category_id)
+    params.require(:website).permit(:title, :url, :description, category_ids: [])
   end
   
   def scrape_title(url)
@@ -73,8 +73,8 @@ class WebsitesController < ApplicationController
   end
   
   def categorize_website(url)
+      category = "Uncategorized"
     if checkURL(url)
-      category = "uncategorized"
       website_keywords = scrape_title(url) + " " + scrape_description(url)   
       website_keywords = website_keywords.delete(',').gsub('the', '').gsub('on', '').gsub('and', '').gsub('more','')
       bad_words = "porn pornstar pornstars nude shemales webcam webcams sex sexshow erotic gay kinky fetish bondage swingers hookups hookup playboy playmate" 
@@ -82,6 +82,9 @@ class WebsitesController < ApplicationController
       
       website_keywords.split(" ").each do |keyword|
         category = (categories.include? keyword)  ? (categories.split(" ").detect{ |word| word.include? keyword }) : category
+        if category != "Uncategorized"
+          break
+        end
       end
       
       if category != "adult"
@@ -93,14 +96,14 @@ class WebsitesController < ApplicationController
       end
       category
     else
-      nil
+      category
     end   
   end
   
   def generate_category(url)
     if checkURL(url)
-      category_name = categorize_website(url)
-      category = Category.where("name = 'category_name'").first
+      category_name = categorize_website(url).capitalize
+      category = Category.where("name = '#{category_name}'").first
       category.id
     end
   end

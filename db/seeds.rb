@@ -10,6 +10,7 @@ Category.destroy_all
 
 Category.create(
   [
+    { name: 'Uncategorized' },
     { name: 'Adult' },
     { name: 'Arts' },
     { name: 'Business' },

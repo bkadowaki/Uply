@@ -1,6 +1,9 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
 FactoryGirl.define do
   factory :user do
+    first "Kobe"
+    last "Bryant"
+    email "blackmamba@lakers.la"
+    password "idunkonyou"
+    elite true
   end
 end
