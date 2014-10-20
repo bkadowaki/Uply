@@ -1,0 +1,293 @@
+<!-- ANGULAR -->
+<% content_for :script do %>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
+
+<% end %>
+
+	<div ng-controller="NavCtrl">
+		<!-- NAV OPEN -->
+		<nav class="top-bar" data-topbar role="navigation">
+		  <ul class="title-area">
+		    <li class="name">
+		      <h1><a href="#">Uply</a></h1>
+		    </li>
+		     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+		    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+		  </ul>
+
+		  <section class="top-bar-section">
+		    <!-- Right Nav Section -->
+		    <ul class="right">
+<!-- 		      <li><a href="#">Right Button Active</a></li> -->
+		      <li class="has-dropdown">
+		        <a href="#">Right Button Dropdown</a>
+		        <ul class="dropdown">
+		          <li><a href="#">First link in dropdown</a></li>
+		          <li class="active"><a href="#">Active link in dropdown</a></li>
+		        </ul>
+		      </li>
+		    </ul>
+
+		    <!-- Left Nav Section -->
+		    <ul class="left">
+		      <li><a href="#">My Profile</a></li>
+		    </ul>
+		  </section>
+		</nav>
+		<!-- CLOSE NAV -->
+
+<!-- ROOT MAIN OPEN -->
+<div id="main-home">
+	<h1>Up.ly</h1>
+
+	<!-- LEFT BOX OPEN -->
+	<div id="left-box">
+		<!-- CAROUSEL OPEN -->
+		<div id="carousel" class="row element">
+			<div class="large-12 columns">
+				<ul class="example-orbit-content" data-orbit>
+					  <li data-orbit-slide="headline-1" class="slides" id="slide1">
+					    <div>
+<!-- 					      <h2>Headline 1</h2>
+					      <h3>Subheadline</h3> -->
+					      <p class="slide-rank">Category: Sports | 1,283 ^'s</p>
+					    </div>
+					  </li>
+					  <li data-orbit-slide="headline-2" class="slides" id="slide2">
+					    <div>
+<!-- 					      <h2>Headline 2</h2>
+					      <h3>Subheadline</h3> -->
+					      <p class="slide-rank">Category: Computers | 785 ^'s</p>
+					    </div>
+					  </li>
+					  <li data-orbit-slide="headline-3" class="slides" id="slide3">
+					    <div>
+<!-- 					      <h2>Headline 3</h2>
+					      <h3>Subheadline</h3> -->
+					      <p class="slide-rank">Category: Shopping | 824 ^'s</p>
+					    </div>
+					  </li>
+				</ul>
+			</div>
+		</div>
+		<!-- CAROUSEL CLOSE -->
+
+		<!-- BREAK OPEN -->
+<!-- 		<div class="row">
+			<div id="break" class="large-12 columns">
+			</div>
+		</div> -->
+		<!-- BREAK CLOSE -->
+
+		<!-- RANKINGS SECTION OPEN -->
+		<div id="rank-sect" ng-controller="RankingsCtrl" class="element">
+<!-- 			<div class="div-title">Rankings</div> -->
+			<!-- SORT OPEN -->
+			<div id="sort-container" class="row">
+				<div class="large-3 columns">
+				</div>
+				<div id="sort-sect" class="large-9 columns">
+					<dl class="sub-nav">
+					  <dt>SORT BY:</dt>
+					  <dd ng-class="{active:isSort(1)}"><a ng-click="setSort(1)">Trending</a></dd>
+
+					  <dd ng-class="{active:isSort(2)}"><a ng-click="setSort(2)">Most Ups</a></dd>			  
+
+					  <dd ng-class="{active:isSort(3)}"><a ng-click="setSort(3)">Most Downs</a></dd>
+
+<!-- 					  <dd ng-class="{active:isSort(4)}"><a ng-click="setSort(4)">Most Uniques</a></dd> -->
+					</dl>
+				</div>
+			</div>
+			<!-- SORT CLOSE -->
+
+			<!-- RANK BOX OPEN -->
+			<div class="row">
+				<!-- CATEGORIES OPEN -->
+				<div id="categories-sect">
+					<div class="large-3 columns">
+						<dl class="sub-nav">
+						  <dt>CATEGORIES:</dt>
+							  <dd ng-class="{active:isSet(1)}"><a ng-click="setClick(1)">Arts</a></dd>
+							  <dd ng-class="{active:isSet(2)}"><a ng-click="setClick(2)">Business</a></dd>
+							  <dd ng-class="{active:isSet(3)}"><a ng-click="setClick(3)">Cooking</a></dd>
+							  <dd ng-class="{active:isSet(4)}"><a ng-click="setClick(4)">Computers</a></dd>	
+							  <dd ng-class="{active:isSet(5)}"><a ng-click="setClick(5)">Health</a></dd>
+							  <dd ng-class="{active:isSet(6)}"><a ng-click="setClick(6)">Home</a></dd>
+							  <dd ng-class="{active:isSet(7)}"><a ng-click="setClick(7)">Kids & Teens</a></dd>
+							  <dd ng-class="{active:isSet(8)}"><a ng-click="setClick(8)">News</a></dd>
+							  <dd ng-class="{active:isSet(9)}"><a ng-click="setClick(9)">Recreation</a></dd>
+							  <dd ng-class="{active:isSet(10)}"><a ng-click="setClick(10)">Regional</a></dd>
+							  <dd ng-class="{active:isSet(11)}"><a ng-click="setClick(11)">Science</a></dd>
+							  <dd ng-class="{active:isSet(12)}"><a ng-click="setClick(12)">Shopping</a></dd>
+							  <dd ng-class="{active:isSet(13)}"><a ng-click="setClick(13)">Society</a></dd>
+							  <dd ng-class="{active:isSet(14)}"><a ng-click="setClick(14)">Sports</a></dd>
+							  <dd ng-class="{active:isSet(15)}"><a ng-click="setClick(15)">World</a></dd>
+						</dl>
+					</div>
+				</div>
+				<!-- CATEGORIES CLOSE -->
+
+				<!-- DISPLAY OPEN -->
+				<div id="rank-disp-sect">
+					<div class="large-9 columns disp" ng-show="isSet(1)"> 
+					<p>First</p>
+					</div>				
+
+					<div class="large-9 columns disp" ng-show="isSet(2)"> 
+					<p>Second</p>
+					</div>
+
+					<div class="large-9 columns disp" ng-show="isSet(3)"> 
+					<p>Third</p>
+					</div>				
+
+					<div class="large-9 columns disp" ng-show="isSet(4)"> 
+					<p>Fourth</p>
+					</div>					
+
+					<div class="large-9 columns disp" ng-show="isSet(5)"> 
+					<p>Fifth</p>
+					</div>
+
+					<div class="large-9 columns disp" ng-show="isSet(6)"> 
+					<p>Sixth</p>
+					</div>				
+
+					<div class="large-9 columns disp" ng-show="isSet(7)"> 
+					<p>Seventh</p>
+					</div>					
+
+					<div class="large-9 columns disp" ng-show="isSet(8)"> 
+					<p>Eighth</p>
+					</div>
+
+					<div class="large-9 columns disp" ng-show="isSet(9)"> 
+					<p>Ninth</p>
+					</div>				
+
+					<div class="large-9 columns disp" ng-show="isSet(10)"> 
+					<p>Tenth</p>
+					</div>					
+
+					<div class="large-9 columns disp" ng-show="isSet(11)"> 
+					<p>Eleventh</p>
+					</div>
+
+					<div class="large-9 columns disp" ng-show="isSet(12)"> 
+					<p>Twelth</p>
+					</div>				
+
+					<div class="large-9 columns disp" ng-show="isSet(13)"> 
+					<p>Thirteenth</p>
+					</div>					
+
+					<div class="large-9 columns disp" ng-show="isSet(14)"> 
+					<p>Fourteenth</p>
+					</div>				
+
+					<div class="large-9 columns disp" ng-show="isSet(15)"> 
+					<p>Fifteenth</p>
+					</div>
+
+				</div>
+				<!-- DISPLAY CLOSE -->
+			</div>
+			<!-- RANK BOX CLOSE -->
+		</div>
+		<!-- RANKINGS SECTION CLOSE -->
+
+
+
+
+	<!-- LEFT BOX CLOSE -->
+	</div>
+
+	<!-- RIGHT BOX OPEN -->
+	<div id="right-box">
+
+		<!-- WEBSITE SPOTLIGHT OPEN -->
+		<div class="row">
+			<div id="website-spotlight" class="large-12 columns element">
+				<div class="title-area">Site Spotlight</div>
+				<p>RealGM</p>
+			</div>
+		</div>
+		<!-- WEBSITE SPOTLIGHT CLOSE -->
+
+		<!-- DISPLAY AD OPEN-->
+		<div class="row">
+			<div id="ad-unit" class="large-12 columns element">
+			</div>
+		</div>
+		<!-- DISPLAY AD CLOSE -->		
+
+		<!-- TOP COMMENT OPEN-->
+		<div class="row">
+			<div id="comment-sect" class="large-12 columns element">
+				Top Comment
+			</div>
+		</div>
+		<!-- TOP COMMENT CLOSE -->
+
+		<!-- SOCIAL MEDIA OPEN-->
+		<div class="row">
+			<div id="social-sect" class="large-12 columns element">
+				Social Media
+			</div>
+		</div>
+		<!-- SOCIAL MEDIA CLOSE -->
+
+
+	</div>
+	<!-- RIGHT BOX CLOSE -->
+
+
+
+
+
+</div>
+<!-- ROOT MAIN CLOSE -->
+
+
+<!-- ANGULAR CTLRS -->
+	<script>
+	  var app = angular.module('uplyApp', []);
+
+	  app.controller('NavCtrl', ['$scope','$http', function($scope, $http){
+				$(document).on('scroll', function () {
+				    if ($(this).scrollTop() > 50) {
+				        if (!$('.top-bar').hasClass('expand')) {
+				            $('.top-bar').addClass('expand');
+				        }
+				    } else {
+				        if ($('.top-bar').hasClass('expand')) {
+				            $('.top-bar').removeClass('expand');
+				        }
+				    }
+				});
+			}
+	  ]);
+
+	  app.controller('RankingsCtrl', ['$scope', '$http', function($scope, $http){
+	  	
+		  	$scope.click = 1;
+		  	$scope.setClick = function(currCategory){
+		  		$scope.click = currCategory;
+		  	};
+		  	$scope.isSet = function(checkedTab){
+		  		return $scope.click === checkedTab;
+		  	};
+
+		  	$scope.sort = 1;
+		  	$scope.setSort = function(currSort){
+		  		$scope.sort = currSort;
+		  	};
+		  	$scope.isSort = function(checkedSort){
+		  		return $scope.sort === checkedSort;
+		  	};
+	  	}
+	  ]);
+
+	</script>

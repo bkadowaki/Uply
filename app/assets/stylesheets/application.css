@@ -1,5 +1,5 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
+
+ /* This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
@@ -13,5 +13,137 @@
  *= require_tree .
  *= require_self
  //= require foundation_and_overrides
-
  */
+
+body {
+	background-image: url('bg.png');
+	background-repeat: none;
+/*	background-color: #EFF0EB;*/
+}
+/* MAINMAIN CONTAINER */
+#mainmain {
+	max-width: 1200px;
+	min-width: 960px;
+	overflow: hidden;	
+	padding-top: 15px;
+	padding-right: 25px;
+	padding-left: 25px;
+	box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* MAIN INDEX HOME */
+.top-bar {
+	top: -45px;
+	position: fixed;
+  transition: top 0.5s;
+  width: 95.7%;
+  z-index: 11;
+}
+.top-bar.expand {
+	top: 0;
+}
+
+#main-home {
+	min-width: 960px;
+  width: 100%;
+  max-width: 1200px;
+}
+h1 {
+	text-align: center;
+	color: #D1DBDC;
+}
+.element {
+	margin-bottom: 10px;
+	border: 1px #D1DBDC solid;
+	background: rgba(0,0,0,0.35);
+}
+
+/* LEFT BOX STYLING */
+#left-box {
+	float: left;
+	width: 73%;
+	height: 907px;
+	color: #D1DBDC;
+	padding: 0;
+}
+#carousel {
+	color: #D1DBDC;
+}
+.orbit-container {
+	height: 250px;
+}
+.slides {
+	height: 208px;
+}
+#slide1 {
+	background-image: url('espn-header.png');
+}
+#slide2 {
+	background-image: url('techcrunch.png');
+}
+#slide3 {
+	background-image: url('gilt.png');
+}
+.slide-rank {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin-bottom: -35px;
+}
+
+#break {
+	height: 1px;
+	width: 100%;
+	background-color: #D1DBDC;
+}
+
+#rank-sect {
+	padding-top: 20px;
+}
+#sort-container {
+	height: 20px;
+	padding-top: 10px;
+}
+#categories-sect {
+	padding-top: 25px;
+}
+#rank-disp-sect {
+	font-size: 30px;
+	text-align: center;
+}
+.disp {
+	padding-top: 18px;
+}
+
+/* RIGHT BOX STYLING*/
+#right-box {
+	float: right;
+	width: 25%;
+	height: 963px;
+	padding: 0;
+}
+#website-spotlight {
+	height: 300px;
+	border: 1px #D1DBDC solid;
+	text-align: center;
+	color: #D1DBDC;
+}
+#ad-unit {
+	height: 250px;
+	border: 1px #D1DBDC solid;
+	background-image: url('fileswap.gif');
+}
+#comment-sect {
+	height: 250px;
+	border: 1px #D1DBDC solid;
+	text-align: center;
+	color: #D1DBDC;
+}
+#social-sect {
+	height: 163px;
+	border: 1px #D1DBDC solid;
+	text-align: center;
+	color: #D1DBDC;
+}
