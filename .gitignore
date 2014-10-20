@@ -14,3 +14,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+#Ignore swp files
+*.swp
+
+#Ignore env files
+*.env
