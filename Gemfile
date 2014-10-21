@@ -43,6 +43,7 @@ gem 'mechanize'
 gem 'devise'
 gem 'json'
 gem 'redis'
+gem 'redis-namespace'
 
 group :development, :test do
   gem 'rspec-rails'
