@@ -4,12 +4,13 @@ Rails.application.routes.draw do
   devise_for :users
 
   root 'static_pages#index'
+  resources :categories
   
   namespace 'api' do
     resources :websites
   end
   
-  namespace 'api' do
+  namespace 'api', defaults: { format: 'json' }  do
     resources :categories
   end
     
