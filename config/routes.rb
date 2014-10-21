@@ -4,7 +4,14 @@ Rails.application.routes.draw do
   devise_for :users
 
   root 'static_pages#index'
-
+  
+  namespace 'api' do
+    resources :websites
+  end
+  
+  namespace 'api' do
+    resources :categories
+  end
     
   resources :websites do
     resources :comments, only: [:create]

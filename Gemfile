@@ -41,6 +41,8 @@ gem 'spring',        group: :development
 gem 'foundation-rails'
 gem 'mechanize'
 gem 'devise'
+gem 'json'
+gem 'redis'
 
 group :development, :test do
   gem 'rspec-rails'

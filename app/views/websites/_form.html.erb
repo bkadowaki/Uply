@@ -10,4 +10,8 @@
   <%= w.label :description %>
   <%= w.text_field :description %>
   
-  <%= 
+  <%= w.label :category %>
+  <%= w.collection_select :category_ids, Category.all, :id, :name, include_blank: true %>
+  
+  <%= w.submit %>
+<% end %> 
