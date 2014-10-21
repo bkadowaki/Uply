@@ -44,6 +44,7 @@ gem 'devise'
 gem 'json'
 gem 'redis'
 gem 'redis-namespace'
+gem 'angular-rails-templates'
 
 group :development, :test do
   gem 'rspec-rails'

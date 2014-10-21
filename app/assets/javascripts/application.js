@@ -13,7 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require turbolinks
+//= require angular-resource.min
+//= require angular-ui-router.min
+//= require angular-rails-templates
 //= require_tree .
+//= require_tree ../templates
 
 $(function(){ $(document).foundation(); });

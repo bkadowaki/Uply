@@ -26,5 +26,6 @@ class Api::CategoriesController < ApplicationController
     
   def set_redis
     set("categories", Category.all.to_json)   
+    set("category_ids", Category.all.map(&:id).to_json)
   end
 end
