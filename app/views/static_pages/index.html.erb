@@ -1,5 +1,3 @@
-<!-- ROOT MAIN OPEN -->
-<div id="main-home">
 	<div ng-controller="NavCtrl">
 		<!-- NAV OPEN -->
 		<nav class="top-bar" data-topbar role="navigation">
@@ -122,69 +120,72 @@
 				<!-- RANK BOX OPEN -->
 				<div class="row">
 					<!-- CATEGORIES OPEN -->
-					<div ui-view="categories"></div>
+					<!-- UI VIEW OPEN -->
+					<div ui-view="categories">
 					<!-- CATEGORIES CLOSE -->
 
 					<!-- DISPLAY OPEN -->
 					<div id="rank-disp-sect">
-						<div class="large-9 columns disp" ng-show="isSet(1)"> 
+						<div class="large-9 columns disp" ng-show="isSet(c.id)"> 
 						<p>First</p>
 						</div>				
 
-						<div class="large-9 columns disp" ng-show="isSet(2)"> 
+						<div class="large-9 columns disp" ng-show="isSet(c.id)"> 
 						<p>Second</p>
 						</div>
 
-						<div class="large-9 columns disp" ng-show="isSet(3)"> 
+						<div class="large-9 columns disp" ng-show="isSet(c.id)"> 
 						<p>Third</p>
 						</div>				
 
-						<div class="large-9 columns disp" ng-show="isSet(4)"> 
+						<div class="large-9 columns disp" ng-show="isSet(c.id)"> 
 						<p>Fourth</p>
 						</div>					
 
-						<div class="large-9 columns disp" ng-show="isSet(5)"> 
+						<div class="large-9 columns disp" ng-show="isSet(c.id)"> 
 						<p>Fifth</p>
 						</div>
 
-						<div class="large-9 columns disp" ng-show="isSet(6)"> 
+						<div class="large-9 columns disp" ng-show="isSet(c.id)"> 
 						<p>Sixth</p>
 						</div>				
 
-						<div class="large-9 columns disp" ng-show="isSet(7)"> 
+						<div class="large-9 columns disp" ng-show="isSet(c.id)"> 
 						<p>Seventh</p>
 						</div>					
 
-						<div class="large-9 columns disp" ng-show="isSet(8)"> 
+						<div class="large-9 columns disp" ng-show="isSet(c.id)"> 
 						<p>Eighth</p>
 						</div>
 
-						<div class="large-9 columns disp" ng-show="isSet(9)"> 
+						<div class="large-9 columns disp" ng-show="isSet(c.id)"> 
 						<p>Ninth</p>
 						</div>				
 
-						<div class="large-9 columns disp" ng-show="isSet(10)"> 
+						<div class="large-9 columns disp" ng-show="isSet(c.id))"> 
 						<p>Tenth</p>
 						</div>					
 
-						<div class="large-9 columns disp" ng-show="isSet(11)"> 
+						<div class="large-9 columns disp" ng-show="isSet(c.id))"> 
 						<p>Eleventh</p>
 						</div>
 
-						<div class="large-9 columns disp" ng-show="isSet(12)"> 
+						<div class="large-9 columns disp" ng-show="isSet(c.id))"> 
 						<p>Twelth</p>
 						</div>				
 
-						<div class="large-9 columns disp" ng-show="isSet(13)"> 
+						<div class="large-9 columns disp" ng-show="isSet(c.id))"> 
 						<p>Thirteenth</p>
 						</div>					
 
-						<div class="large-9 columns disp" ng-show="isSet(14)"> 
+						<div class="large-9 columns disp" ng-show="isSet(c.id))"> 
 						<p>Fourteenth</p>
 						</div>				
 
 					</div>
 					<!-- DISPLAY CLOSE -->
+				</div>
+				<!-- VIEW CLOSE -->
 				</div>
 				<!-- RANK BOX CLOSE -->
 			</div>
@@ -238,8 +239,3 @@
 		<!-- RIGHT BOX CLOSE -->
 	</div>
 	<!-- ELEMENT BOXES CLOSE -->
-
-
-
-</div>
-<!-- ROOT MAIN CLOSE -->

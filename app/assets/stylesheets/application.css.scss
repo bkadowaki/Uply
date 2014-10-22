@@ -22,16 +22,14 @@ body {
 }
 /* MAINMAIN CONTAINER */
 #mainmain {
-	max-width: 1200px;
-	min-width: 960px;
 	overflow: hidden;	
 	padding-top: 15px;
+	width: 100%;
 }
 
 /* MAIN INDEX HOME */
 #main-home {
-/*	padding-right: 25px;
-	padding-left: 25px;*/
+
 }
 
 /* NAV BAR STYLING */
@@ -106,8 +104,9 @@ h1 {
 	border: 1px #646E70 solid;
 	margin-top: -15px;
 	padding: 0;
-	background-image: url('jumbo3.png');
+	background-image: url('jumbo2.png');
 	z-index: -3;
+	background-size: cover;
 }
 fieldset form {
 	z-index: 1;
