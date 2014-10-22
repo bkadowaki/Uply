@@ -30,8 +30,8 @@ body {
 
 /* MAIN INDEX HOME */
 #main-home {
-	padding-right: 25px;
-	padding-left: 25px;
+/*	padding-right: 25px;
+	padding-left: 25px;*/
 }
 
 /* NAV BAR STYLING */
@@ -41,7 +41,7 @@ body {
   transition: top 0.5s;
   width: 100%;
   z-index: 11;
-  margin-left: -25px;
+/*  margin-left: -25px;*/
 }
 .top-bar.expand {
 	top: 0;
@@ -67,19 +67,60 @@ body {
   width: 100%;
   max-width: 1200px;
 }
-#header-block {
+/*#header-block {
 	height: 300px;
 	width: 300px;
 	margin-bottom: 30px;
 	position: fixed;
 	top: 5px;
 	z-index: -10;
+}*/
+#header-bloc {
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	margin-left: 35%;
+	margin-top: -75px;
+	z-index: 1;
+}
+#balloons {
+	height: 50px;
+	width: 50px;
+	margin-left: 41.5%;
+	margin-top: 490px;
+	position: absolute;
+	z-index: 0;
 }
 h1 {
 	text-align: center;
 	color: #FFFFFF;
 	font-family: 'Orbitron', sans-serif;
 	background-color: transparent;
+}
+
+/* JUMBO STYLING */
+#jumbo {
+	width: 100%;
+	height: 550px;
+	margin-bottom: 5px;
+	border: 1px #646E70 solid;
+	margin-top: -15px;
+	padding: 0;
+	background-image: url('jumbo3.png');
+	z-index: -3;
+}
+fieldset form {
+	z-index: 1;
+}
+fieldset {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 225px;
+	width: 50%;
+	background: rgba(200,200,200,0.55);
+}
+#input-box {
+	width: 95%;
 }
 h6 {
 	color: white;
@@ -90,16 +131,18 @@ h6 {
 	font-family: 'Orbitron', sans-serif;
 }*/
 .element {
-	margin-bottom: 5px;
+	margin-bottom: 20px;
 	border: 1px #646E70 solid;
 	background: rgba(200,200,200,0.35);
-	margin-top: 15px;
-	padding: 0;
+	padding:0;
 }
 
 /* ELEMENT BOX STYLING */
 #element-boxes {
-	margin-top: 100px;
+	margin-top: 15px;
+	padding: 0;
+	padding-right: 25px;
+	padding-left: 25px;
 }
 
 /* LEFT BOX STYLING */
@@ -109,10 +152,17 @@ h6 {
 	color: #646E70;
 	padding: 0;
 }
-#carousel {
-	color: #646E70;
+#ninja {
+	background-color: white;
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	margin-left: 64%;
+	margin-top: -15px;
+	z-index: -1;
 }
-.orbit-container {
+#carousel2 {
+	color: #646E70;
 	height: 275px;
 }
 .example-orbit-content {
@@ -203,4 +253,6 @@ footer {
 }
 footer p {
 	margin-bottom: 0;
+	font-size: 14px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
