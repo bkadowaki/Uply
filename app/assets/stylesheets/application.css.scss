@@ -48,6 +48,9 @@ body {
 }
 #nav-brand {
 	padding-left: 5px;
+/*	background-color: rgba(200,200,200,0.85);
+	height: 100px;
+	width: 100px;*/
 }
 #my-profile {
 	margin-left: 5px;
@@ -65,8 +68,8 @@ body {
   max-width: 1200px;
 }
 #header-block {
-	height: 250px;
-	width: 250px;
+	height: 300px;
+	width: 300px;
 	margin-bottom: 30px;
 	position: fixed;
 	top: 5px;
@@ -83,14 +86,14 @@ h6 {
 	text-align: left;
 	margin-top: 0;
 }
-#uply {
+/*#uply {
 	font-family: 'Orbitron', sans-serif;
-}
+}*/
 .element {
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	border: 1px #646E70 solid;
 	background: rgba(200,200,200,0.35);
-	margin-top: 50px;
+	margin-top: 15px;
 	padding: 0;
 }
 
@@ -110,7 +113,10 @@ h6 {
 	color: #646E70;
 }
 .orbit-container {
-	height: 250px;
+	height: 275px;
+}
+.example-orbit-content {
+	padding-top: 25px !important;
 }
 .slides {
 	height: 208px;
@@ -184,4 +190,17 @@ h6 {
 	padding: .5em;
 	background-color: #fafafa;
 	border: 1px solid #ccc;
+}
+
+/* FOOTER STYLING */
+footer {
+	height: 60px;
+	width: 100%;
+	color: #646E70;
+	padding-top: 20px;
+	background-color: rgba(200,200,200,0.85);
+	text-align: center;
+}
+footer p {
+	margin-bottom: 0;
 }
