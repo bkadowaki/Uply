@@ -1,7 +1,8 @@
 class StaticPagesController < ApplicationController
-	def front
-	end
-
-	def index
-	end
+	
+  def index;end
+  
+  def logo
+    render layout: false
+  end
 end
