@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
-        <script type="text/javascript" src="angular/angular-ui-router.min.js"></script>
-        <script type="text/javascript" src="angular/angular-resource.min.js"></script>
-	<script>
-	  var app = angular.module('uplyApp', []);
+var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
 
 	  app.controller('NavCtrl', ['$scope','$http', function($scope, $http){
 				$(document).on('scroll', function () {
@@ -23,12 +16,22 @@
 	  ]);
     
     app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider
+            .otherwise('/');
       
         $stateProvider
-            .state('categories', {
-                url: '/categories',
-                templateUrl: 'categories.html'
+            .state('homepage', {
+                url: '/',
+                views: {
+                    'categories': {
+                        templateUrl: '/categories',
+                        controller: 'CategoryCtrl'
+                    },
+                    'static_pages': {
+                        templateUrl: '/logo',
+                        controller: 'LogoCtrl'
+                    },
+                }
             });
     }]);
     
@@ -37,11 +40,28 @@
     });
   
     app.controller('CategoryCtrl', ['$scope', 'Category', function($scope, Category) {
+		  	
         var categories = Category.query(function(){
             $scope.categoryList = categories;
             console.log(categories);
         });
+        var category_ids = Category.query(function(){
+            $scope.categoryListIds = category_ids;
+            console.log(category_ids);
+        });
     }]); 
+	  
+	  app.controller('LogoCtrl', ['$scope', function($scope){
+
+	  			var moveUp = function(){
+	  				$('#balloons').animate({
+	  					top:'-=356px'},4000);
+	  			}
+	  			$(window).load(function(){
+	  				moveUp();
+	  			})
+		  	}
+	  ]);
 
 	  app.controller('RankingsCtrl', ['$scope', '$http', function($scope, $http){
 	  	
@@ -62,12 +82,3 @@
 		  	};
 	  	}
 	  ]);
-
-	</script>
-    </head>
-    <body ng-app="uglyApp">
-        <div ng-controller="CategoryCtrl">
-          <h1>Categories : {{ categories }}</h1>
-        </div>
-    </body>
-</html>

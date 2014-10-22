@@ -49,6 +49,9 @@ gem 'json'
 gem 'redis'
 gem 'redis-namespace'
 gem 'angular-rails-templates'
+gem 'angular-ui-router-rails', :git => 'git@github.com:rodeschen/angular-ui-router-rails.git'
+gem 'angularjs-rails'
+
 
 group :development, :test do
   gem 'rspec-rails'

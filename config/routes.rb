@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   root 'static_pages#index'
+  get '/logo', to: 'static_pages#logo'
   resources :categories
   
   namespace 'api' do
