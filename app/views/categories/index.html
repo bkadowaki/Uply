@@ -10,3 +10,10 @@
 			</dl>
 	  </div>
 	</div>
+  <div id="rank-disp-sect">
+    <div ng-repeat="c in categoryList">
+      <div class="large-9 columns disp" ng-show="isSet(c.id)">
+        <p> {{ c.id }} </p>
+      </div>
+    </div>
+  </div>
