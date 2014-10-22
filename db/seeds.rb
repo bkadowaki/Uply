@@ -28,4 +28,19 @@ Category.create(
     { name: 'Society' },
     { name: 'Sports' },
     { name: 'World' }
-  ])
+  ]);
+
+Website.destroy_all
+
+website = Website.create([
+    { 
+        title: "RealGM",
+        url: "http://realgm.com",
+        description: "Badass sports site" 
+    },
+    {
+        title: "Reddit",
+        url: "http://reddit.com",
+        description: "Best site ever"
+    }
+    ]);
