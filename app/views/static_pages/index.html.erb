@@ -1,10 +1,3 @@
-<!-- ANGULAR -->
-<% content_for :script do %>
-
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
-
-<% end %>
-
 <!-- ROOT MAIN OPEN -->
 <div id="main-home">
 	<div ng-controller="NavCtrl">
@@ -13,11 +6,11 @@
 		  <ul class="title-area">
 		    <li class="name">
 		      <div id="nav-brand">
-		      	<h1>Uply</h1>
+		      	<h1><%#= image_tag "upthumb.png" %>Up.ly</h1>
 		      </div>
 		    </li>
 		     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-		    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+		    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 		  </ul>
 
 		  <section class="top-bar-section">
@@ -40,20 +33,49 @@
 		  </section>
 		</nav>
 		<!-- CLOSE NAV -->
+
 	</div>
 
-	<div ng-controller="LogoCtrl">
+<!-- 	<div ng-controller="LogoCtrl">
 		<div id="header-block"> 
-			<h1><%= image_tag "uplylogo.png" %></h1>
+			<h1><%#= image_tag "uplylogolarge.png" %></h1>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- ELEMENT BOXES OPEN -->
+	
+	<!-- JUMBOTRON OPEN -->
+<div ng-controller="LogoCtrl">	
+	<div id="jumbo">
+		<form>
+		  <fieldset>
+		    <legend></legend>
+				<div id="header-bloc">
+					<%= image_tag "uplytxt.png" %>
+				</div>
+				<div id="balloons">
+					<%= image_tag "upthumb.png" %>
+				</div>
+		    <label>Find the Internet's best based on what others think...
+		      <input type="text" placeholder="Search" id="input-box">
+		    </label>
+		  </fieldset>
+		</form>
+
+	</div>
+</div>
+	<!-- CLOSE JUMBOTRON -->
+
 	<div id="element-boxes">
 		<!-- LEFT BOX OPEN -->
 		<div id="left-box">
+			<!-- NINJA DIV OPEN -->
+				<div id="ninja">
+
+				</div>
+			<!-- NINJA DIV CLOSE -->
 			<!-- CAROUSEL OPEN -->
-			<div id="carousel" class="row element">
+			<div id="carousel2" class="row element">
 				<div class="large-12 columns">
 					<ul class="example-orbit-content" data-orbit>
 						  <li data-orbit-slide="headline-1" class="slides" id="slide1">
@@ -86,7 +108,6 @@
 
 			<div id="rank-sect" ng-controller="RankingsCtrl" class="element">
 			<h6 class="div-headers">Website Rankings</h6>
-	<!-- 			<div class="div-title">Rankings</div> -->
 				<!-- SORT OPEN -->
 				<div id="sort-container" class="row">
 					<div class="large-3 columns">
@@ -99,8 +120,6 @@
 						  <dd ng-class="{active:isSort(2)}"><a ng-click="setSort(2)">Most Ups</a></dd>			  
 
 						  <dd ng-class="{active:isSort(3)}"><a ng-click="setSort(3)">Most Downs</a></dd>
-
-	<!-- 					  <dd ng-class="{active:isSort(4)}"><a ng-click="setSort(4)">Most Uniques</a></dd> -->
 						</dl>
 					</div>
 				</div>
@@ -109,27 +128,7 @@
 				<!-- RANK BOX OPEN -->
 				<div class="row">
 					<!-- CATEGORIES OPEN -->
-					<div id="categories-sect">
-						<div class="large-3 columns">
-							<dl class="sub-nav">
-							  <dt>CATEGORIES:</dt>
-								  <dd ng-class="{active:isSet(1)}"><a ng-click="setClick(1)">Arts & Music</a></dd>
-								  <dd ng-class="{active:isSet(2)}"><a ng-click="setClick(2)">Business</a></dd>
-								  <dd ng-class="{active:isSet(3)}"><a ng-click="setClick(3)">Cooking</a></dd>
-								  <dd ng-class="{active:isSet(4)}"><a ng-click="setClick(4)">Computers</a></dd>	
-								  <dd ng-class="{active:isSet(5)}"><a ng-click="setClick(5)">Health</a></dd>
-								  <dd ng-class="{active:isSet(6)}"><a ng-click="setClick(6)">Home & Garden</a></dd>
-								  <dd ng-class="{active:isSet(7)}"><a ng-click="setClick(7)">Kids & Teens</a></dd>
-								  <dd ng-class="{active:isSet(8)}"><a ng-click="setClick(8)">News</a></dd>
-								  <dd ng-class="{active:isSet(9)}"><a ng-click="setClick(9)">Recreation</a></dd>
-								  <dd ng-class="{active:isSet(10)}"><a ng-click="setClick(10)">Regional</a></dd>
-								  <dd ng-class="{active:isSet(11)}"><a ng-click="setClick(11)">Science</a></dd>
-								  <dd ng-class="{active:isSet(12)}"><a ng-click="setClick(12)">Shopping</a></dd>
-								  <dd ng-class="{active:isSet(13)}"><a ng-click="setClick(13)">Society</a></dd>
-								  <dd ng-class="{active:isSet(14)}"><a ng-click="setClick(14)">Sports</a></dd>
-							</dl>
-						</div>
-					</div>
+					<div ui-view="categories"></div>
 					<!-- CATEGORIES CLOSE -->
 
 					<!-- DISPLAY OPEN -->
@@ -250,59 +249,3 @@
 
 </div>
 <!-- ROOT MAIN CLOSE -->
-
-
-<!-- ANGULAR CTLRS -->
-	<script>
-	  var app = angular.module('uplyApp', []);
-
-	  app.controller('NavCtrl', ['$scope','$http', function($scope, $http){
-				$(document).on('scroll', function () {
-				    if ($(this).scrollTop() > 50) {
-				        if (!$('.top-bar').hasClass('expand')) {
-				            $('.top-bar').addClass('expand');
-				        }
-				    } else {
-				        if ($('.top-bar').hasClass('expand')) {
-				            $('.top-bar').removeClass('expand');
-				        }
-				    }
-				});
-			}
-	  ]);
-
-	  app.controller('LogoCtrl', ['$scope', function($scope){
-		  		var moveRight = function(){
-		  			$('#header-block').animate({left: "+=1350"}, 30000, moveLeft);
-		  		}
-		  		var moveLeft = function(){
-		  			$('#header-block').animate({left: "-=1350"}, 30000, moveRight);
-		  		}
-		  		$(document).ready(function() {
-
-       			moveRight();
-       		})
-		  	}
-	  ]);
-
-	  app.controller('RankingsCtrl', ['$scope', '$http', function($scope, $http){
-	  	
-		  	$scope.click = 1;
-		  	$scope.setClick = function(currCategory){
-		  		$scope.click = currCategory;
-		  	};
-		  	$scope.isSet = function(checkedTab){
-		  		return $scope.click === checkedTab;
-		  	};
-
-		  	$scope.sort = 1;
-		  	$scope.setSort = function(currSort){
-		  		$scope.sort = currSort;
-		  	};
-		  	$scope.isSort = function(checkedSort){
-		  		return $scope.sort === checkedSort;
-		  	};
-	  	}
-	  ]);
-
-	</script>

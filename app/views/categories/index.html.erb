@@ -1,73 +1,12 @@
-<% content_for :script do %>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
-<% end %>
-
-<div ng-controller="CategoryCtrl">
-  <div ng-repeat="c in categoryList">
-    <a href="http://localhost:3000/categories/{{ c.id }}" >{{ c.name }}</a>
-  </div>
-</div>
-	<script>
-	  var app = angular.module('uplyApp', ['ui.router', 'ngResource']);
-
-	  app.controller('NavCtrl', ['$scope','$http', function($scope, $http){
-				$(document).on('scroll', function () {
-				    if ($(this).scrollTop() > 50) {
-				        if (!$('.top-bar').hasClass('expand')) {
-				            $('.top-bar').addClass('expand');
-				        }
-				    } else {
-				        if ($('.top-bar').hasClass('expand')) {
-				            $('.top-bar').removeClass('expand');
-				        }
-				    }
-				});
-			}
-	  ]);
-    
-    app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/');
-      
-        $stateProvider
-            .state('categories', {
-                url: '/categories',
-                templateUrl: 'categories.html'
-            });
-    }]);
-    
-    app.factory('Category', function($resource) {
-        return $resource('/api/categories/:id');
-    });
-  
-    app.controller('CategoryCtrl', ['$scope', 'Category', function($scope, Category) {
-        var categories = Category.query(function(){
-            $scope.categoryList = categories;
-            console.log(categories);
-        });
-        var category_ids = Category.query(function(){
-            $scope.categoryListIds = category_ids;
-            console.log(category_ids);
-        });
-    }]); 
-
-	  app.controller('RankingsCtrl', ['$scope', '$http', function($scope, $http){
-	  	
-		  	$scope.click = 1;
-		  	$scope.setClick = function(currCategory){
-		  		$scope.click = currCategory;
-		  	};
-		  	$scope.isSet = function(checkedTab){
-		  		return $scope.click === checkedTab;
-		  	};
-
-		  	$scope.sort = 1;
-		  	$scope.setSort = function(currSort){
-		  		$scope.sort = currSort;
-		  	};
-		  	$scope.isSort = function(checkedSort){
-		  		return $scope.sort === checkedSort;
-		  	};
-	  	}
-	  ]);
-
-	</script>
+  <div id="categories-sect">
+	  <div class="large-3 columns">
+		  <dl class="sub-nav">
+			  <dt>CATEGORIES:</dt>
+          <div ng-repeat="c in categoryList">
+					  <dd ng-class="{active:isSet(c.id)}">
+              <a ng-click="setClick(c.id)" >{{ c.name }}</a>
+            </dd>
+          </div>
+			</dl>
+	  </div>
+	</div>
