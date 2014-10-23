@@ -27,11 +27,6 @@ body {
 	width: 100%;
 }
 
-/* MAIN INDEX HOME */
-#main-home {
-
-}
-
 /* NAV BAR STYLING */
 .top-bar {
 	top: -45px;
@@ -46,9 +41,7 @@ body {
 }
 #nav-brand {
 	padding-left: 5px;
-/*	background-color: rgba(200,200,200,0.85);
-	height: 100px;
-	width: 100px;*/
+	font-family: 'Josefin Sans', sans-serif;
 }
 #my-profile {
 	margin-left: 5px;
@@ -59,20 +52,11 @@ body {
 .top-bar-section li:not(.has-form) a:not(.button) {
 	background-color: #33CC00;
 }
-
 #main-home {
 	min-width: 960px;
   width: 100%;
   max-width: 1200px;
 }
-/*#header-block {
-	height: 300px;
-	width: 300px;
-	margin-bottom: 30px;
-	position: fixed;
-	top: 5px;
-	z-index: -10;
-}*/
 #header-bloc {
 	height: 100px;
 	width: 100px;
@@ -120,7 +104,28 @@ fieldset {
 }
 #input-box {
 	width: 95%;
+	display: inline;
 }
+#search-button {
+	display: inline;
+	height: 50px;
+	width: 50px;
+}
+#sign-up-btn {
+	margin-top: 28px;
+}
+.up-btn {
+	margin-left: 48%;
+	background-color: transparent;
+	border: 2px solid white;
+	color: white;
+	padding: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 8px;
+}
+
+/* BODY STYLING */
 h6 {
 	color: white;
 	text-align: left;
@@ -134,6 +139,7 @@ h6 {
 	border: 1px #646E70 solid;
 	background: rgba(200,200,200,0.35);
 	padding:0;
+	width: 100%;
 }
 
 /* ELEMENT BOX STYLING */
@@ -150,15 +156,6 @@ h6 {
 	width: 73%;
 	color: #646E70;
 	padding: 0;
-}
-#ninja {
-	background-color: white;
-	position: absolute;
-	height: 100px;
-	width: 100px;
-	margin-left: 64%;
-	margin-top: -15px;
-	z-index: -1;
 }
 #carousel2 {
 	color: #646E70;
@@ -193,14 +190,34 @@ h6 {
 #categories-sect {
 	padding-top: 25px;
 }
+#cat-list {
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
 #rank-disp-sect {
-	font-size: 30px;
+	font-size: 20px;
 	text-align: center;
+}
+.rank-row {
+	height: 30px;
+	width: 100%;
+	color: white;
+	background-color: rgba(200, 200, 200, 0.90);
+	margin-top: -4px;
+	text-align: left;
+}
+.rank-row span {
+	background-color: #666666;
+	display: inline-block;
+	padding-top: 10px;
 }
 .disp {
 	padding-top: 18px;
 }
-
+.rank-ups {
+	margin-left: -76px;
+	margin-top: -1px;
+}
 /* RIGHT BOX STYLING*/
 #right-box {
 	float: right;
@@ -220,7 +237,6 @@ h6 {
 #ad-unit {
 	height: 250px;
 	border: 1px #646E70 solid;
-	background-image: url('fileswap.gif');
 }
 #comment-sect {
 	height: 250px;
@@ -249,9 +265,37 @@ footer {
 	padding-top: 20px;
 	background-color: rgba(200,200,200,0.85);
 	text-align: center;
+	bottom: 0;
+	position: absolute;
 }
 footer p {
 	margin-bottom: 0;
 	font-size: 14px;
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+// NEW USER REGISTRATION STYLING 
+#partial-nav {
+	height: 45px;
+	width: 100%;
+	background-color: rgba(200,200,200,0.85);	
+	// margin-top: -15px;
+	top: 0;
+	position: fixed;
+}
+#log-in-box {
+	height: 350px;
+	width: 300px;
+	background-color: rgba(255,255,255,0.4);
+	margin-top: 75px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#reg-head {
+	text-align: center;
+}
+.rails-btns {
+	width: 300px;
+	height: 37px;
+	background-color: orange;
 }

@@ -4,7 +4,7 @@
 		  <ul class="title-area">
 		    <li class="name">
 		      <div id="nav-brand">
-		      	<h1>Up.ly</h1>
+		      	<h1>up.ly</h1>
 		      </div>
 		    </li>
 		     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
@@ -50,10 +50,13 @@
 				</div>
 		    <label>Find the Internet's best based on what others think...
 		      <input type="text" placeholder="Search" id="input-box">
+		      <div id="search-button"><i class="fi-magnifying-glass large"></i></div>
 		    </label>
 		  </fieldset>
 		</form>
-
+		<div id="sign-up-btn">
+			<%= link_to "Sign Up", new_user_registration_path,:class => "up-btn" %>
+		</div>
 	</div>
 </div>
 	<!-- CLOSE JUMBOTRON -->
@@ -149,6 +152,7 @@
 			<!-- DISPLAY AD OPEN-->
 			<div class="row">
 				<div id="ad-unit" class="large-12 columns element">
+					<%= image_tag "fileswap.gif" %>
 				</div>
 			</div>
 			<!-- DISPLAY AD CLOSE -->		
