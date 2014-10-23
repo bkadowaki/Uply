@@ -17,6 +17,9 @@ Rails.application.routes.draw do
     
   resources :websites do
     resources :comments, only: [:create]
+    member do
+      post :up
+    end
   end
 
 

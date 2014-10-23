@@ -29,3 +29,127 @@ Category.create(
     { name: 'Sports' },
     { name: 'World' }
   ]);
+
+Website.destroy_all
+
+Website.create([
+    { 
+        title: "RealGM",
+        url: "http://realgm.com",
+        description: "Badass sports site", 
+    },
+    {
+        title: "Reddit",
+        url: "http://reddit.com",
+        description: "Best site ever"
+    }
+    ]);
+
+WebsiteCategory.destroy_all
+
+WebsiteCategory.create([
+    {
+        category_id: 1,
+        website_id: 1
+    },
+    {
+        category_id: 17,
+        website_id: 1
+    },
+    {
+        category_id: 1,
+        website_id: 2
+    },
+    {
+        category_id: 18,
+        website_id: 2
+    }
+    ]);
+
+User.destroy_all
+
+User.create([
+    {
+        first: "Cool",
+        last: "Guy",
+        elite: true,
+        email: "cool@beans.com",
+        password: "coolbeans",
+        password_confirmation: "coolbeans"
+    },
+    {
+        first: "Kobe",
+        last: "Bryant",
+        elite: true,
+        email: "Kobe@beast.com",
+        password: "idunkonyou",
+        password_confirmation: "idunkonyou"
+    },
+    {
+        first: "Bob",
+        last: "Loblaw",
+        elite: true,
+        email: "bob@loblaw.com",
+        password: "boblaw",
+        password_confirmation: "boblaw"
+    }
+    ]); 
+
+Up.destroy_all
+
+Up.create([
+    {
+        website_id: 1,
+        user_id: 1
+    },
+    {
+        website_id: 1,
+        user_id: 2
+    },
+    {
+        website_id: 1,
+        user_id: 3
+    },
+    {
+        website_id: 2,
+        user_id: 1
+    },
+    {
+        website_id: 2,
+        user_id: 2
+    },
+    {
+        website_id: 2,
+        user_id: 3
+    }
+    ]);
+
+Comment.destroy_all
+
+Comment.create([
+    {
+        text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
+        website_id: 1,
+        user_id: 1
+    },
+    {
+        text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
+        website_id: 1,
+        user_id: 2
+    },
+    {
+        text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
+        website_id: 2,
+        user_id: 3
+    },
+    {
+        text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
+        website_id: 2,
+        user_id: 2
+    },
+    {
+        text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
+        website_id: 2,
+        user_id: 1
+    },
+    ]);

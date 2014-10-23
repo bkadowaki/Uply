@@ -108,4 +108,30 @@ describe WebsitesController do
       end
     end
   end
+  
+  describe 'POST up' do
+    before do
+      @website = create(:website)
+      set_current_user
+      post :up, id: @website.id, user_id: @user.id, format: 'js'            
+    end
+    context 'with valid input' do
+      it 'should increase up count on website' do
+        expect(@website.ups.count).to eq(1)
+      end
+      it 'should belong to website' do
+        expect(Up.first.website_id).to eq(@website.id)
+      end
+      it 'should belong to the current_user' do
+        expect(Up.first.user_id).to eq(@user.id)
+      end
+    end
+    
+    context 'with invalid input' do
+      it 'should only allow a user to up once on a website'do
+        post :up, id: @website.id, user_id: @user.id, format: 'js'
+        expect(@website.ups.count).to eq(1)
+      end
+    end    
+  end
 end

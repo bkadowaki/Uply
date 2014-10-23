@@ -1,1 +1,8 @@
-show.html.erb
+<%= @website.title %>
+<br>
+<%= @website.description %>
+<br>
+<%= @website.category %>
+<div id="website_<%= @website.id %>_up">
+  <%= @website.ups.count %>
+</div>
