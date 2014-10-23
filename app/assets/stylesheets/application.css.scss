@@ -89,6 +89,7 @@ h1 {
 	margin-top: -15px;
 	padding: 0;
 	background-image: url('jumbo2.png');
+	background-attachment: fixed;
 	z-index: -3;
 	background-size: cover;
 }
@@ -123,6 +124,9 @@ fieldset {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-top: 8px;
+}
+label {
+	color: white;
 }
 
 /* BODY STYLING */
@@ -265,8 +269,8 @@ footer {
 	padding-top: 20px;
 	background-color: rgba(200,200,200,0.85);
 	text-align: center;
-	bottom: 0;
-	position: absolute;
+	position: relative;
+	clear: both;
 }
 footer p {
 	margin-bottom: 0;
@@ -283,19 +287,48 @@ footer p {
 	top: 0;
 	position: fixed;
 }
-#log-in-box {
-	height: 350px;
+.reg-text {
+	color: black;
+}
+.log-in-box {
 	width: 300px;
 	background-color: rgba(255,255,255,0.4);
-	margin-top: 75px;
+	margin-top: 25px;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 13px;
 }
 #reg-head {
 	text-align: center;
 }
 .rails-btns {
-	width: 300px;
+	width: 274px;
 	height: 37px;
-	background-color: orange;
+	background-color: #33CC00;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 20px;
+	border: 2px solid rgba(255,255,255,0.4);
+	margin-top: 4px;
+	color: white;
+}
+#reg-container {
+	background: url('reg-bg.png') no-repeat;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  padding-top: 100px;
+}
+#log-in-btn {
+	margin-top: 10px;
+	background-color: white;
+	color: black;
+	text-align: center;
+	padding-top: 7px;
+}
+.flexbox {
+	text-top: -75px;
 }

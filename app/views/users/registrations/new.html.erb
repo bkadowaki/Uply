@@ -1,24 +1,32 @@
-<div id="partial-nav">
+<!-- REG CONTAINER OPEN -->
+<div id="reg-container">
+
+		<div id="partial-nav">
+			MAKE THIS A PARTIAL LATER
+		</div>
+		
+		<div class="log-in-box">
+			<h2 id="reg-head">Register for Uply!</h2>
+
+			<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+			  <%= devise_error_messages! %>
+
+			  <div><%= f.label :email, :class => 'reg-text' %><br />
+			  <%= f.email_field :email, autofocus: true %></div>
+
+			  <div><%= f.label :password, :class => 'reg-text' %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
+			    <%= f.password_field :password, autocomplete: "off" %></div>
+
+			  <div><%= f.label :password_confirmation, :class => 'reg-text' %><br />
+			    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+			  <div><%= f.submit "Sign up", :class => 'rails-btns' %></div>
+				<% end %>
+
+				<div class="rails-btns" id="log-in-btn">
+				<%= render "users/shared/links" %>
+				</div>
+		</div>
 
 </div>
-
-	<div id="log-in-box">
-		<h2 id="reg-head">Register for Uply!</h2>
-
-		<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-		  <%= devise_error_messages! %>
-
-		  <div><%= f.label :email %><br />
-		  <%= f.email_field :email, autofocus: true %></div>
-
-		  <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
-		    <%= f.password_field :password, autocomplete: "off" %></div>
-
-		  <div><%= f.label :password_confirmation %><br />
-		    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-
-		  <div><%= f.submit "Sign up", :class => 'rails-btns' %></div>
-		<% end %>
-
-		<%= render "users/shared/links" %>
-	</div>
+<!-- REG CONTAINER CLOSE
