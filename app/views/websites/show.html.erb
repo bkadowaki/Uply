@@ -2,7 +2,19 @@
 <br>
 <%= @website.description %>
 <br>
-<%= @website.category %>
+<% @website.categories.each do |c| %>
+  <p><%= c.name %></p>
+<% end %>
+<br>
+<% @website.comments.each do |c| %>
+  <p><%= c.text %></p>
+<% end %>
 <div id="website_<%= @website.id %>_up">
   <%= @website.ups.count %>
 </div>
+
+<%= form_for [@website, @comment] do |f| %>
+  <%= f.label :comment %>
+  <%= f.text_field :text, placeholder: 'Write a comment about the website!' %>
+  <%= f.submit "Post Comment" %>
+<% end %>
