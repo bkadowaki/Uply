@@ -90,8 +90,8 @@ User.create([
         last: "Loblaw",
         elite: true,
         email: "bob@loblaw.com",
-        password: "boblaw",
-        password_confirmation: "boblaw"
+        password: "password",
+        password_confirmation: "password"
     }
     ]); 
 

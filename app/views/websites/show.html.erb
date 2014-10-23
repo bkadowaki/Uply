@@ -9,8 +9,9 @@
 <% @website.comments.each do |c| %>
   <p><%= c.text %></p>
 <% end %>
-<div id="website_<%= @website.id %>_up">
-  <%= @website.ups.count %>
+<%= link_to "Insert Up Icon Here", up_website_path(@website), method: 'post', remote: true %>
+<div id="website_<%= @website.id %>_ups">
+  <%= @website.ups.count %> Ups
 </div>
 
 <%= form_for [@website, @comment] do |f| %>
