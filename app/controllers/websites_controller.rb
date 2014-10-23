@@ -1,5 +1,5 @@
 class WebsitesController < ApplicationController
-  before_action :set_website, only:[:show, :edit, :update]
+  before_action :set_website, only:[:show, :edit, :update, :up]
 
   def index
     @websites = Website.all
@@ -33,6 +33,14 @@ class WebsitesController < ApplicationController
     else
       render :edit
     end
+  end
+  
+  def up
+    @up = Up.create(website_id: @website.id, user_id: current_user.id)
+    
+    respond_to do |format|
+      format.js
+    end 
   end
    
   private

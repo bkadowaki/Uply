@@ -1,0 +1,3 @@
+<% if @up.valid? %>
+  $('#website_<%= @website.id %>_ups').html(' <%= @website.ups.count %> Ups');
+<% end %>

@@ -3,9 +3,11 @@
 		  <dl class="sub-nav">
 			  <dt>CATEGORIES:</dt>
           <div ng-repeat="c in categoryList">
-					  <dd ng-class="{active:isSet(c.id)}">
-              <a ng-click="setClick(c.id)" >{{ c.name }}</a>
-            </dd>
+            <div class="row">
+					    <dd ng-class="{active:isSet(c.id)}">
+                <a ng-click="setClick(c.id)" >{{ c.name }}</a>
+              </dd>
+            </div>
           </div>
 			</dl>
 	  </div>
