@@ -101,29 +101,55 @@ if Rails.env.development?
 
     Up.create([
         {
-            website_id: 1,
+            upable_id: 1,
+            upable_type: "Website",
             user_id: 1
         },
         {
-            website_id: 1,
-            user_id: 2
-        },
-        {
-            website_id: 1,
-            user_id: 3
-        },
-        {
-            website_id: 2,
+            upable_id: 1,
+            upable_type: "Website",
             user_id: 1
         },
         {
-            website_id: 2,
+            upable_id: 1,
+            upable_type: "Website",
             user_id: 2
         },
         {
-            website_id: 2,
-            user_id: 3
-        }
+            upable_id: 2,
+            upable_type: "Website",
+            user_id: 1
+        },
+        {
+            upable_id: 2,
+            upable_type: "Website",
+            user_id: 2
+        },
+        {
+            upable_id: 1,
+            upable_type: "Comment",
+            user_id: 1
+        },
+        {
+            upable_id: 2,
+            upable_type: "Comment",
+            user_id: 1
+        },
+        {
+            upable_id: 3,
+            upable_type: "Comment",
+            user_id: 1
+        },
+        {
+            upable_id: 4,
+            upable_type: "Comment",
+            user_id: 1
+        },
+        {
+            upable_id: 5,
+            upable_type: "Comment",
+            user_id: 1
+        },
         ]);
 
     Comment.destroy_all

@@ -120,7 +120,10 @@ describe WebsitesController do
         expect(@website.ups.count).to eq(1)
       end
       it 'should belong to website' do
-        expect(Up.first.website_id).to eq(@website.id)
+        expect(Up.first.upable_id).to eq(@website.id)
+      end
+      it 'should belong to website type' do
+        expect(Up.first.upable_type).to eq("Website")
       end
       it 'should belong to the current_user' do
         expect(Up.first.user_id).to eq(@user.id)

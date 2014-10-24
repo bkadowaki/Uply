@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141022220452) do
+ActiveRecord::Schema.define(version: 20141024155003) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,8 +50,9 @@ ActiveRecord::Schema.define(version: 20141022220452) do
   add_index "companies", ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true, using: :btree
 
   create_table "ups", force: true do |t|
-    t.integer  "website_id"
     t.integer  "user_id"
+    t.integer  "upable_id"
+    t.string   "upable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

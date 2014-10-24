@@ -9,7 +9,7 @@ class Website < ActiveRecord::Base
   has_many :comments
   has_many :website_categories
   has_many :categories, through: :website_categories
-  has_many :ups
+  has_many :ups, as: :upable
 
 
 #################################################################
