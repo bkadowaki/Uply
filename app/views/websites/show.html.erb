@@ -1,21 +1,70 @@
-<%= @website.title %>
-<br>
-<%= @website.description %>
-<br>
-<% @website.categories.each do |c| %>
-  <p><%= c.name %></p>
-<% end %>
-<br>
-<% @website.comments.each do |c| %>
-  <p><%= c.text %></p>
-<% end %>
-<%= link_to "Insert Up Icon Here", up_website_path(@website), method: 'post', remote: true %>
-<div id="website_<%= @website.id %>_ups">
-  <%= @website.ups.count %> Ups
-</div>
+<%= render partial: 'layouts/navbar' %>
 
-<%= form_for [@website, @comment] do |f| %>
-  <%= f.label :comment %>
-  <%= f.text_field :text, placeholder: 'Write a comment about the website!' %>
-  <%= f.submit "Post Comment" %>
-<% end %>
+<div class="websites-show-container">
+	<h1 id="website-show-h1" class="div-headers"><%= @website.title %></h1>
+	<!-- WEB LEFT OPEN -->
+	<div class="web-left">
+		<div class="row">
+			<div class="large-12 columns web-left-boxes element" id="description">
+				<h6 class="div-headers">Description</h6>
+				<%= @website.description %>
+				<br>
+				<% @website.categories.each do |c| %>
+  			<p><%= c.name %></p>
+				<% end %>
+				<br>
+				<%= link_to "Insert Up Icon Here", up_website_path(@website), method: 'post', remote: true %>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-12 columns web-left-boxes element">
+				<h6 class="div-headers">Alexa Analytics</h6>
+				website d3 analytics
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-12 columns web-left-boxes element" id="comment-container">
+				<h6 class="div-headers">Comments</h6>
+					<div id="inner-comments-div">
+						<%= form_for [@website, @comment] do |f| %>
+						  <%#= f.label :comment %>
+							<%= f.text_field :text, placeholder: 'Join the discussion' %>
+							<%= f.submit "Post Comment", :class => 'up-btn2' %>
+							<% end %>
+
+						<div id="user-comments">
+							<% @website.comments.each do |c| %>
+				  				<p>"<%= c.text %>"</p>
+				  				<p id="user-name-sig">-username<%#= %></p>
+							<% end %>
+						</div>
+					</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- WEB LEFT CLOSE -->
+
+	<!-- WEB RIGHT OPEN -->
+	<div class="web-right">
+		<div class="row">
+			<div class="large-12 columns web-right-boxes element" id="ups-box">
+				<div id="website_<%= @website.id %>_ups">
+  				<!-- <h6 class="div-headers">Ups</h6> -->
+  				<%= @website.ups.count %>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-12 columns web-right-boxes element">screenshot</div>
+		</div>
+
+		<div class="row">
+			<div class="large-12 columns web-right-boxes element">ad</div>
+		</div>
+	</div>
+	<!-- WEB RIGHT CLOSE -->
+</div>
