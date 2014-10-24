@@ -1,8 +1,8 @@
-class CreateUp < ActiveRecord::Migration
+class CreateUps < ActiveRecord::Migration
   def change
     create_table :ups do |t|
-      t.integer :website_id
       t.integer :user_id
+      t.references :upable, polymorphic: true
       t.timestamps
     end
   end

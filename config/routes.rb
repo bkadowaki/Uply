@@ -16,7 +16,11 @@ Rails.application.routes.draw do
   end
     
   resources :websites do
-    resources :comments, only: [:create]
+    resources :comments, only: [:create] do
+      member do
+        post :up
+      end
+    end
     member do
       post :up
     end

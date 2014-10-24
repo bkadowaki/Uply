@@ -38,7 +38,7 @@ class WebsitesController < ApplicationController
   end
   
   def up
-    @up = Up.create(website_id: @website.id, user_id: current_user.id)
+    @up = Up.create(upable: @website, user_id: current_user.id)
     
     respond_to do |format|
       format.js
