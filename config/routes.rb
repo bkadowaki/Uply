@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   root 'static_pages#index'
   get '/logo', to: 'static_pages#logo'
-  resources :categories
+  resources :categories, :users
   
   namespace 'api' do
     resources :websites
