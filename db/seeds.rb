@@ -30,126 +30,129 @@ Category.create(
     { name: 'World' }
   ]);
 
-Website.destroy_all
+if Rails.env.development?
 
-Website.create([
-    { 
-        title: "RealGM",
-        url: "http://realgm.com",
-        description: "Badass sports site", 
-    },
-    {
-        title: "Reddit",
-        url: "http://reddit.com",
-        description: "Best site ever"
-    }
-    ]);
+    Website.destroy_all
 
-WebsiteCategory.destroy_all
+    Website.create([
+        { 
+            title: "RealGM",
+            url: "http://realgm.com",
+            description: "Badass sports site", 
+        },
+        {
+            title: "Reddit",
+            url: "http://reddit.com",
+            description: "Best site ever"
+        }
+        ]);
 
-WebsiteCategory.create([
-    {
-        category_id: 1,
-        website_id: 1
-    },
-    {
-        category_id: 17,
-        website_id: 1
-    },
-    {
-        category_id: 1,
-        website_id: 2
-    },
-    {
-        category_id: 18,
-        website_id: 2
-    }
-    ]);
+    WebsiteCategory.destroy_all
 
-User.destroy_all
+    WebsiteCategory.create([
+        {
+            category_id: 1,
+            website_id: 1
+        },
+        {
+            category_id: 17,
+            website_id: 1
+        },
+        {
+            category_id: 1,
+            website_id: 2
+        },
+        {
+            category_id: 18,
+            website_id: 2
+        }
+        ]);
 
-User.create([
-    {
-        first: "Cool",
-        last: "Guy",
-        elite: true,
-        email: "cool@beans.com",
-        password: "coolbeans",
-        password_confirmation: "coolbeans"
-    },
-    {
-        first: "Kobe",
-        last: "Bryant",
-        elite: true,
-        email: "Kobe@beast.com",
-        password: "idunkonyou",
-        password_confirmation: "idunkonyou"
-    },
-    {
-        first: "Bob",
-        last: "Loblaw",
-        elite: true,
-        email: "bob@loblaw.com",
-        password: "password",
-        password_confirmation: "password"
-    }
-    ]); 
+    User.destroy_all
 
-Up.destroy_all
+    User.create([
+        {
+            first: "Cool",
+            last: "Guy",
+            elite: true,
+            email: "cool@beans.com",
+            password: "coolbeans",
+            password_confirmation: "coolbeans"
+        },
+        {
+            first: "Kobe",
+            last: "Bryant",
+            elite: true,
+            email: "Kobe@beast.com",
+            password: "idunkonyou",
+            password_confirmation: "idunkonyou"
+        },
+        {
+            first: "Bob",
+            last: "Loblaw",
+            elite: true,
+            email: "bob@loblaw.com",
+            password: "password",
+            password_confirmation: "password"
+        }
+        ]); 
 
-Up.create([
-    {
-        website_id: 1,
-        user_id: 1
-    },
-    {
-        website_id: 1,
-        user_id: 2
-    },
-    {
-        website_id: 1,
-        user_id: 3
-    },
-    {
-        website_id: 2,
-        user_id: 1
-    },
-    {
-        website_id: 2,
-        user_id: 2
-    },
-    {
-        website_id: 2,
-        user_id: 3
-    }
-    ]);
+    Up.destroy_all
 
-Comment.destroy_all
+    Up.create([
+        {
+            website_id: 1,
+            user_id: 1
+        },
+        {
+            website_id: 1,
+            user_id: 2
+        },
+        {
+            website_id: 1,
+            user_id: 3
+        },
+        {
+            website_id: 2,
+            user_id: 1
+        },
+        {
+            website_id: 2,
+            user_id: 2
+        },
+        {
+            website_id: 2,
+            user_id: 3
+        }
+        ]);
 
-Comment.create([
-    {
-        text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
-        website_id: 1,
-        user_id: 1
-    },
-    {
-        text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
-        website_id: 1,
-        user_id: 2
-    },
-    {
-        text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
-        website_id: 2,
-        user_id: 3
-    },
-    {
-        text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
-        website_id: 2,
-        user_id: 2
-    },
-    {
-        text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
-        website_id: 2,
-        user_id: 1
-    },
-    ]);
+    Comment.destroy_all
+
+    Comment.create([
+        {
+            text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
+            website_id: 1,
+            user_id: 1
+        },
+        {
+            text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
+            website_id: 1,
+            user_id: 2
+        },
+        {
+            text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
+            website_id: 2,
+            user_id: 3
+        },
+        {
+            text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
+            website_id: 2,
+            user_id: 2
+        },
+        {
+            text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
+            website_id: 2,
+            user_id: 1
+        },
+        ]);
+end
