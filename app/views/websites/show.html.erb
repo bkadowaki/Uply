@@ -13,7 +13,11 @@
   			<p><%= c.name %></p>
 				<% end %>
 				<br>
-				<%= link_to "Insert Up Icon Here", up_website_path(@website), method: 'post', remote: true %>
+				<p>
+          <%= @website.ups.count %><%= link_to up_website_path(@website), method: 'post', remote: true do %>
+          <i class="fi-arrow-up medium"></i>
+          <% end %>
+        </p>
 			</div>
 		</div>
 
@@ -36,8 +40,14 @@
 
 						<div id="user-comments">
 							<% @website.comments.each do |c| %>
-				  				<p>"<%= c.text %>"</p>
-				  				<p id="user-name-sig">-username<%#= %></p>
+				  				<p>
+          <%= c.ups.count %><%= link_to up_website_comment_path(@website, c), method: 'post', remote: true do %>
+          <i class="fi-arrow-up medium"></i>
+          <% end %>
+                  "<%= c.text %>"
+                  <br>
+				  				<id="user-name-sig">-<%= c.user.first %>
+                  </p>
 							<% end %>
 						</div>
 					</div>
