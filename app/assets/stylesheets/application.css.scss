@@ -333,3 +333,65 @@ footer p {
 .flexbox {
 	text-top: -75px;
 }
+
+// WEBSITE SHOW STYLING
+.websites-show-container {
+	width: 100%;
+	padding-left: 100px;
+	padding-right: 100px;
+	margin-top: 225px;
+}
+#website-show-h1 {
+	font-size: 40px;
+	color: white;
+}
+.web-left {
+	width: 73%;
+	padding: 0;
+	float: left;
+}
+.web-left-boxes {
+	height: 400px;
+	width: 100%;
+}
+#description {
+	height: 200px;
+}
+.web-right {
+	width: 25%;
+	float: right;
+}
+.web-right-boxes {
+	height: 250px;
+	width: 100%;
+}
+#ups-box {
+	background-color: #33CC00;
+	text-align: center;
+	font-size: 90px;
+	color: white;
+	padding-top: 83px;
+}
+#comment-container {
+	height: 100%;
+}
+#inner-comments-div {
+	padding: 10px;
+}
+.up-btn2 {
+	background-color: rgba(200, 200, 200, 0.85);
+	border: 2px solid white;
+	color: white;
+	padding: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 2px;
+}
+#user-comments {
+	border: 3px solid white;
+	margin-top: 10px;
+	padding: 15px;
+}
+#user-name-sig {
+	right: 10;
+}
