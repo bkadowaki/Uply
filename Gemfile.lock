@@ -82,7 +82,7 @@ GEM
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.6.11)
-    jbuilder (2.2.2)
+    jbuilder (2.2.3)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jquery-rails (3.1.2)
@@ -214,7 +214,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.0)
   foundation-icons-sass-rails (~> 3.0.0)
   foundation-rails
-  jbuilder (~> 2.0)
+  jbuilder (~> 2.2.3)
   jquery-rails
   json
   mechanize

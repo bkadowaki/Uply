@@ -2,14 +2,16 @@ class Api::CategoriesController < ApplicationController
   require 'redis'
   require 'json'
   include RedisStore
-  before_action :set_redis
+  #before_action :set_redis
   
   def index
-    categories = JSON.parse(get('categories')) 
+    @categories = Category.all
+    #categories = get('categories') 
     
-    respond_to do |format|
-      format.json { render :json => categories }
-    end 
+    #respond_to do |format|
+     # format.json { render :json => categories }
+    #end
+    render 'index.json.jbuilder'
   end
   
   def show
@@ -25,7 +27,8 @@ class Api::CategoriesController < ApplicationController
   private
     
   def set_redis
-    set("categories", Category.all.to_json)   
+    @category = Category.all
+    set("categories", (json.(@category)))   
     set("category_ids", Category.all.map(&:id).to_json)
   end
 end

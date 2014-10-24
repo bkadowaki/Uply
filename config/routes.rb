@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :websites
   end
   
-  namespace 'api', defaults: { format: 'json' }  do
+  namespace 'api', defaults: { format: 'json.jbuilder' }  do
     resources :categories
   end
     
