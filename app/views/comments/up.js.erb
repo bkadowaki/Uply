@@ -1,0 +1,3 @@
+<% if @up.valid? %>
+  $('#comment_<%= @comment.id %>_up').html('<%= @comment.ups.count %>')
+<% end %>

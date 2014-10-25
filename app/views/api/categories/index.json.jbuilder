@@ -7,5 +7,6 @@ json.array! @categories do |c|
     json.description w.description
     json.created_at w.created_at
     json.ups w.ups.count
+    json.score w.score
   end
 end
