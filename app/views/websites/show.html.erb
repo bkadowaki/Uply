@@ -14,8 +14,9 @@
 				<% end %>
 				<br>
 				<p>
-          <%= @website.ups.count %><%= link_to up_website_path(@website), method: 'post', remote: true do %>
-          <i class="fi-arrow-up medium"></i>
+          <div class="website_<%= @website.id %>_up"> 
+            <%= @website.ups.count %></div><%= link_to up_website_path(@website), method: 'post', remote: true do %>
+            <i class="fi-arrow-up medium"></i>
           <% end %>
         </p>
 			</div>
@@ -40,15 +41,15 @@
 
 						<div id="user-comments">
 							<% @website.comments.each do |c| %>
-				  				<p>
-          <%= c.ups.count %><%= link_to up_website_comment_path(@website, c), method: 'post', remote: true do %>
-          <i class="fi-arrow-up medium"></i>
-          <% end %>
-                  "<%= c.text %>"
+				  			<p>
+                  <div id="comment_<%= c.id %>_up"><%= c.ups.count %></div>
+                      <%= link_to up_website_comment_path(@website, c), method: 'post', remote: true do %>
+                      <i class="fi-arrow-up medium"></i>
+                    <% end %>
+                    "<%= c.text %>"
                   <br>
 				  				<id="user-name-sig">-<%= c.user.first %>
-                  </p>
-
+                 </p>
 							<% end %>
 						</div>
 					</div>
@@ -62,7 +63,7 @@
 	<div class="web-right">
 		<div class="row">
 			<div class="large-12 columns web-right-boxes element" id="ups-box">
-				<div id="website_<%= @website.id %>_ups">
+				<div class="website_<%= @website.id %>_up">
   				<!-- <h6 class="div-headers">Ups</h6> -->
   				<%= @website.ups.count %>
 				</div>
