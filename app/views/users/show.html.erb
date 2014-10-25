@@ -2,13 +2,17 @@
 
 <!-- USER SHOW OPEN -->
 <div class="user-cover">
-	<div class="user-cover-content">
-		<%= video_tag('balloonsvid.mp4', id: 'videobcg', autoplay: "true", loop: "true")%>
+	<div class="user-cover-top">
+		<%#= video_tag('balloonsvid.mp4', id: 'videobcg', autoplay: "true", loop: "true")%>
 		<div id="user-thumb">
 			<%= image_tag "upthumb.png" %>
 		</div>
 		<h1 id="user-first"><%#= current_user.first %>brett</h1>
-		<i class="fi-widget small"></i>
+		<%= link_to "", edit_user_registration_path, :class => 'fi-widget' %>
+	</div>
+	<div class="user-cover-bottom">
+		<div class="user-links" id="user-left-link">Up'd Websites</div>
+		<div class="user-links" id="user-right-link">Comments</div>
 	</div>
 </div>
 
@@ -16,11 +20,7 @@
 
 	<!-- TOP OPEN -->
 	<div class="top-users">
-		<div class="row">
-			<div class="large-12 columns element">
-				
-			</div>
-		</div>
+
 	</div>
 	<!-- TOP CLOSE -->
 </div>
