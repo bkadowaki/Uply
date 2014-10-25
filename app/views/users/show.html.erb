@@ -1,1 +1,27 @@
-show.html.erb
+<%= render partial: 'layouts/navbar' %>
+
+<!-- USER SHOW OPEN -->
+<div class="user-cover">
+	<div class="user-cover-content">
+		<%= video_tag('balloonsvid.mp4', id: 'videobcg', autoplay: "true", loop: "true")%>
+		<div id="user-thumb">
+			<%= image_tag "upthumb.png" %>
+		</div>
+		<h1 id="user-first"><%#= current_user.first %>brett</h1>
+		<i class="fi-widget small"></i>
+	</div>
+</div>
+
+<div class="user-show-container">
+
+	<!-- TOP OPEN -->
+	<div class="top-users">
+		<div class="row">
+			<div class="large-12 columns element">
+				
+			</div>
+		</div>
+	</div>
+	<!-- TOP CLOSE -->
+</div>
+<!-- USER SHOW CLOSED -->

@@ -134,10 +134,8 @@ h6 {
 	color: white;
 	text-align: left;
 	margin-top: 0;
+	padding-left: 3px;
 }
-/*#uply {
-	font-family: 'Orbitron', sans-serif;
-}*/
 .element {
 	margin-bottom: 20px;
 	border: 1px #646E70 solid;
@@ -278,6 +276,7 @@ footer p {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
+// **NEW VIEW**
 // NEW USER REGISTRATION STYLING 
 #partial-nav {
 	height: 45px;
@@ -293,13 +292,17 @@ footer p {
 .log-in-box {
 	width: 300px;
 	background-color: rgba(255,255,255,0.4);
-	margin-top: 25px;
+	margin-top: -30px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 13px;
 }
-#reg-head {
+.reg-head {
 	text-align: center;
+}
+#company-reg-head {
+	text-align: center;
+	font-size: 1.8rem;
 }
 .rails-btns {
 	width: 274px;
@@ -312,17 +315,25 @@ footer p {
 	color: white;
 	cursor: hand;
 }
-#reg-container {
+.reg-container {
 	background: url('reg-bg.png') no-repeat;
   // -webkit-background-size: cover;
   // -moz-background-size: cover;
   // -o-background-size: cover;
   // background-size: cover;
   background-attachment: fixed;
+  background-size: cover;
   height: 100%;
   width: 100%;
   padding-top: 100px;
 }
+#error_explanation h2 {
+	font-size: .8rem;
+	color: red;
+}
+//   #sentence
+//   #messages
+
 #log-in-btn {
 	margin-top: 10px;
 	background-color: white;
@@ -334,6 +345,7 @@ footer p {
 	text-top: -75px;
 }
 
+// **NEW VIEW**
 // WEBSITE SHOW STYLING
 .websites-show-container {
 	width: 100%;
@@ -344,6 +356,7 @@ footer p {
 #website-show-h1 {
 	font-size: 40px;
 	color: white;
+	border: 1px solid black;
 }
 .web-left {
 	width: 73%;
@@ -392,6 +405,63 @@ footer p {
 	margin-top: 10px;
 	padding: 15px;
 }
-#user-name-sig {
-	right: 10;
+.company-reg-link {
+	margin-top: 10px;
+	text-align: center;
+}
+
+// **NEW VIEW**
+// USER SHOW STYLING
+.user-cover {
+	background-color: white;
+	height: 300px;
+	border: 1px solid black;
+	background-color: transparent;
+}
+.user-cover-content {
+	border: 1px solid black;
+	margin: 40px;
+	height: 73%;
+	position: relative;
+	overflow: hidden;
+	background-color: transparent;
+}
+#videobcg {
+	width: 102%;
+	margin-top: -10px;
+	z-index: -200;
+	position: absolute;
+	margin-left: -10px;
+}
+#user-thumb {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	margin-left: 48.5%;
+	margin-top: 50px;
+	z-index: 1;
+}
+#user-first {
+	color: white;
+	padding-top: 90px;
+}
+.user-show-container {
+	width: 100%;
+	padding-left: 100px;
+	padding-right: 100px;
+	margin-top: 100px;
+	height: 800px;
+}
+.top-users {
+	height: 20%;
+	border: 1px solid black;
+}
+.fi-widget {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	font-size: 30px;
+	color: white;
 }
