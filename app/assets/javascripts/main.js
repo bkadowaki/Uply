@@ -53,6 +53,15 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
                         controller: 'LogoCtrl'
                     },
                 }
+            })
+            .state('website', {
+                url: '/websites/:id', 
+                views: {
+                    'websites': {
+                      templateUrl: '/websites/d3',
+                      controller: 'WebsiteCtrl'
+                    },
+                }
             });
     }]);
     
@@ -65,10 +74,6 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
         var categories = Category.query(function(){
             $scope.categoryList = categories;
             console.log(categories);
-        });
-        var category_ids = Category.query(function(){
-            $scope.categoryListIds = category_ids;
-            console.log(category_ids);
         });
 
       
@@ -111,4 +116,15 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
 	  			})
 		  	}
 	  ]);
+    
+    app.factory('Website', function($resource)
+        {
+          return $resource('/api/website/:id');
+        });
+
+    app.controller('WebsiteCtrl', ['$scope', function($scope){
+        var website = Website.get({ id: 'params[:id]' }, function(){
+            $scope.webShow = website; 
+        })
+    }]);
 
