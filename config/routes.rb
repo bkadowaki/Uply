@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/logo', to: 'static_pages#logo'
   resources :categories, :users
   
-  namespace 'api' do
+  namespace 'api', defaults: { format: 'json' } do
     resources :websites
   end
   

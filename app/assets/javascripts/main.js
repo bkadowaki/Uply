@@ -34,11 +34,8 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
 				    	});
 				});
 			}
-<<<<<<< HEAD
-=======
-
->>>>>>> d3
-	  ]);
+	  
+    ]);
     
     app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider
@@ -121,6 +118,17 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
 	  			})
 		  	}
 	  ]);
+    
+    app.factory('Website', function($resource)
+        {
+          return $resource('/api/website/:id');
+        });
+
+    app.controller('WebsiteCtrl', ['$scope', function($scope){
+        var website = Website.get({ id: 'params[:id]' }, function(){
+            $scope.webShow = website; 
+        })
+    }]);
 
 	  app.factory('Website', function($resource)
 	  		{
