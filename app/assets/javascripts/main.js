@@ -84,7 +84,7 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
 
 	  			var moveUp = function(){
 	  				$('#balloons').animate({
-	  					top:'-=356px'},4000);
+	  					top:'-=361px'},4000);
 	  			}
 	  			$(window).load(function(){
 	  				moveUp();
