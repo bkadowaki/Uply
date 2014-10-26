@@ -45,3 +45,19 @@
 		  </div>
 	</div>
 </div>
+  <div id="rank-disp-sect">
+    <div ng-repeat="c in categoryList">
+      <div ng-if="c.websites.length > 0">
+      <div ng-repeat="website in c.websites">
+        <div class="large-7 columns disp" ng-show="isSet(c.id)">
+      	  <div class="rank-row">
+            <span><a href="/websites/{{website.id}}">{{website.title}}</a></span>
+            {{ website.ups }}
+            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fi-arrow-up"></i></a>
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>    
+  </div>

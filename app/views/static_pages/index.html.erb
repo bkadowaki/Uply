@@ -6,16 +6,18 @@
 	
 	<!-- JUMBOTRON OPEN -->
 <div ng-controller="LogoCtrl">	
+		<div id="logo-thumb-connect">
+				<div id="balloons">
+					<%= image_tag "upthumb.png" %>
+				</div>
+				<div id="header-bloc">
+					<%= image_tag "uplytxt.png" %>
+				</div>
+		</div>
 	<div id="jumbo">
 		<form>
 		  <fieldset>
 		    <legend></legend>
-				<div id="header-bloc">
-					<%= image_tag "uplytxt.png" %>
-				</div>
-				<div id="balloons">
-					<%= image_tag "upthumb.png" %>
-				</div>
 		    <label>Find the Internet's best based on what others think...
 		      <input type="text" placeholder="Search" id="input-box">
 		      <div id="search-button"><i class="fi-magnifying-glass large"></i></div>

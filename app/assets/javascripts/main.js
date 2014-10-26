@@ -78,11 +78,31 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
             $scope.categoryListIds = category_ids;
             console.log(category_ids);
         });
+
       
         $scope.predicate = 'score';
         $scope.reverse = true;
 		  	
         $scope.click = 1;
+
+    }]); 
+
+	  app.controller('LogoCtrl', ['$scope', function($scope){
+
+	  			var moveUp = function(){
+	  				$('#balloons').animate({
+	  					top:'-=361px'},4000);
+	  			}
+	  			$(window).load(function(){
+	  				moveUp();
+	  			})
+		  	}
+	  ]);
+
+	  app.controller('RankingsCtrl', ['$scope', '$http', function($scope, $http){
+	  	
+		  	$scope.click = 1;
+
 		  	$scope.setClick = function(currCategory){
 		  		$scope.click = currCategory;
 		  	};

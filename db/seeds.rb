@@ -38,7 +38,27 @@ if Rails.env.development?
         { 
             title: "RealGM",
             url: "http://realgm.com",
-            description: "Badass sports site", 
+            description: "Badass sports site"
+        },        
+        { 
+            title: "Gilt",
+            url: "http://gilt.com",
+            description: "Shopping for female hipsters"
+        },        
+        { 
+            title: "ESPN",
+            url: "http://espn.com",
+            description: "The Wall St Journal of sports"
+        },        
+        { 
+            title: "Webmd",
+            url: "http://webmd.com",
+            description: "Online self-diagnosis"
+        },
+        { 
+            title: "Newegg",
+            url: "http://newegg.com",
+            description: "Online retailer for electronic goods"
         },
         {
             title: "Reddit",

@@ -109,26 +109,32 @@ body {
 	margin-top: -6px;
 }
 
+// MAIN BODY STYLING
 #main-home {
 	min-width: 960px;
   width: 100%;
   max-width: 1200px;
 }
+#logo-thumb-connect {
+	position: absolute;
+	height: 427px;
+	width: 130px;
+	margin-left: 61.2%;
+	margin-top: 123px;
+}
 #header-bloc {
 	height: 100px;
 	width: 100px;
-	position: absolute;
-	margin-left: 35%;
-	margin-top: -75px;
+	padding-top: 50px;
 	z-index: 1;
 }
 #balloons {
 	height: 50px;
 	width: 50px;
-	margin-left: 41.5%;
-	margin-top: 490px;
+	padding-top: 373px;
 	position: absolute;
 	z-index: 0;
+	right: 0;
 }
 h1 {
 	text-align: center;
@@ -264,19 +270,20 @@ h6 {
 	background-color: rgba(200, 200, 200, 0.90);
 	margin-top: -4px;
 	text-align: left;
+	height: 40px;
 }
 .rank-row span {
 	background-color: #666666;
 	display: inline-block;
 	padding-top: 10px;
+	height: 40px;
+	width: 90%;
+	padding-left: 3px;
 }
 .disp {
 	padding-top: 18px;
 }
-.rank-ups {
-	margin-left: -76px;
-	margin-top: -1px;
-}
+
 /* RIGHT BOX STYLING*/
 #right-box {
 	float: right;
@@ -387,22 +394,17 @@ footer p {
 }
 .reg-container {
 	background: url('reg-bg.png') no-repeat;
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
-  // background-size: cover;
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
   width: 100%;
   padding-top: 100px;
+  // -webkit-filter: blur(5px);
 }
 #error_explanation h2 {
 	font-size: .8rem;
 	color: red;
 }
-//   #sentence
-//   #messages
 
 #log-in-btn {
 	margin-top: 10px;
@@ -410,6 +412,7 @@ footer p {
 	color: black;
 	text-align: center;
 	padding-top: 7px;
+  -webkit-filter: blur(0px);
 }
 .flexbox {
 	text-top: -75px;
