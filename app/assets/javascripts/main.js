@@ -112,7 +112,7 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
 
 	  			var moveUp = function(){
 	  				$('#balloons').animate({
-	  					top:'-=361px'},4000);
+	  					top:'-=360px'},4000);
 	  			}
 	  			$(window).load(function(){
 	  				moveUp();
@@ -120,15 +120,15 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
 		  	}
 	  ]);
 
-	  app.controller('LogoCtrl', ['$scope', function($scope){
+	  // app.controller('LogoCtrl', ['$scope', function($scope){
 
-	  			var moveUp = function(){
-	  				$('#balloons').animate({
-	  					top:'-=356px'},4000);
-	  			}
-	  			$(window).load(function(){
-	  				moveUp();
-	  			})
-		  	}
-	  ]);
+	  // 			var moveUp = function(){
+	  // 				$('#balloons').animate({
+	  // 					top:'-=356px'},4000);
+	  // 			}
+	  // 			$(window).load(function(){
+	  // 				moveUp();
+	  // 			})
+		 //  	}
+	  // ]);
 
