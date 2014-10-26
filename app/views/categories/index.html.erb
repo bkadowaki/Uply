@@ -1,29 +1,47 @@
-  <div id="categories-sect">
-	  <div class="large-3 columns">
-		  <dl class="sub-nav">
-			  <dt>CATEGORIES:</dt>
-          <div ng-repeat="c in categoryList">
-          	<div class="row cat-list">
-					  	<dd ng-class="{active:isSet(c.id)}" class="cat-list">
-              	<a ng-click="setClick(c.id)" >{{ c.name }}</a>
-            	</dd>
-          	</div>
-          </div>
-			</dl>
-	  </div>
+<div id="rank-sect" class="element">
+	<h6 class="div-headers">Website Rankings</h6>
+		<!-- SORT OPEN -->
+		<div id="sort-container" class="row">
+			<div class="large-3 columns">
+			</div>
+			<div id="sort-sect" class="large-9 columns">
+				<dl class="sub-nav">
+				  <dt>SORT BY:</dt>
+				  <dd ng-class="{active:isSort(1)}"><a ng-click="setSort(1)">Trending</a></dd>
+
+				  <dd ng-class="{active:isSort(2)}"><a ng-click="setSort(2)">Most Ups</a></dd>			  
+         </dl>
+			</div>
+		</div>
+	<div class="row">
+  		<div id="categories-sect">
+		  <div class="large-3 columns">
+			  <dl class="sub-nav">
+				<dt>CATEGORIES:</dt>
+	          	<div ng-repeat="c in categoryList">
+	          		<div class="row cat-list">
+						<dd ng-class="{active:isSet(c.id)}" class="cat-list">
+	              			<a ng-click="setClick(c.id)" >{{ c.name }}</a>
+	            		</dd>
+	          		</div>
+	          	</div>
+			  </dl>
+		  </div>
+		</div>
+		  <div id="rank-disp-sect">
+		    <div ng-repeat="c in categoryList">
+		      <div ng-if="c.websites.length > 0">
+		      <div ng-repeat="website in c.websites | orderBy:predicate:reverse">
+		        <div class="large-7 columns disp" ng-show="isSet(c.id)">
+		      	  <div class="rank-row"><span><a href="/websites/{{website.id}}">{{website.title}}</a></span></div>
+		      	  <div class="rank-ups">
+		            {{ website.ups }}
+		            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fi-arrow-up medium"></i></a>
+		          </div>
+		        </div>
+		      </div>
+		      </div>
+		    </div>    
+		  </div>
 	</div>
-  <div id="rank-disp-sect">
-    <div ng-repeat="c in categoryList">
-      <div ng-if="c.websites.length > 0">
-      <div ng-repeat="website in c.websites">
-        <div class="large-7 columns disp" ng-show="isSet(c.id)">
-      	  <div class="rank-row"><span><a href="/websites/{{website.id}}">{{website.title}}</a></span></div>
-      	  <div class="rank-ups">
-            {{ website.ups }}
-            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fi-arrow-up medium"></i></a>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>    
-  </div>
+</div>

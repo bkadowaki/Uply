@@ -5,7 +5,7 @@ class Api::CategoriesController < ApplicationController
   #before_action :set_redis
   
   def index
-    @categories = Category.all
+    @categories = Category.all.select{ |c| c.name != "Adult" }
     #categories = get('categories') 
     
     #respond_to do |format|

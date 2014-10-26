@@ -49,6 +49,31 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
             $scope.categoryListIds = category_ids;
             console.log(category_ids);
         });
+        
+        $scope.predicate = 'score';
+        $scope.reverse = true;
+		  	
+        $scope.click = 1;
+		  	$scope.setClick = function(currCategory){
+		  		$scope.click = currCategory;
+		  	};
+		  	$scope.isSet = function(checkedTab){
+		  		return $scope.click === checkedTab;
+		  	};
+
+		  	$scope.sort = 1;
+		  	$scope.setSort = function(currSort){
+          if (currSort == 1){
+            $scope.predicate = 'score';
+          }
+          else if (currSort == 2) {
+            $scope.predicate = 'ups';
+          }
+		  		$scope.sort = currSort;
+		  	};
+		  	$scope.isSort = function(checkedSort){
+		  		return $scope.sort === checkedSort;
+		  	};
     }]); 
 	  
 	  app.controller('LogoCtrl', ['$scope', function($scope){
@@ -63,22 +88,3 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
 		  	}
 	  ]);
 
-	  app.controller('RankingsCtrl', ['$scope', '$http', function($scope, $http){
-	  	
-		  	$scope.click = 1;
-		  	$scope.setClick = function(currCategory){
-		  		$scope.click = currCategory;
-		  	};
-		  	$scope.isSet = function(checkedTab){
-		  		return $scope.click === checkedTab;
-		  	};
-
-		  	$scope.sort = 1;
-		  	$scope.setSort = function(currSort){
-		  		$scope.sort = currSort;
-		  	};
-		  	$scope.isSort = function(checkedSort){
-		  		return $scope.sort === checkedSort;
-		  	};
-	  	}
-	  ]);
