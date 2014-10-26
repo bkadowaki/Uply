@@ -34,13 +34,6 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
 				    	});
 				});
 			}
-			// {
-			// 	$(document).ready(function(){
-			// 		$('#drop-about').hover(function(){
-			// 			$('#aboutvideo').play();
-			// 		})
-			// 	})
-			// }
 
 	  ]);
     
@@ -61,6 +54,16 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
                         controller: 'LogoCtrl'
                     },
                 }
+            })
+
+            .state('website', {
+            	url: '/websites/:id', 
+            	views: {
+            		'websites': {
+            			templateUrl: '/websites/d3',
+            			controller: 'WebsiteCtrl'
+            		},
+            	}
             });
     }]);
     
@@ -73,10 +76,6 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
         var categories = Category.query(function(){
             $scope.categoryList = categories;
             console.log(categories);
-        });
-        var category_ids = Category.query(function(){
-            $scope.categoryListIds = category_ids;
-            console.log(category_ids);
         });
 
       
@@ -120,15 +119,14 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
 		  	}
 	  ]);
 
-	  // app.controller('LogoCtrl', ['$scope', function($scope){
+	  app.factory('Website', function($resource)
+	  		{
+	  			return $resource('/api/website/:id');
+	  		});
 
-	  // 			var moveUp = function(){
-	  // 				$('#balloons').animate({
-	  // 					top:'-=356px'},4000);
-	  // 			}
-	  // 			$(window).load(function(){
-	  // 				moveUp();
-	  // 			})
-		 //  	}
-	  // ]);
+	  app.controller('WebsiteCtrl', ['$scope', function($scope){
+	  		var website = Website.get({}, function(){
+
+	  		})
+	  }]);
 
