@@ -41,9 +41,10 @@ body {
 }
 #nav-brand {
 	padding-left: 5px;
+	margin-right: 5px;
 	font-family: 'Josefin Sans', sans-serif;
 }
-#my-profile {
+.my-profile {
 	margin-left: 5px;
 }
 .fi-list {
@@ -52,6 +53,62 @@ body {
 .top-bar-section li:not(.has-form) a:not(.button) {
 	background-color: #33CC00;
 }
+#my-drop {
+	width: 300px;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+.drop-link {
+	position: absolute;
+	z-index: 1;
+	background-color: transparent !important;
+	text-align: center;
+	margin-top: 50px;
+	font-size: 30px !important;
+	margin-left: 17px;
+}
+.drop-lis {
+	display: inline-block;
+	height: 100%;
+	width: 300px;
+}
+#signinvideo {
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	height: 150px;
+	margin-left: 17px;
+}
+#drop-siteindex {
+	width: 300px;
+	height: 100%;
+	padding: 0;
+	margin-top: 150px;
+}
+#siteindexvideo {
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	height: 150px;
+	margin-left: 17px;
+}
+#drop-signout {
+	width: 300px;
+	height: 100%;
+	padding: 0;
+	margin-top: 150px;
+	overflow: hidden !important;
+}
+#signoutvideo {
+	position: absolute;
+	z-index: 0;
+	width: 90%;
+	height: 150px;
+	margin-left: 34px;
+	margin-top: -6px;
+}
+
 #main-home {
 	min-width: 960px;
   width: 100%;
@@ -235,6 +292,19 @@ h6 {
 	border: 1px #646E70 solid;
 	text-align: center;
 	color: #646E70;
+	overflow: hidden;
+}
+#left-spotlight {
+	width: 19%;
+	border: 1px solid black;
+	float: left;
+	height: 100%;
+}
+#right-spotlight {
+	width: 79%;
+	border: 1px solid black;
+	float: right;
+	height: 100%;
 }
 #ad-unit {
 	height: 250px;

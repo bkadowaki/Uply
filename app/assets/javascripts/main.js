@@ -10,9 +10,38 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
 				        if ($('.top-bar').hasClass('expand')) {
 				            $('.top-bar').removeClass('expand');
 				        }
-				    }
+				    };
+				    $('#drop-signin')
+				    	.mouseenter(function(){
+				    		$('#signinvideo').get(0).play();
+				    	})
+				    	.mouseleave(function(){
+				    		$('#signinvideo').get(0).pause();
+				    	});
+				    $('#drop-siteindex')
+				    	.mouseenter(function(){
+				    		$('#siteindexvideo').get(0).play();
+				    	})
+				    	.mouseleave(function(){
+				    		$('#siteindexvideo').get(0).pause();
+				    	});
+				    $('#drop-signout')
+				    	.mouseenter(function(){
+				    		$('#signoutvideo').get(0).play();
+				    	})
+				    	.mouseleave(function(){
+				    		$('#signoutvideo').get(0).pause();
+				    	});
 				});
 			}
+			// {
+			// 	$(document).ready(function(){
+			// 		$('#drop-about').hover(function(){
+			// 			$('#aboutvideo').play();
+			// 		})
+			// 	})
+			// }
+
 	  ]);
     
     app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
@@ -50,7 +79,7 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
             console.log(category_ids);
         });
     }]); 
-	  
+
 	  app.controller('LogoCtrl', ['$scope', function($scope){
 
 	  			var moveUp = function(){
