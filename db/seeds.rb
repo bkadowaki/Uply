@@ -85,7 +85,12 @@ if Rails.env.development?
         {
             category_id: 18,
             website_id: 2
+        },        
+        {
+            category_id: 17,
+            website_id: 3
         }
+
         ]);
 
     User.destroy_all
