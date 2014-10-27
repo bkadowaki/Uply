@@ -1,6 +1,7 @@
 class Website < ActiveRecord::Base
   include ApplicationHelper
   require 'date'
+  require 'metainspector'
   
   validates_uniqueness_of :url
   validates_presence_of :title
@@ -116,6 +117,17 @@ class Website < ActiveRecord::Base
       category_name = self.categorize_website.capitalize
       category = Category.where("name = '#{category_name}'").first
       category.id
+    end
+  end
+  
+  def scrape_favicon
+    if self.checkURL
+      page = MetaInspector.new(self.url)
+      if page.favicon
+        page.favicon
+      else
+        "https://lh3.googleusercontent.com/-T4Hy85789og/UFNUt29AJxI/AAAAAAAA0DI/UzV2M6LgeY0/s288/ui_resources_default_200_percent_default_favicon_new.png"
+      end
     end
   end
 end

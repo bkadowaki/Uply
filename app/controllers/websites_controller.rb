@@ -12,7 +12,7 @@ class WebsitesController < ApplicationController
   def create
     @website = Website.new(website_params)
     
-    @website.favicon       = @website.favicon
+    @website.favicon       = @website.scrape_favicon
     @website.title         = @website.scrape_title unless @website.title.is_a? String
     @website.description   = @website.scrape_description unless @website.description.is_a? String
     @website.category_ids << @website.generate_category unless @website.category_ids.select{ |i| i.class == Fixnum }.count != @website.category_ids.count
@@ -57,6 +57,6 @@ class WebsitesController < ApplicationController
   end
   
   def website_params
-    params.require(:website).permit(:title, :url, :description, category_ids: [])
+    params.require(:website).permit(:title, :url, :description, :favicon, :screenshot, category_ids: [])
   end
 end

@@ -66,6 +66,11 @@ if Rails.env.development?
             description: "Best site ever"
         }
         ]);
+        
+        Website.all.each do |w|
+          w.favicon = w.scrape_favicon
+          w.save
+        end
 
     WebsiteCategory.destroy_all
 
