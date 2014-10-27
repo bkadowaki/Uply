@@ -181,28 +181,33 @@ if Rails.env.development?
 
     Comment.create([
         {
-            text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
+            text: "RealGM gets the most important sports news without all the in-your-face ads like ESPN.",
             website_id: 1,
             user_id: 1
         },
         {
-            text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
+            text: "I live on this site.",
             website_id: 1,
             user_id: 2
         },
         {
-            text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
+            text: "Gilt has the cutest dresses!",
             website_id: 2,
             user_id: 3
         },
         {
-            text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
+            text: "I definitely use the site, but their customer service can use some improvement.",
             website_id: 2,
             user_id: 2
         },
         {
-            text: "alsd ialsdlifdjaalsidfj laijsdlifjlaisjdlfij lsadijf laijsdlf jsldjfl ajsldijf lsaijf lasjdl",
+            text: "Great designer brand items at a discounted price. Everything is good quality, only downside is you can't try anything on.",
             website_id: 2,
+            user_id: 1
+        },        
+        {
+            text: "Reddit is my internet home. I consume all my news and entertainment here, AND the comments are hilariously witty--unlike YouTube comments which are just 1960's-style racist.",
+            website_id: 6,
             user_id: 1
         },
         ]);

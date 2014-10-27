@@ -7,18 +7,15 @@
 		<div class="row">
 			<div class="large-12 columns web-left-boxes element" id="description">
 				<h6 class="div-headers">Description</h6>
-				<%= @website.description %>
-				<br>
-				<% @website.categories.each do |c| %>
-  			<p><%= c.name %></p>
-				<% end %>
-				<br>
-				<p>
-          <div class="website_<%= @website.id %>_up"> 
-            <%= @website.ups.count %></div><%= link_to up_website_path(@website), method: 'post', remote: true do %>
-            <i class="fi-arrow-up medium"></i>
-          <% end %>
-        </p>
+
+				<div class="web-content-container">
+					<%= @website.description %>
+					<br>
+					<% @website.categories.each do |c| %>
+	  			<p><%= c.name %></p>
+					<% end %>
+					<br>
+				</div>
 			</div>
 		</div>
 
@@ -61,10 +58,18 @@
 	<div class="web-right">
 		<div class="row">
 			<div class="large-12 columns web-right-boxes element" id="ups-box">
-				<div class="website_<%= @website.id %>_up">
-  				<!-- <h6 class="div-headers">Ups</h6> -->
-  				<%= @website.ups.count %>
-				</div>
+
+					<div class="website_<%= @website.id %>_up"> 
+	            <%#= @website.ups.count %>
+	        </div>
+	          <%= link_to up_website_path(@website), method: 'post', remote: true do %>
+	            <i class="fi-arrow-up"></i>
+	          <% end %>
+
+					<div class="website_<%= @website.id %>_up">
+	  				<%= @website.ups.count %>
+
+					</div>
 			</div>
 		</div>
 

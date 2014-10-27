@@ -63,14 +63,17 @@
 			<!-- WEBSITE SPOTLIGHT OPEN -->
 			<div class="row">
 				<div id="website-spotlight" class="large-12 columns element">
-					<h6 class="div-headers">Site Spotlight | Most Talked about Site</h6>
-            {{ websiteHighestComScore.title }}<br>
-            {{ websiteHighestComScore.url }}<br>
-            <hr>
-            Comments: 
-            <div ng-repeat="c in websiteHighestComScore.comments">
-              {{ c.text }}
-            </div>
+					<h6 class="div-headers">What Others are Saying About...</h6>
+            <div id="spotlight-url">{{websiteHighestComScore.ups}}<i class="fi-arrow-up"></i> {{ websiteHighestComScore.title }} |
+            {{ websiteHighestComScore.url }}</div>
+            <hr id="hr1">
+
+            <div id="spot-comments-header">COMMENTS:</div>
+            	<div id="comments-container">
+		            <div ng-repeat="c in websiteHighestComScore.comments">
+		              <div>"{{ c.commentsText}}"<br>-{{c.commentsUser}}</div><br>
+		          	</div>
+		          </div>
 				</div>
 			</div>
 			<!-- WEBSITE SPOTLIGHT CLOSE -->
