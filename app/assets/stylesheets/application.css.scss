@@ -207,6 +207,33 @@ h6 {
 	width: 100%;
 }
 
+/* FAV ICON GRID */
+#icon-grid-container {
+	height: 350px;
+	width: 100%;
+	margin-top: -6px;
+	border: 1px solid black;
+	position: relative;
+}
+#icon-grid-inner {
+	// height: 74%;
+	margin-top: 4%;
+	margin-left: 5%;
+	margin-right: 5%;
+	border: 1px solid black;
+	width: 50px;
+	height: 50px;
+}
+#icon-grid-content {
+	height: 40px;
+	width: 40px;
+	border: 1px solid black;
+}
+// .fav-icon-img {
+// 	height: 30px;
+// 	width: 30px;
+// }
+
 /* ELEMENT BOX STYLING */
 #element-boxes {
 	margin-top: 15px;
@@ -214,7 +241,6 @@ h6 {
 	padding-right: 25px;
 	padding-left: 25px;
 }
-
 /* LEFT BOX STYLING */
 #left-box {
 	float: left;
@@ -222,32 +248,6 @@ h6 {
 	color: #646E70;
 	padding: 0;
 }
-#carousel2 {
-	color: #646E70;
-	height: 275px;
-}
-.example-orbit-content {
-	padding-top: 25px !important;
-}
-.slides {
-	height: 208px;
-}
-#slide1 {
-	background-image: url('espn-header.png');
-}
-#slide2 {
-	background-image: url('techcrunch.png');
-}
-#slide3 {
-	background-image: url('gilt.png');
-}
-.slide-rank {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	margin-bottom: -35px;
-}
-
 #sort-container {
 	height: 20px;
 	padding-top: 10px;
@@ -350,12 +350,12 @@ h6 {
 	padding: 10px;
 }
 
-#social-sect {
-	height: 163px;
-	border: 1px #646E70 solid;
-	text-align: center;
-	color: #646E70;
-}
+// #social-sect {
+// 	height: 163px;
+// 	border: 1px #646E70 solid;
+// 	text-align: center;
+// 	color: #646E70;
+// }
 .menu-button {
 	display: inline-block;
 	padding: .5em;
@@ -498,6 +498,9 @@ footer p {
 	color: white;
 	padding-top: 17%;
 }
+#score-num-disp {
+	font-size: 65px;
+}
 #comment-container {
 	height: 100%;
 }
@@ -516,7 +519,8 @@ footer p {
 #user-comments {
 	border: 3px solid white;
 	margin-top: 10px;
-	padding: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 .company-reg-link {
 	margin-top: 10px;

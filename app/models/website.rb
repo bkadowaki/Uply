@@ -1,7 +1,6 @@
 class Website < ActiveRecord::Base
   include ApplicationHelper
   require 'date'
-  require 'metainspector'
   
   validates_uniqueness_of :url
   validates_presence_of :title
