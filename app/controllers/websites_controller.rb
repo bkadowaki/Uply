@@ -12,6 +12,7 @@ class WebsitesController < ApplicationController
   def create
     @website = Website.new(website_params)
     
+    @website.favicon       = @website.favicon
     @website.title         = @website.scrape_title unless @website.title.is_a? String
     @website.description   = @website.scrape_description unless @website.description.is_a? String
     @website.category_ids << @website.generate_category unless @website.category_ids.select{ |i| i.class == Fixnum }.count != @website.category_ids.count

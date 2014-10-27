@@ -25,6 +25,9 @@ describe WebsitesController do
       it 'should save website record' do
         expect(Website.count).to eq(1)
       end
+      it 'should grab the favicon for the website' do
+        expect(Website.first.favicon).to be_truthy
+      end
       it 'should redirect to show page' do
         website = Website.first
         expect(response).to redirect_to website_path(website)
