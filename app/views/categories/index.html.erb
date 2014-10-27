@@ -47,7 +47,7 @@
   		      	  <div class="rank-row">
                   <span><a href="/websites/{{website.id}}">{{website.title}}</a></span>
   		            <span class="website_{{website.id}}_up">{{ website.ups }}</span>
-  		            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fi-arrow-up medium"></i></a>
+  		            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fi-arrow-up"></i></a>
 
                 </div>
   		        </div>
@@ -66,10 +66,9 @@
 					<h6 class="div-headers">What Others are Saying About...</h6>
             <div class="spotlight-url">{{websiteHighestComScore.ups}}<i class="fi-arrow-up"></i> {{ websiteHighestComScore.title }} |
             {{ websiteHighestComScore.url }}</div>
-            {{ websiteHighestComScore.comCount }} people talking about this site<br>
             <hr class="hr1">
 
-            <div class="spot-comments-header">COMMENTS:</div>
+            <div class="spot-comments-header">            {{ websiteHighestComScore.comCount }} COMMENTS:</div>
             	<div class="comments-container">
 		            <div ng-repeat="c in websiteHighestComScore.comments">
 		              <div>"{{ c.commentsText}}"<br>-{{c.commentsUser}}</div><br>
@@ -84,13 +83,11 @@
 				<div id="comment-sect" class="large-12 columns element">
 					<div class="top-comment-top">
 						<h6 class="div-headers">Top Comment</h6>
-	            Website: {{ bestComment.websiteTitle }}<br>
-	            Commenter: {{ bestComment.user }}<br>
-	            {{ bestComment.ups }}ups
+	            {{ bestComment.user }} commented on {{ bestComment.websiteTitle }}:<br>
 					</div>
             <hr class="hr1">
             <div class="top-comments-container">
-            	{{ bestComment.text }}
+            	"{{ bestComment.text }}"<br>{{ bestComment.ups }}<i class="fi-arrow-up"></i>
           	</div>
 				</div>
 			</div>
