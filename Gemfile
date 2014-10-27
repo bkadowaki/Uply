@@ -52,6 +52,9 @@ gem 'angular-rails-templates'
 gem 'angular-ui-router-rails', :git => 'git@github.com:rodeschen/angular-ui-router-rails.git'
 gem 'angularjs-rails'
 gem 'metainspector'
+gem 'imgkit'
+gem 'aws-sdk'
+gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 
 
 group :development, :test do
