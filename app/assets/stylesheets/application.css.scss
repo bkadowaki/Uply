@@ -300,12 +300,12 @@ h6 {
 	text-align: center;
 	color: #646E70;
 }
-#hr1 {
+.hr1 {
 	margin: 0;
 	padding-bottom: 15px;
 }
 
-#spotlight-url {
+.spotlight-url {
 	padding-top: 15px;
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 25px;
@@ -313,29 +313,17 @@ h6 {
 	padding-bottom: 15px;
 	background-color: white;
 }
-#spot-comments-header {
+.spot-comments-header {
 	margin-top: -3px;
 	padding-bottom: 11px;
 }
-#comments-container {
+.comments-container {
 	overflow-y: auto;
 	height: 180px;
 	border: 3px solid white;
 	margin-left: 8px;
 	margin-right: 8px;
 }
-// #left-spotlight {
-// 	width: 19%;
-// 	border: 1px solid black;
-// 	float: left;
-// 	height: 100%;
-// }
-// #right-spotlight {
-// 	width: 79%;
-// 	border: 1px solid black;
-// 	float: right;
-// 	height: 100%;
-// }
 #ad-unit {
 	height: 250px;
 	border: 1px #646E70 solid;
@@ -346,6 +334,19 @@ h6 {
 	text-align: center;
 	color: #646E70;
 }
+.top-comment-top {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 25px;
+	padding-bottom: 15px;
+	background-color: white;
+}
+.top-comments-container {
+	height: 100px;
+	border: 3px solid white;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
 #social-sect {
 	height: 163px;
 	border: 1px #646E70 solid;

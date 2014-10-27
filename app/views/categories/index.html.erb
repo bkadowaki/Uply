@@ -64,12 +64,12 @@
 			<div class="row">
 				<div id="website-spotlight" class="large-12 columns element">
 					<h6 class="div-headers">What Others are Saying About...</h6>
-            <div id="spotlight-url">{{websiteHighestComScore.ups}}<i class="fi-arrow-up"></i> {{ websiteHighestComScore.title }} |
+            <div class="spotlight-url">{{websiteHighestComScore.ups}}<i class="fi-arrow-up"></i> {{ websiteHighestComScore.title }} |
             {{ websiteHighestComScore.url }}</div>
-            <hr id="hr1">
+            <hr class="hr1">
 
-            <div id="spot-comments-header">COMMENTS:</div>
-            	<div id="comments-container">
+            <div class="spot-comments-header">COMMENTS:</div>
+            	<div class="comments-container">
 		            <div ng-repeat="c in websiteHighestComScore.comments">
 		              <div>"{{ c.commentsText}}"<br>-{{c.commentsUser}}</div><br>
 		          	</div>
@@ -78,6 +78,23 @@
 			</div>
 			<!-- WEBSITE SPOTLIGHT CLOSE -->
 
+			<!-- TOP COMMENT OPEN-->
+			<div class="row">
+				<div id="comment-sect" class="large-12 columns element">
+					<div class="top-comment-top">
+						<h6 class="div-headers">Top Comment</h6>
+	            Website: {{ bestComment.websiteTitle }}<br>
+	            Commenter: {{ bestComment.user }}<br>
+	            {{ bestComment.ups }}ups
+					</div>
+            <hr class="hr1">
+            <div class="top-comments-container">
+            	{{ bestComment.text }}
+          	</div>
+				</div>
+			</div>
+			<!-- TOP COMMENT CLOSE -->
+
 			<!-- DISPLAY AD OPEN-->
 			<div class="row">
 				<div id="ad-unit" class="large-12 columns element">
@@ -85,18 +102,6 @@
 				</div>
 			</div>
 			<!-- DISPLAY AD CLOSE -->		
-
-			<!-- TOP COMMENT OPEN-->
-			<div class="row">
-				<div id="comment-sect" class="large-12 columns element">
-					<h6 class="div-headers">Top Comment</h6>
-            Website: {{ bestComment.websiteTitle }}<br>
-            Commenter: {{ bestComment.user }}<br>
-            {{ bestComment.ups }}ups<hr>
-            {{ bestComment.text }}
-				</div>
-			</div>
-			<!-- TOP COMMENT CLOSE -->
 
 			<!-- SOCIAL MEDIA OPEN-->
 			<div class="row">
