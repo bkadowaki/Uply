@@ -6,6 +6,7 @@ class Api::CategoriesController < ApplicationController
   
   def index
     @categories = Category.all.select{ |c| c.name != "Adult" }
+    @websites = Website.all
     #categories = get('categories') 
     
     #respond_to do |format|

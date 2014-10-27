@@ -1,3 +1,14 @@
+	<div id="element-boxes">
+		<!-- LEFT BOX OPEN -->
+		<div id="left-box">
+			<!-- NINJA DIV OPEN -->
+				<div id="ninja">
+
+				</div>
+			<!-- NINJA DIV CLOSE -->
+			<!-- CAROUSEL OPEN -->
+			<div id="carousel2" class="row element">
+			</div>
 <div id="rank-sect" class="element">
 	<h6 class="div-headers">Website Rankings</h6>
 		<!-- SORT OPEN -->
@@ -46,3 +57,60 @@
 		  </div>
 	</div>
 </div>
+</div>
+		<div id="right-box">
+
+			<!-- WEBSITE SPOTLIGHT OPEN -->
+			<div class="row">
+				<div id="website-spotlight" class="large-12 columns element">
+					<h6 class="div-headers">Site Spotlight | Most Talked about Site</h6>
+            {{ websiteHighestComScore.title }}<br>
+            {{ websiteHighestComScore.url }}<br>
+            <hr>
+            Comments: 
+            <div ng-repeat="c in websiteHighestComScore.comments">
+              {{ c.text }}
+            </div>
+				</div>
+			</div>
+			<!-- WEBSITE SPOTLIGHT CLOSE -->
+
+			<!-- DISPLAY AD OPEN-->
+			<div class="row">
+				<div id="ad-unit" class="large-12 columns element">
+					<%= image_tag "fileswap.gif" %>
+				</div>
+			</div>
+			<!-- DISPLAY AD CLOSE -->		
+
+			<!-- TOP COMMENT OPEN-->
+			<div class="row">
+				<div id="comment-sect" class="large-12 columns element">
+					<h6 class="div-headers">Top Comment</h6>
+            Website: {{ bestComment.websiteTitle }}<br>
+            Commenter: {{ bestComment.user }}<br>
+            {{ bestComment.ups }}ups<hr>
+            {{ bestComment.text }}
+				</div>
+			</div>
+			<!-- TOP COMMENT CLOSE -->
+
+			<!-- SOCIAL MEDIA OPEN-->
+			<div class="row">
+				<div id="social-sect" class="large-12 columns element">
+					<h6 class="div-headers">Social Media</h6>
+						<p>Twitter</p>
+				</div>
+			</div>
+			<!-- SOCIAL MEDIA CLOSE -->
+
+
+		</div>
+		<!-- RIGHT BOX CLOSE -->
+	</div>
+	<!-- ELEMENT BOXES CLOSE -->
+<footer>
+      <p id="foot-p">
+      ©2014 UP.LY, Inc. |  TERMS OF USE / PRIVACY POLICY
+      </p>
+</footer>

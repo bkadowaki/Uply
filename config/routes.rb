@@ -5,9 +5,11 @@ Rails.application.routes.draw do
 
   root 'static_pages#index'
   get '/logo', to: 'static_pages#logo'
+  get '/websites/d3', to: 'websites#d3'
   resources :categories, :users
   
   namespace 'api', defaults: { format: 'json' } do
+    get '/websites/comscore', to: 'websites#comscore', defaults: { format: 'json.jbuilder' }
     resources :websites
   end
   
@@ -15,6 +17,10 @@ Rails.application.routes.draw do
     resources :categories
   end
     
+  namespace 'api', defaults: { format: 'json.jbuilder' }  do
+    get 'comments/top', to: 'comments#top'
+  end
+  
   resources :websites do
     resources :comments, only: [:create] do
       member do

@@ -42,7 +42,7 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
             .otherwise('/');
       
         $stateProvider
-            .state('homepage', {
+            .state('main', {
                 url: '/',
                 views: {
                     'categories': {
@@ -53,32 +53,56 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
                         templateUrl: '/logo',
                         controller: 'LogoCtrl'
                     },
+            		    'websites': {
+            			      templateUrl: '/websites/d3',
+            			      controller: 'WebsiteCtrl'
+            		    },
                 }
             })
-
-            .state('website', {
-            	url: '/websites/:id', 
-            	views: {
-            		'websites': {
-            			templateUrl: '/websites/d3',
-            			controller: 'WebsiteCtrl'
-            		},
-            	}
-            });
     }]);
+	 
+     app.factory('Website', function($resource)
+	  		{
+	  			return $resource('/api/websites/:id');
+	  		});
+
+	  app.controller('WebsiteCtrl', ['$scope', '$state', function($scope, $state){
+        
+	  		var website = Website.get({}, function(){
+
+	  		})
+	  }]);
     
     app.factory('Category', function($resource) {
         return $resource('/api/categories/:id');
     });
   
-    app.controller('CategoryCtrl', ['$scope', 'Category', function($scope, Category) {
+    app.controller('CategoryCtrl', ['$scope', '$resource',  'Category', 'Website',  function($scope, $resource, Category, Website) {
 		  	
         var categories = Category.query(function(){
             $scope.categoryList = categories;
             console.log(categories);
         });
-
+        
+        var websites = Website.query(function(){
+            $scope.websiteList = websites;
+            console.log(websites);
+        });
+    
+        var WebsiteComScore = $resource('/api/websites/comscore');
+ 
+        var website_comscore = WebsiteComScore.get(function(){
+            $scope.websiteHighestComScore = website_comscore;
+            console.log(website_comscore);
+        });
+        
+        var CommentScore = $resource('/api/comments/top');
       
+        var comment_score = CommentScore.get(function(){
+            $scope.bestComment = comment_score;
+            console.log(comment_score);
+        });
+
         $scope.predicate = 'score';
         $scope.reverse = true;
 		  	
@@ -119,13 +143,3 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
 		  	}
 	  ]);
 
-	  app.factory('Website', function($resource)
-	  		{
-	  			return $resource('/api/website/:id');
-	  		});
-
-	  app.controller('WebsiteCtrl', ['$scope', function($scope){
-	  		var website = Website.get({}, function(){
-
-	  		})
-	  }]);

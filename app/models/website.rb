@@ -20,12 +20,24 @@ class Website < ActiveRecord::Base
   ### This Gravity/Time Algorithm was adopted from the Hacker News front page algorithm 
   ### https://news.ycombinator.com/
 
-  def score
+  def website_score
     c = DateTime.parse(self.created_at.to_datetime.to_s)
     t = (DateTime.now - c).to_i
     p = self.ups.count
     
     (p-1)/((t+2)**(1.8))
+  end
+
+  ### Determine the score of comments "Most discussed" based on the gravity/time algorithm
+  ### being used for the score of the website, but with a heavier gravity, so that the most
+  ### discussed with change frequently
+  
+  def website_comment_score
+    c = DateTime.parse(self.created_at.to_datetime.to_s)
+    t = (DateTime.now - c).to_i
+    p = self.comments.count
+  
+    (p)/((t+2)**(0.8))
   end
 
   #################################################################

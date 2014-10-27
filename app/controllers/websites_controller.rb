@@ -28,6 +28,10 @@ class WebsitesController < ApplicationController
   end
   
   def edit; end
+ 
+  def d3
+    render layout: false
+  end
   
   def update
     if @website.update_attributes(website_params)
