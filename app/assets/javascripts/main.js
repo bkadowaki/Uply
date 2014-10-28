@@ -46,7 +46,7 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
                 url: '/',
                 views: {
                     'categories': {
-                        templateUrl: '/categories',
+                        templateUrl: '/categories/front',
                         controller: 'CategoryCtrl'
                     },
                     'static_pages': {

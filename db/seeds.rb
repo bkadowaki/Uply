@@ -10,7 +10,7 @@ Category.destroy_all
 
 Category.create(
   [
-    { name: 'Uncategorized' },
+    { name: 'All Sites' },
     { name: 'Adult' },
     { name: 'Arts' },
     { name: 'Business' },
@@ -32,7 +32,11 @@ Category.create(
 
 if Rails.env.development?
 
+    WebsiteCategory.destroy_all
     Website.destroy_all
+    User.destroy_all
+    Up.destroy_all
+    Comment.destroy_all
 
     Website.create([
         { 
@@ -72,8 +76,6 @@ if Rails.env.development?
           w.save
         end
 
-    WebsiteCategory.destroy_all
-
     WebsiteCategory.create([
         {
             category_id: 1,
@@ -97,8 +99,6 @@ if Rails.env.development?
         }
 
         ]);
-
-    User.destroy_all
 
     User.create([
         {
@@ -126,8 +126,6 @@ if Rails.env.development?
             password_confirmation: "password"
         }
         ]); 
-
-    Up.destroy_all
 
     Up.create([
         {
@@ -181,8 +179,6 @@ if Rails.env.development?
             user_id: 1
         },
         ]);
-
-    Comment.destroy_all
 
     Comment.create([
         {

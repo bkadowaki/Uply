@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   root 'static_pages#index'
   get '/logo', to: 'static_pages#logo'
   get '/websites/d3', to: 'websites#d3'
+  get '/categories/front', to: 'categories#front'
+  # post '/websites/:website_id/comments/', to: 'comments#create', as: 'website_comments'
+  # post '/websites/:website_id/comments/:id/ups', to: 'comments#up', as: 'up_website_comment'
+  # post '/websites/:id/up', to: 'websites#up', as: 'up_website'
+  
   resources :categories, :users
   
   namespace 'api', defaults: { format: 'json' } do
@@ -20,7 +25,7 @@ Rails.application.routes.draw do
   namespace 'api', defaults: { format: 'json.jbuilder' }  do
     get 'comments/top', to: 'comments#top'
   end
-  
+
   resources :websites do
     resources :comments, only: [:create] do
       member do
@@ -31,7 +36,8 @@ Rails.application.routes.draw do
       post :up
     end
   end
-
+  
+  # get '*path', to: 'static_pages#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
