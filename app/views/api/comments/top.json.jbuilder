@@ -5,5 +5,5 @@ json.commentScore @comment.comment_score
 json.createdAt @comment.created_at
 json.user @comment.user.first
 json.websiteId @comment.website.id
-json.websiteTitle @comment.website.title
+json.websiteTitle @comment.website.url.gsub("http://","").gsub("https://","")
 

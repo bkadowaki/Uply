@@ -47,7 +47,7 @@
 				  </div>
 				</div>
 			  <div id="rank-disp-sect">
-			    <div ng-repeat="c in categoryList">
+			    <div ng-repeat="c in categoryList" ng-init="predicate = 'websiteScore'">
 			      <div ng-if="c.websites.length > 0">
 	  		      <div ng-repeat="website in c.websites | orderBy:predicate:reverse">
 	  		        <div class="large-8 columns disp" ng-show="isSet(c.id)">
@@ -76,8 +76,8 @@
 					<div class="row">
 						<div id="website-spotlight" class="large-12 columns element">
 							<h6 class="div-headers">What Others are Saying About...</h6>
-		            <div class="spotlight-url">{{websiteHighestComScore.ups}}<i class="fi-arrow-up"></i> {{ websiteHighestComScore.title }} |
-		            {{ websiteHighestComScore.url }}</div>
+		            <div class="spotlight-url">{{websiteHighestComScore.ups}}<i class="fi-arrow-up"></i> 
+		            {{ websiteHighestComScore.url_title }}</div>
 		            <hr class="hr1">
 
 		            <div class="spot-comments-header">            {{ websiteHighestComScore.comCount }} COMMENTS:</div>

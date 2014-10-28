@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/logo', to: 'static_pages#logo'
   get '/websites/d3', to: 'websites#d3'
   get '/categories/front', to: 'categories#front'
+  get '/categories/index_template', to: 'categories#index_template'
   # post '/websites/:website_id/comments/', to: 'comments#create', as: 'website_comments'
   # post '/websites/:website_id/comments/:id/ups', to: 'comments#up', as: 'up_website_comment'
   # post '/websites/:id/up', to: 'websites#up', as: 'up_website'

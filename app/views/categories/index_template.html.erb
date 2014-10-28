@@ -1,0 +1,34 @@
+
+			<div class="row">
+		  		<div id="categories-sect">
+				  <div class="large-3 columns">
+					  <dl class="sub-nav">
+						<dt>CATEGORIES:</dt>
+                  <hr>
+			          	<div ng-repeat="c in categoryList">
+			          		<div class="row cat-list">
+								<dd ng-class="{active:isSet(c.id)}" class="cat-list">
+			              			<a ng-click="setClick(c.id)" >{{ c.name }}</a>
+			            		</dd>
+			          		</div>
+			          	</div>
+					  </dl>
+				  </div>
+				</div>
+			  <div id="rank-disp-sect">
+			    <div ng-repeat="c in categoryList" ng-init="predicate = 'url_title'">
+			      <div ng-if="c.websites.length > 0">
+	  		      <div ng-repeat="website in c.websites | orderBy:predicate">
+	  		        <div class="large-8 columns disp" ng-show="isSet(c.id)">
+	  		      	  <div class="rank-row">
+	                  <span class="web-url"><a href="/websites/{{website.id}}">{{website.url_title}}</a></span>
+										<div class="web-ups">
+		  		            <span class="website_{{website.id}}_up">{{ website.ups }}</span>
+		  		            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fi-arrow-up"></i></a>
+										</div>
+	                </div>
+	  		        </div>
+	  		      </div>
+			      </div>
+			    </div>    
+			  </div>

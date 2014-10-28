@@ -43,7 +43,7 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
       
         $stateProvider
             .state('main', {
-                url: '/',
+                url: '/websites',
                 views: {
                     'categories': {
                         templateUrl: '/categories/front',
@@ -53,10 +53,17 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
                         templateUrl: '/logo',
                         controller: 'LogoCtrl'
                     },
-            		    'websites': {
-            			      templateUrl: '/websites/d3',
-            			      controller: 'WebsiteCtrl'
-            		    },
+                    'categoryIndex': {
+                        templateUrl: '/categories/index_template',
+                        controller: 'CategoryCtrl'
+                    },
+                }
+            })
+            .state('main.website', {
+                url: '/websites/:website_id',
+                templateUrl: '/websites/d3',
+                controller: function($stateParams) {
+                    console.log($stateParams)
                 }
             })
     }]);
@@ -67,7 +74,8 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
 	  		});
 
 	  app.controller('WebsiteCtrl', ['$scope', '$state', function($scope, $state){
-        
+      
+        $state  
 	  		var website = Website.get({}, function(){
 
 	  		})
@@ -103,7 +111,6 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
             console.log(comment_score);
         });
 
-        $scope.predicate = 'score';
         $scope.reverse = true;
 		  	
         $scope.click = 1;
@@ -116,12 +123,16 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
 		  	};
 
 		  	$scope.sort = 1;
+        $scope.predicate;
+
 		  	$scope.setSort = function(currSort){
           if (currSort == 1){
-            $scope.predicate = 'score';
+            $scope.predicate = 'websiteScore';
+            console.log($scope.predicate);
           }
           else if (currSort == 2) {
             $scope.predicate = 'ups';
+            console.log($scope.predicate);
           }
 		  		$scope.sort = currSort;
 		  	};
