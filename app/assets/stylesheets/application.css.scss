@@ -260,6 +260,9 @@ h6 {
 	color: #646E70;
 	padding: 0;
 }
+.cat-row {
+	padding-bottom: 20px;
+}
 #sort-container {
 	height: 20px;
 	padding-top: 10px;
@@ -280,12 +283,18 @@ h6 {
 	margin-left: 25%;
 	height: 100%;
 }
+.fav-rank-disp {
+	height: 19px;
+	width: 19px;
+	margin-left: 12px;
+	margin-right: -12px;
+}
 .rank-row {
 	height: 30px;
 	width: 100%;
 	color: white;
 	background-color: rgba(200, 200, 200, 0.90);
-	margin-top: -4px;
+	margin-top: -13px;
 	text-align: left;
 	height: 40px;
 	border-radius: 5px 20px 5px;
@@ -492,11 +501,18 @@ footer p {
 
 // **NEW VIEW**
 // WEBSITE SHOW STYLING
+.svg-container {
+	color: transparent;
+	text-align: center;
+	border: 1px solid black;
+}
+.svg-element {
+	margin-top: 10px;
+}
 .websites-show-container {
 	width: 100%;
 	padding-left: 100px;
 	padding-right: 100px;
-	margin-top: 225px;
 }
 #website-show-h1 {
 	font-size: 40px;

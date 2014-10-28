@@ -31,7 +31,7 @@
 					</div>
 				</div>
 			<!-- CATEGORIES OPEN -->
-			<div class="row">
+			<div class="row cat-row">
 		  		<div id="categories-sect">
 				  <div class="large-3 columns">
 					  <dl class="sub-nav">
@@ -53,7 +53,10 @@
 	  		      <div ng-repeat="website in c.websites | orderBy:predicate:reverse">
 		  		        <div class="large-8 columns disp" ng-show="isSet(c.id)">
 		  		      	  <div class="rank-row">
-		                  <span class="web-url"><a href="/websites/{{website.id}}">{{website.url}}</a></span>
+		                  <span class="web-url">
+												<img class="fav-rank-disp" src={{website.favicon}}>
+		                  	<a href="/websites/{{website.id}}">{{website.url}}</a></span>
+
 											<div class="web-ups">
 			  		            <span class="website_{{website.id}}_up">{{ website.ups }}</span>
 			  		            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fi-arrow-up"></i></a>
@@ -124,8 +127,6 @@
 					</div> -->
 					<!-- SOCIAL MEDIA CLOSE -->
 
-	<!-- RIGHT BOX CLOSE -->
-
 <a href="#" data-options="align:left" data-dropdown="drop" class="button">Link Dropdown &raquo;</a>
 <ul id="drop" class="[tiny small medium large content]f-dropdown" data-dropdown-content>
   <li><a href="#">This is a link</a></li>
@@ -135,7 +136,8 @@
 
 
 
-
+	<!-- RIGHT BOX CLOSE -->
+	</div>
 </div>
 <!-- ELEMENT BOXES CLOSE -->
 <footer>
