@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :comments
   has_many :ups
+  has_many :websites, through: :ups, source: :upable, source_type: "Website"
 end

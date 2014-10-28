@@ -6,6 +6,7 @@ json.array! @categories do |c|
     json.title w.title
     json.url w.url
     json.url_title w.url.gsub("http://","").gsub("https://","")
+    json.favicon w.favicon
     json.description w.description
     json.created_at w.created_at
     json.ups w.ups.count
