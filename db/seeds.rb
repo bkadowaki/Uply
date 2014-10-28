@@ -36,39 +36,323 @@ if Rails.env.development?
 
     Website.create([
         { 
-            title: "RealGM",
             url: "http://realgm.com",
-            description: "Badass sports site"
         },        
         { 
-            title: "Gilt",
             url: "http://gilt.com",
-            description: "Shopping for female hipsters"
         },        
         { 
-            title: "ESPN",
             url: "http://espn.com",
-            description: "The Wall St Journal of sports"
         },        
         { 
-            title: "Webmd",
             url: "http://webmd.com",
-            description: "Online self-diagnosis"
         },
         { 
-            title: "Newegg",
             url: "http://newegg.com",
-            description: "Online retailer for electronic goods"
         },
         {
-            title: "Reddit",
             url: "http://reddit.com",
-            description: "Best site ever"
+        },        
+        {
+            url: "http://androidcentral.com",
+        },        
+        {
+            url: "http://chacha.com",
+        },        
+        {
+            url: "http://thechive.com",
+        },        
+        {
+            url: "http://nbcsports.com",
+        },        
+        {
+            url: "http://buzzfeed.com",
+        },        
+        {
+            url: "http://urbandictionary.com",
+        },        
+        {
+            url: "http://rollingstone.com",
+        },        
+        {
+            url: "http://rottentomatoes.com",
+        },        
+        {
+            url: "http://tmz.com",
+        },        
+        {
+            url: "http://upworthy.com",
+        },        
+        {
+            url: "http://bleacherreport.com",
+        },        
+        {
+            url: "http://twitch.tv",
+        },        
+        {
+            url: "http://photobucket.com",
+        },        
+        {
+            url: "http://independent.co.uk",
+        },        
+        {
+            url: "http://stackoverflow.com",
+        },        
+        {
+            url: "http://quora.com",
+        },        
+        {
+            url: "http://linkedin.com",
+        },        
+        {
+            url: "http://kickstarter.com",
+        },        
+        {
+            url: "http://macrumors.com",
+        },        
+        {
+            url: "http://yelp.com",
+        },
+        {
+            url: "http://metacafe.com"
+        },
+        {
+            url: "http://pinterest.com"
+        },
+        {
+            url: "http://wikipedia.com"
+        },
+        {
+            url: "http://blogger.com"
+        },
+        {
+            url: "http://about.com"
+        },
+        {
+            url: "http://craigslist.org"
+        },
+        {
+            url: "http://mlb.com"
+        },
+        {
+            url: "http://examiner.com"
+        },
+        {
+            url: "http://slickdeals.com"
+        },
+        {
+            url: "http://tumblr.com"
+        },
+        {
+            url: "http://sbnation.com"
+        },
+        {
+            url: "http://usmagazine.com"
+        },
+        {
+            url: "http://foxnews.com"
+        },
+        {
+            url: "http://drugs.com"
+        },
+        {
+            url: "http://theblaze.com"
+        },
+        {
+            url: "http://legacy.com"
+        },
+        {
+            url: "http://babycenter.com"
+        },
+        {
+            url: "http://goodreads.com"
+        },
+        {
+            url: "http://yellowpages.com"
+        },
+        {
+            url: "http://imdb.com"
+        },
+        {
+            url: "http://uproxx.com"
+        },
+        {
+            url: "http://nytimes.com"
+        },
+        {
+            url: "http://ehow.com"
+        },
+        {
+            url: "http://wsj.com"
+        },
+        {
+            url: "http://eonline.com"
+        },
+        {
+            url: "http://instagram.com"
+        },
+        {
+            url: "http://merriam-webster.com"
+        },
+        {
+            url: "http://glassdoor.com"
+        },
+        {
+            url: "http://gawker.com"
+        },
+        {
+            url: "http://flickr.com"
+        },
+        {
+            url: "http://booking.com"
+        },
+        {
+            url: "http://gizmodo.com"
+        },
+        {
+            url: "http://lifehacker.com"
+        },
+        {
+            url: "http://cbssports.com"
+        },
+        {
+            url: "http://tripadvisor.com"
+        },
+        {
+            url: "http://deadspin.com"
+        },
+        {
+            url: "http://fandango.com"
+        },
+        {
+            url: "http://wetpaint.com"
+        },
+        {
+            url: "http://drudgereport.com"
+        },
+        {
+            url: "http://local.com"
+        },
+        {
+            url: "http://etsy.com"
+        },
+        {
+            url: "http://ranker.com"
+        },
+        {
+            url: "http://topix.com"
+        },
+        {
+            url: "http://nfl.com"
+        },
+        {
+            url: "http://radaronline.com"
+        },
+        {
+            url: "http://theguardian.com"
+        },
+        {
+            url: "http://suggest.com"
+        },
+        {
+            url: "http://forbes.com"
+        },
+        {
+            url: "http://myspace.com"
+        },
+        {
+            url: "http://dailycooking.com"
+        },
+        {
+            url: "http://thekitchn.com"
+        },
+        {
+            url: "http://popsugar.com"
+        },
+        {
+            url: "http://fixya.com"
+        },
+        {
+            url: "http://classmates.com"
+        },
+        {
+            url: "http://foodnetwork.com"
+        },
+        {
+            url: "http://simplyhired.com"
+        },
+        {
+            url: "http://christianpost.com"
+        },
+        {
+            url: "http://fool.com"
+        },
+        {
+            url: "http://choicehotels.com"
+        },
+        {
+            url: "http://dailydot.com"
+        },
+        {
+            url: "http://expedia.com"
+        },
+        {
+            url: "http://abcnews.com"
+        },
+        {
+            url: "http://thinkprogress.org"
+        },
+        {
+            url: "http://mentalfloss.com"
+        },
+        {
+            url: "http://theweek.com"
+        },
+        {
+            url: "http://collegehumor.com"
+        },
+        {
+            url: "http://bossip.com"
+        },
+        {
+            url: "http://britannica.com"
+        },
+        {
+            url: "http://bloomberg.com"
+        },
+        {
+            url: "http://smosh.com"
+        },
+        {
+            url: "http://allrecipes.com"
+        },
+        {
+            url: "http://nhl.com"
+        },
+        {
+            url: "http://wikihow.com"
+        },
+        {
+            url: "http://dummies.com"
+        },
+        {
+            url: "http://seattletimes.com"
+        },
+        {
+            url: "http://peoplefinders.com"
+        },
+        {
+            url: "http://startribune.com"
+        },
+        {
+            url: "http://carmax.com"
         }
         ]);
-        
+
         Website.all.each do |w|
           w.favicon = w.scrape_favicon
+          w.title = w.scrape_title
+          w.description = w.scrape_description
           w.save
         end
 
@@ -90,11 +374,100 @@ if Rails.env.development?
         {
             category_id: 18,
             website_id: 2
+        },         
+        {
+            category_id: 6,
+            website_id: 4
         },        
         {
             category_id: 17,
             website_id: 3
+        },
+        {
+            category_id: 4,
+            website_id: 5
+        },        
+        {
+            category_id: 4,
+            website_id: 7
+        },
+        {
+            category_id: 11,
+            website_id: 8
+        },
+        {
+            category_id: 10,
+            website_id: 9
+        },
+        {
+            category_id: 10,
+            website_id: 10
+        },
+        {
+            category_id: 8,
+            website_id: 11
+        },
+        {
+            category_id: 11,
+            website_id: 12
+        },
+        {
+            category_id: 2,
+            website_id: 13
+        },
+        {
+            category_id: 10,
+            website_id: 14
+        },
+        {
+            category_id: 8,
+            website_id: 15
+        },
+        {
+            category_id: 9,
+            website_id: 16
+        },
+        {
+            category_id: 16,
+            website_id: 17
+        },
+        {
+            category_id: 5,
+            website_id: 18
+        },
+        {
+            category_id: 10,
+            website_id: 19
+        },
+        {
+            category_id: 9,
+            website_id: 20
+        },
+        {
+            category_id: 11,
+            website_id: 21
+        },
+        {
+            category_id: 11,
+            website_id: 22
+        },
+        {
+            category_id: 15,
+            website_id: 23
+        },
+        {
+            category_id: 15,
+            website_id: 24
+        },
+        {
+            category_id: 4,
+            website_id: 25
+        },
+        {
+            category_id: 15,
+            website_id: 26
         }
+
 
         ]);
 

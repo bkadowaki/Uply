@@ -209,30 +209,39 @@ h6 {
 
 /* FAV ICON GRID */
 #icon-grid-container {
-	height: 350px;
+	height: 265px;
 	width: 100%;
-	margin-top: -6px;
-	border: 1px solid black;
-	position: relative;
+	border-bottom: 2px solid #eaeae8;
 }
 #icon-grid-inner {
 	// height: 74%;
-	margin-top: 4%;
+	margin-top: 8%;
 	margin-left: 5%;
 	margin-right: 5%;
-	border: 1px solid black;
-	width: 50px;
-	height: 50px;
 }
 #icon-grid-content {
 	height: 40px;
 	width: 40px;
-	border: 1px solid black;
+	padding: 7px;
+	background-color: #eaeae8;
+	border-radius: 5px;
+	margin: 2px;
+	display: inline-block !important;
 }
-// .fav-icon-img {
-// 	height: 30px;
-// 	width: 30px;
-// }
+.img-container {
+	height: 26px;
+	width: 26px;
+	background-color: white;
+	border-radius: 5px;
+	padding: 4px;
+	cursor: pointer;
+	display: inline-block !important;
+}
+.fav-icon-img {
+	height: 19px;
+	width: 19px;
+	background-color: white;
+}
 
 /* ELEMENT BOX STYLING */
 #element-boxes {
@@ -260,7 +269,7 @@ h6 {
 	margin-top: 5px;
 }
 #rank-disp-sect {
-	font-size: 20px;
+	// font-size: 20px;
 	text-align: center;
 }
 .rank-row {
@@ -272,13 +281,16 @@ h6 {
 	text-align: left;
 	height: 40px;
 }
-.rank-row span {
+.web-url {
 	background-color: #666666;
 	display: inline-block;
 	padding-top: 10px;
 	height: 40px;
 	width: 90%;
 	padding-left: 3px;
+}
+.web-ups {
+	display: inline-block;
 }
 .disp {
 	padding-top: 18px;
