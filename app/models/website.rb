@@ -28,7 +28,9 @@ class Website < ActiveRecord::Base
   scope :created_between, lambda {|start_date, end_date| where("created_at >= ? AND created_at <= ?", start_date, end_date)}
 
   def default_values
-    self.categories << Category.where("name = 'All Sites'")
+    if self.categories.length == 0
+      self.categories << Category.where("name = 'All Sites'")
+    end
   end
 
   ### Determine the score of a website, based off of the 'ups' and amount of time

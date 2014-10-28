@@ -357,7 +357,7 @@ if Rails.env.development?
           w.favicon = w.scrape_favicon
           w.title = w.scrape_title
           w.description = w.scrape_description
-          w.save
+          w.save!
         end
 
     WebsiteCategory.create([
