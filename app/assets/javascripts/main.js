@@ -43,7 +43,7 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
       
         $stateProvider
             .state('main', {
-                url: '/websites',
+                url: '/',
                 views: {
                     'categories': {
                         templateUrl: '/categories/front',
@@ -53,17 +53,10 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
                         templateUrl: '/logo',
                         controller: 'LogoCtrl'
                     },
-                    'categoryIndex': {
-                        templateUrl: '/categories/index_template',
-                        controller: 'CategoryCtrl'
+                    'website': {
+                        templateUrl: '/websites/d3',
+                        controller: 'WebsiteCtrl'
                     },
-                }
-            })
-            .state('main.website', {
-                url: '/websites/:website_id',
-                templateUrl: '/websites/d3',
-                controller: function($stateParams) {
-                    console.log($stateParams)
                 }
             })
     }]);
@@ -73,12 +66,12 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
 	  			return $resource('/api/websites/:id');
 	  		});
 
-	  app.controller('WebsiteCtrl', ['$scope', '$state', function($scope, $state){
+	  app.controller('WebsiteCtrl', ['$scope', 'Website', function($scope, Website){
       
-        $state  
-	  		var website = Website.get({}, function(){
-
-	  		})
+        var website = Website.get({ id:gon.websiteId }, function(){
+            $scope.webShow = website;
+            console.log(website);
+        });
 	  }]);
     
     app.factory('Category', function($resource) {

@@ -5,13 +5,7 @@ class Api::WebsitesController < WebsitesController
   end
   
   def show
-    @website = Website.all 
-    id = params[:id].to_i
-    response = { 'title' => @website.where("id = '#{id }'") }
-    
-    respond_to do |format|
-      format.json { render :json => response }
-    end   
+    @website = Website.find(params[:id]) 
   end
   
   def comscore

@@ -55,6 +55,7 @@ gem 'metainspector'
 gem 'imgkit'
 gem 'aws-sdk'
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
+gem 'gon'
 
 
 group :development, :test do

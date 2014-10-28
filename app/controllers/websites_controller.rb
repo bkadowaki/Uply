@@ -27,6 +27,7 @@ class WebsitesController < ApplicationController
   
   def show
     @comment = Comment.new
+    gon.websiteId = @website.id
   end
   
   def edit; end
