@@ -1,5 +1,10 @@
 <%= render partial: 'layouts/navbar' %>
 
+<div>
+
+</div>
+
+
 <div class="websites-show-container">
 	<h1 id="website-show-h1" class="div-headers"><%= @website.title %></h1>
 	<!-- WEB LEFT OPEN -->
@@ -7,15 +12,15 @@
 		<div class="row">
 			<div class="large-12 columns web-left-boxes element" id="description">
 				<h6 class="div-headers">Description</h6>
-
-				<div class="web-content-container">
-					<%= @website.description %>
-					<br>
-					<% @website.categories.each do |c| %>
-	  			<p><%= c.name %></p>
-					<% end %>
-					<br>
-				</div>
+					<div class="web-content-container">
+						<%= image_tag "realgm.png", :class => "desc-img" %>
+						<%= @website.description %> Get the latest NBA basketball news, scores, stats, standings, forums and more on RealGM.com. Get the latest NBA basketball news, scores, stats, standings, forums and more on RealGM.com. Get the latest NBA basketball news, scores, stats, standings, forums and more on RealGM.com.
+						<br><br>
+						Website Category: <% @website.categories.each do |c| %>
+		  			<p><%= c.name %></p>
+						<% end %>
+						<br>
+					</div>
 			</div>
 		</div>
 
@@ -44,7 +49,7 @@
                     "<%= c.text %>"
                   <br>
 				  				<id="user-name-sig">-<%= c.user.first %>
-                 </p>
+              </p>
 							<% end %>
 						</div>
 					</div>
@@ -73,9 +78,9 @@
 			</div>
 		</div>
 
-		<div class="row">
+<!-- 		<div class="row">
 			<div class="large-12 columns web-right-boxes element">screenshot</div>
-		</div>
+		</div> -->
 
 		<div class="row">
 			<div class="large-12 columns web-right-boxes element">ad</div>

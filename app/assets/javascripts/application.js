@@ -21,3 +21,10 @@
 //= require_tree ../templates
 
 $(function(){ $(document).foundation(); });
+
+// HOVER EFFECT ON FAVICON GRID
+$(document).ready(function(){
+	$('.icon-grid-content').hover(function(){
+		$(this).toggleClass('change-icon');
+	})
+});

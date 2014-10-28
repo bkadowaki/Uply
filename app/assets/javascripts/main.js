@@ -142,4 +142,3 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
 	  			})
 		  	}
 	  ]);
-
