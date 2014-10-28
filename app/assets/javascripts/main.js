@@ -67,6 +67,14 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates'])
                         templateUrl: '/websites/d3',
                         controller: 'WebsiteCtrl'
                     },
+                    'user': {
+                        templateUrl: '/users/d3',
+                        controller: 'UserCtrl'
+                    },
+                    'company': {
+                        templateUrl: '/companies/d3',
+                        controller: 'CompanyCtrl'
+                    },
                 }
             })
     }]);
@@ -91,6 +99,22 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates'])
         var website = Website.get({ id:gon.websiteId }, function(){
             $scope.webShow = website;
             console.log(website);
+        });
+	  }]);
+    
+    app.controller('UserCtrl', ['$scope', 'User', function($scope, User){
+      
+        var user = User.get({ id:gon.userId }, function(){
+            $scope.userShow = user;
+            console.log(user);
+        });
+	  }]);
+    
+    app.controller('CompanyCtrl', ['$scope', 'Company', function($scope, Company){
+      
+        var company = Company.get({ id:gon.companyId }, function(){
+            $scope.companyShow = company;
+            console.log(company);
         });
 	  }]);
     

@@ -33,6 +33,7 @@ Category.create(
 if Rails.env.development?
 
     WebsiteCategory.destroy_all
+    Company.destroy_all
     Website.destroy_all
     User.destroy_all
     Up.destroy_all
@@ -41,39 +42,51 @@ if Rails.env.development?
     Website.create([
         { 
             url: "http://realgm.com",
+            company_id: 1
         },        
         { 
             url: "http://gilt.com",
+            company_id: 2
         },        
         { 
             url: "http://espn.com",
+            company_id: 3
         },        
         { 
             url: "http://webmd.com",
+            company_id: 4
         },
         { 
             url: "http://newegg.com",
+            company_id: 5
         },
         {
             url: "http://reddit.com",
+            company_id: 6
         },        
         {
             url: "http://androidcentral.com",
+            company_id: 7
         },        
         {
             url: "http://chacha.com",
+            company_id: 8
         },        
         {
             url: "http://thechive.com",
+            company_id: 9
         },        
         {
             url: "http://nbcsports.com",
+            company_id: 10
         },        
         {
             url: "http://buzzfeed.com",
+            company_id: 11
         },        
         {
             url: "http://urbandictionary.com",
+            company_id: 12
         },        
         {
             url: "http://rollingstone.com",
@@ -472,6 +485,123 @@ if Rails.env.development?
 
 
         ]);
+      
+    Company.create([
+        { 
+            name: "Real GM",
+            email: "real@gm.com",
+            password: "password",
+            password_confirmation: "password"
+        },        
+        { 
+            name: "Gilt",
+            email: "gilt@gilt.com",
+            password: "password",
+            password_confirmation: "password"
+        },        
+        { 
+            name: "ESPN",
+            email: "espn@espn.com",
+            password: "password",
+            password_confirmation: "password"
+        },        
+        { 
+            name: "webmd",
+            email: "webmd@webmd.com",
+            password: "password",
+            password_confirmation: "password"
+        },
+        { 
+            name: "newegg",
+            email: "new@egg.com",
+            password: "password",
+            password_confirmation: "password"
+        },
+        {
+            name: "reddit",
+            email: "red@dit.com",
+            password: "password",
+            password_confirmation: "password"
+        },        
+        {
+            name: "androidcentral",
+            email: "android@cental.com",
+            password: "password",
+            password_confirmation: "password"
+        },        
+        {
+            name: "chacha",
+            email: "cha@cha.com",
+            password: "password",
+            password_confirmation: "password"
+        },        
+        {
+            name: "thechive",
+            email: "the@chive.com",
+            password: "password",
+            password_confirmation: "password"
+        },        
+        {
+            name: "nbcsports",
+            email: "nbc@sports.com",
+            password: "password",
+            password_confirmation: "password"
+        },        
+        {
+            name: "buzzfeed",
+            email: "buzz@feed.com",
+            password: "password",
+            password_confirmation: "password"
+        },        
+        {
+            name: "urbandictionary",
+            email: "urban@dictionary.com",
+            password: "password",
+            password_confirmation: "password"
+        },        
+        {
+            name: "rollingstone",
+            email: "rollling@stone.com",
+            password: "password",
+            password_confirmation: "password"
+        },        
+        {
+            name: "rottentomatoes",
+            email: "rotten@tomatoes.com",
+            password: "password",
+            password_confirmation: "password"
+        },        
+        {
+            name: "tmz",
+            email: "t@mux.com",
+            password: "password",
+            password_confirmation: "password"
+        },        
+        {
+            name: "upworthy",
+            email: "ru@worthy.com",
+            password: "password",
+            password_confirmation: "password"
+        },        
+        {
+            name: "bleacherreport",
+            email: "andrew@wong.com",
+            password: "password",
+            password_confirmation: "password"
+        },        
+        {
+            name: "twitch.tv",
+            email: "ben@an.com",
+            password: "password",
+            password_confirmation: "password"
+        },        
+        {
+            name: "photobucket",
+            email: "photo@bucket.com",
+            password: "password",
+            password_confirmation: "password"
+        }
+    ]);
 
     User.create([
         {
