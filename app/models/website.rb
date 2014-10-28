@@ -14,7 +14,7 @@ class Website < ActiveRecord::Base
 
   has_attached_file :screenshot, 
                     :styles => {
-                      :medium => "232x",
+                      :medium => "250x",
                       :large => "400x"
                     },
                     :storage => :s3,
