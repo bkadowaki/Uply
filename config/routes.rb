@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # post '/websites/:website_id/comments/:id/ups', to: 'comments#up', as: 'up_website_comment'
   # post '/websites/:id/up', to: 'websites#up', as: 'up_website'
   
-  resources :categories, :users
+  resources :categories, :users, :companies
   
   namespace 'api', defaults: { format: 'json.jbuilder' } do
     get '/websites/comscore', to: 'websites#comscore'

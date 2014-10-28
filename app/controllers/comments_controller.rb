@@ -13,12 +13,32 @@ class CommentsController < ApplicationController
     end
   end
   
-  def up
-    @comment = Comment.find(params[:id])
-    @up      = Up.create(upable: @comment, user_id: current_user.id)
+  # def up
+  #   @comment = Comment.find(params[:id])
+  #   @up      = Up.create(upable: @comment, user_id: current_user.id)
     
-    respond_to do |format|
-      format.js
-    end 
-  end
+  #   respond_to do |format|
+  #     format.js
+  #   end 
+  # end
+
+  # def edit
+  #   @comment = Comment.find(params[:id])
+  # end
+
+  # def update
+  #   @comment = Comment.find(paramd[:id])
+  #   if @comment.update_attributes(params.require(:comment).permit(:text))
+  #   redirect_to websites_path(@website)
+  #   else
+  #     render 'edit'
+  #   end
+  # end
+
+  # def destroy
+  #   @comment = Comment.find(params[:id])
+  #   @comment.destroy
+  #   redirect_to :back
+  # end
+
 end

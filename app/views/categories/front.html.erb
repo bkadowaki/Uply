@@ -1,7 +1,7 @@
 <!-- FAV ICON GRID OPEN -->
 <div id="icon-grid-container">
 	<div id="icon-grid-inner">
-		<div id="icon-grid-content" ng-repeat="w in websiteList">
+		<div class="icon-grid-content" ng-repeat="w in websiteList">
 			<div class="img-container">
 				<img src={{w.favicon}} class="fav-icon-img">
 			</div>
@@ -49,17 +49,19 @@
 			  <div id="rank-disp-sect">
 			    <div ng-repeat="c in categoryList" ng-init="predicate = 'websiteScore'">
 			      <div ng-if="c.websites.length > 0">
+			      	<div class="columns-container">
 	  		      <div ng-repeat="website in c.websites | orderBy:predicate:reverse">
-	  		        <div class="large-8 columns disp" ng-show="isSet(c.id)">
-	  		      	  <div class="rank-row">
-	                  <span class="web-url"><a href="/websites/{{website.id}}">{{website.url}}</a></span>
-										<div class="web-ups">
-		  		            <span class="website_{{website.id}}_up">{{ website.ups }}</span>
-		  		            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fi-arrow-up"></i></a>
-										</div>
-	                </div>
-	  		        </div>
+		  		        <div class="large-8 columns disp" ng-show="isSet(c.id)">
+		  		      	  <div class="rank-row">
+		                  <span class="web-url"><a href="/websites/{{website.id}}">{{website.url}}</a></span>
+											<div class="web-ups">
+			  		            <span class="website_{{website.id}}_up">{{ website.ups }}</span>
+			  		            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fi-arrow-up"></i></a>
+			  		          </div>
+		                </div>
+		  		        </div>
 	  		      </div>
+	  		    </div>
 			      </div>
 			    </div>    
 			  </div>
@@ -122,9 +124,18 @@
 					</div> -->
 					<!-- SOCIAL MEDIA CLOSE -->
 
-
-	</div>
 	<!-- RIGHT BOX CLOSE -->
+
+<a href="#" data-options="align:left" data-dropdown="drop" class="button">Link Dropdown &raquo;</a>
+<ul id="drop" class="[tiny small medium large content]f-dropdown" data-dropdown-content>
+  <li><a href="#">This is a link</a></li>
+  <li><a href="#">This is another</a></li>
+  <li><a href="#">Yet another</a></li>
+</ul>
+
+
+
+
 </div>
 <!-- ELEMENT BOXES CLOSE -->
 <footer>

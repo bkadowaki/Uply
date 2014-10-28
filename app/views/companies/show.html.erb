@@ -1,0 +1,27 @@
+<%= render partial: 'layouts/navbar' %>
+
+<!-- COMPANY SHOW OPEN -->
+<div class="user-cover">
+	<div class="user-cover-top">
+		<%#= video_tag('balloonsvid.mp4', id: 'videobcg', autoplay: "true", loop: "true")%>
+		<div id="user-thumb">
+			<%= image_tag "upthumb.png" %>
+		</div>
+		<h1 id="user-first"><%#= current_company.name %>Google</h1>
+		<%= link_to "", edit_company_registration_path, :class => 'fi-widget' %>
+	</div>
+	<div class="user-cover-bottom">
+		<div class="user-links" id="user-left-link">Website Up's</div>
+		<div class="user-links" id="user-right-link">Website Comments</div>
+	</div>
+</div>
+
+<div class="user-show-container">
+
+	<!-- TOP OPEN -->
+	<div class="top-users">
+
+	</div>
+	<!-- TOP CLOSE -->
+</div>
+<!-- COMPANY SHOW CLOSED -->
