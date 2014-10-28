@@ -61,12 +61,22 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
             })
     }]);
 	 
-     app.factory('Website', function($resource)
-	  		{
-	  			return $resource('/api/websites/:id');
-	  		});
+    app.factory('Website', function($resource)
+	  	{
+	  		  return $resource('/api/websites/:id');
+	  	});
 
-	  app.controller('WebsiteCtrl', ['$scope', 'Website', function($scope, Website){
+    app.factory('User', function($resource)
+	  	{
+	  		  return $resource('/api/users/:id');
+	  	});
+    
+    app.factory('Company', function($resource)
+	  	{
+	  		  return $resource('/api/companies/:id');
+	  	});
+	  
+    app.controller('WebsiteCtrl', ['$scope', 'Website', function($scope, Website){
       
         var website = Website.get({ id:gon.websiteId }, function(){
             $scope.webShow = website;

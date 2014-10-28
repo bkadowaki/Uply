@@ -24,6 +24,14 @@ Rails.application.routes.draw do
   end
     
   namespace 'api', defaults: { format: 'json.jbuilder' }  do
+    resources :users, only: [:index, :show]
+  end
+  
+  namespace 'api', defaults: { format: 'json.jbuilder' }  do
+    resources :companies, only: [:index, :show]
+  end
+  
+  namespace 'api', defaults: { format: 'json.jbuilder' }  do
     get 'comments/top', to: 'comments#top'
   end
 
