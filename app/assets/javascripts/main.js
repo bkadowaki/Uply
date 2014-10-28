@@ -1,4 +1,10 @@
-var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates']);
+var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates'])
+
+.run(function($rootScope) {
+    $rootScope.$on('$viewContentLoaded', function () {
+        $(document).foundation();
+    });
+});
 
 	  app.controller('NavCtrl', ['$scope','$http', function($scope, $http){
 				$(document).on('scroll', function () {
