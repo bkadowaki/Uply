@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20141028003519) do
-=======
-ActiveRecord::Schema.define(version: 20141027234230) do
->>>>>>> 955c4c62a673c21db74a19cf9f001185ade7dc0f
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -94,15 +90,12 @@ ActiveRecord::Schema.define(version: 20141027234230) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "favicon"
-<<<<<<< HEAD
     t.text     "title"
     t.text     "description"
-=======
     t.string   "screenshot_file_name"
     t.string   "screenshot_content_type"
     t.integer  "screenshot_file_size"
     t.datetime "screenshot_updated_at"
->>>>>>> 955c4c62a673c21db74a19cf9f001185ade7dc0f
   end
 
 end
