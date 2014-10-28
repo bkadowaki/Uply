@@ -18,6 +18,7 @@ class WebsitesController < ApplicationController
     @website.category_ids << @website.generate_category unless @website.category_ids.select{ |i| i.class == Fixnum }.count != @website.category_ids.count
      
     if @website.save
+      @website.generate_screenshot
       redirect_to website_path(@website)
     else
       render :new

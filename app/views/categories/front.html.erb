@@ -1,0 +1,134 @@
+<!-- FAV ICON GRID OPEN -->
+<div id="icon-grid-container">
+	<div id="icon-grid-inner">
+		<div id="icon-grid-content" ng-repeat="w in websiteList">
+			<div class="img-container">
+				<img src={{w.favicon}} class="fav-icon-img">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- FAV ICON GRID CLOSE -->
+
+<div id="element-boxes">
+	<!-- LEFT BOX OPEN -->
+	<div id="left-box">
+		
+		<!-- RANKING CONTAINER OPEN -->
+		<div id="rank-sect" class="element">
+			<h6 class="div-headers">Website Rankings</h6>
+				<!-- SORT OPEN -->
+				<div id="sort-container" class="row">
+					<div class="large-3 columns">
+					</div>
+					<div id="sort-sect" class="large-9 columns">
+						<dl class="sub-nav">
+						  <dt>SORT BY:</dt>
+						  <dd ng-class="{active:isSort(1)}"><a ng-click="setSort(1)">Trending</a></dd>
+
+						  <dd ng-class="{active:isSort(2)}"><a ng-click="setSort(2)">Most Ups</a></dd>			  
+		         </dl>
+					</div>
+				</div>
+			<!-- CATEGORIES OPEN -->
+			<div class="row">
+		  		<div id="categories-sect">
+				  <div class="large-3 columns">
+					  <dl class="sub-nav">
+						<dt>CATEGORIES:</dt>
+			          	<div ng-repeat="c in categoryList">
+			          		<div class="row cat-list">
+								<dd ng-class="{active:isSet(c.id)}" class="cat-list">
+			              			<a ng-click="setClick(c.id)" >{{ c.name }}</a>
+			            		</dd>
+			          		</div>
+			          	</div>
+					  </dl>
+				  </div>
+				</div>
+			  <div id="rank-disp-sect">
+			    <div ng-repeat="c in categoryList">
+			      <div ng-if="c.websites.length > 0">
+	  		      <div ng-repeat="website in c.websites | orderBy:predicate:reverse">
+	  		        <div class="large-8 columns disp" ng-show="isSet(c.id)">
+	  		      	  <div class="rank-row">
+	                  <span class="web-url"><a href="/websites/{{website.id}}">{{website.url}}</a></span>
+										<div class="web-ups">
+		  		            <span class="website_{{website.id}}_up">{{ website.ups }}</span>
+		  		            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fi-arrow-up"></i></a>
+										</div>
+	                </div>
+	  		        </div>
+	  		      </div>
+			      </div>
+			    </div>    
+			  </div>
+			</div>
+			<!-- CATEGORIES CLOSE -->
+		</div>
+		<!-- RANKING CONTAINER CLOSE -->
+	</div>
+	<!-- LEFT BOX CLOSE -->
+	<!-- RIGHT BOX OPEN -->
+	<div id="right-box">
+
+					<!-- WEBSITE SPOTLIGHT OPEN -->
+					<div class="row">
+						<div id="website-spotlight" class="large-12 columns element">
+							<h6 class="div-headers">What Others are Saying About...</h6>
+		            <div class="spotlight-url">{{websiteHighestComScore.ups}}<i class="fi-arrow-up"></i> {{ websiteHighestComScore.title }} |
+		            {{ websiteHighestComScore.url }}</div>
+		            <hr class="hr1">
+
+		            <div class="spot-comments-header">            {{ websiteHighestComScore.comCount }} COMMENTS:</div>
+		            	<div class="comments-container">
+				            <div ng-repeat="c in websiteHighestComScore.comments">
+				              <div>"{{ c.commentsText}}"<br>-{{c.commentsUser}}</div><br>
+				          	</div>
+				          </div>
+						</div>
+					</div>
+					<!-- WEBSITE SPOTLIGHT CLOSE -->
+
+					<!-- TOP COMMENT OPEN-->
+					<div class="row">
+						<div id="comment-sect" class="large-12 columns element">
+							<div class="top-comment-top">
+								<h6 class="div-headers">Top Comment</h6>
+			            {{ bestComment.user }} commented on {{ bestComment.websiteTitle }}:<br>
+							</div>
+		            <hr class="hr1">
+		            <div class="top-comments-container">
+		            	"{{ bestComment.text }}"<br>{{ bestComment.ups }}<i class="fi-arrow-up"></i>
+		          	</div>
+						</div>
+					</div>
+					<!-- TOP COMMENT CLOSE -->
+
+					<!-- DISPLAY AD OPEN-->
+					<div class="row">
+						<div id="ad-unit" class="large-12 columns element">
+							<%= image_tag "fileswap.gif" %>
+						</div>
+					</div>
+					<!-- DISPLAY AD CLOSE -->		
+
+					<!-- SOCIAL MEDIA OPEN-->
+<!-- 					<div class="row">
+						<div id="social-sect" class="large-12 columns element">
+							<h6 class="div-headers">Social Media</h6>
+								<p>Twitter</p>
+						</div>
+					</div> -->
+					<!-- SOCIAL MEDIA CLOSE -->
+
+
+	</div>
+	<!-- RIGHT BOX CLOSE -->
+</div>
+<!-- ELEMENT BOXES CLOSE -->
+<footer>
+      <p id="foot-p">
+      ©2014 UP.LY, Inc. |  TERMS OF USE / PRIVACY POLICY
+      </p>
+</footer>
