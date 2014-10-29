@@ -1,0 +1,10 @@
+<div class="search-results-container">
+	<div class="search-results-inner">
+			<% @results.each do |i| %>
+					<ul>
+						<h4><%= i.title %></h4>
+						<li class="search-lis"><%= link_to i.url, website_path(i) %></li>
+					</ul>
+			<% end %>
+	</div>
+</div>

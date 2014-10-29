@@ -52,6 +52,14 @@ class WebsitesController < ApplicationController
     end 
   end
    
+  def search
+    # "I" is for ignoring uppercase and lower case difference.
+    # LIKE = looking for the stuff that is closest to the keyword
+    # "%# contentgoeshere %" = prevents direct injection of the words typed in the search box into our database (postgreSQL specific)
+    @results = Website.where("url ILIKE ?", "%#{params[:keyword]}%")
+  end
+
+
   private
   
   def set_website
