@@ -13,14 +13,14 @@ class CommentsController < ApplicationController
     end
   end
   
-  # def up
-  #   @comment = Comment.find(params[:id])
-  #   @up      = Up.create(upable: @comment, user_id: current_user.id)
+  def up
+    @comment = Comment.find(params[:id])
+    @up      = Up.create(upable: @comment, user_id: current_user.id)
     
-  #   respond_to do |format|
-  #     format.js
-  #   end 
-  # end
+    respond_to do |format|
+      format.js
+    end 
+  end
 
   # def edit
   #   @comment = Comment.find(params[:id])
@@ -35,10 +35,14 @@ class CommentsController < ApplicationController
   #   end
   # end
 
-  # def destroy
-  #   @comment = Comment.find(params[:id])
-  #   @comment.destroy
-  #   redirect_to :back
-  # end
+  def destroy
+    @comment = Comment.find(params[:id])
+    if @comment.user_id == current_user
+      @comment.destroy
+      redirect_to :back 
+    else  
+      render 'website/show'
+    end
+   end
 
 end

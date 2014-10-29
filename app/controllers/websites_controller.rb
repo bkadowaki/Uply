@@ -44,6 +44,15 @@ class WebsitesController < ApplicationController
     end
   end
   
+  def destroy
+    if current_company == @website.company
+      @website.destroy
+      redirect_to company_path(current_company)
+    else
+      render 'company/show'
+    end
+  end
+  
   def up
     @up = Up.create(upable: @website, user_id: current_user.id)
     
