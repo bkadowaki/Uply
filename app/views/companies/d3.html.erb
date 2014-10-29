@@ -1,0 +1,11 @@
+{{ companyShow.name }} 
+<br>
+Websites:
+<div ng-repeat="w in companyShow.websites">
+  {{ w.title }}<br>
+  Ups: {{ w.ups }}
+  <div ng-repeat="c in w.comments">
+    {{ c.text }}<br>
+    Ups: {{ c.ups }}
+  </div>
+</div>

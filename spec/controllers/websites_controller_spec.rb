@@ -112,6 +112,30 @@ describe WebsitesController do
     end
   end
   
+  describe 'DELETE destroy' do
+    before do
+      @website = create(:website)
+      set_current_company
+      delete :destroy, id: @website.id
+    end
+    context 'with valid input' do
+      it 'should remove the website from the database' do
+        expect(Website.count).to eq(0)
+      end
+      it 'should redirect to root_path' do
+        expect(response).to redirect_to(company_path(current_company))
+      end
+    end
+    context 'with invalid input' do
+      it 'should not remove the website from the database' do
+        expect(Website.count).to eq(1)
+      end
+      it 'should render show template' do
+        expect(response).to render_template(:show)
+      end
+    end
+  end
+  
   describe 'POST up' do
     before do
       @website = create(:website)

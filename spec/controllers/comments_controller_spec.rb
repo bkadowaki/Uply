@@ -67,4 +67,11 @@ describe CommentsController do
       end
     end
   end
+  
+  describe "DELETE destroy" do
+    context 'with valid inputs' do
+    end
+    context 'with invalid input' do
+    end
+  end
 end

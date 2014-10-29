@@ -22,4 +22,27 @@ class CommentsController < ApplicationController
     end 
   end
 
+  # def edit
+  #   @comment = Comment.find(params[:id])
+  # end
+
+  # def update
+  #   @comment = Comment.find(paramd[:id])
+  #   if @comment.update_attributes(params.require(:comment).permit(:text))
+  #   redirect_to websites_path(@website)
+  #   else
+  #     render 'edit'
+  #   end
+  # end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    if @comment.user_id == current_user
+      @comment.destroy
+      redirect_to :back 
+    else  
+      render 'website/show'
+    end
+   end
+
 end
