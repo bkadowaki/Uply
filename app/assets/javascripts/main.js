@@ -5,7 +5,7 @@ var app = angular.module('uplyApp', ['ui.state', 'ngResource', 'ngAnimate', 'ang
         $(document).foundation();
     });
 });
-
+//comment
 	  app.controller('NavCtrl', ['$scope','$http', function($scope, $http){
 				$(document).on('scroll', function () {
 				    if ($(this).scrollTop() > 50) {
