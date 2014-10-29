@@ -48,6 +48,8 @@ Rails.application.routes.draw do
     end
   end
   
+  get '/search' => 'websites#search', as: :search_route
+  
   # get '*path', to: 'static_pages#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
