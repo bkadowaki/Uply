@@ -9,3 +9,4 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( d3.layout.cloud.js)
 Rails.application.config.assets.precompile += %w( d3.min.js )
+Rails.application.config.assets.precompile += %w( angular-parallax.js )
