@@ -1,4 +1,4 @@
-var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'ngAnimate', 'templates', 'angular-parallax'])
+var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'ngAnimate', 'angular-parallax'])
 
 .run(function($rootScope) {
     $rootScope.$on('$viewContentLoaded', function () {
