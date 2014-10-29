@@ -28,6 +28,7 @@ class WebsitesController < ApplicationController
   def show
     @comment = Comment.new
     gon.websiteId = @website.id
+    gon.wordle = ((@website.title + @website.description)*10).split(" ")
   end
   
   def edit; end

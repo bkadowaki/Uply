@@ -15,7 +15,7 @@
 	<div id="left-box">
 		
 		<!-- RANKING CONTAINER OPEN -->
-		<div id="rank-sect" class="element">
+		<div id="rank-sect" class="element" infinite-scroll="increaseLimit()">
 			<h6 class="div-headers">Website Rankings</h6>
 				<!-- SORT OPEN -->
 				<div id="sort-container" class="row">
@@ -50,7 +50,7 @@
 			    <div ng-repeat="c in categoryList" ng-init="predicate = 'websiteScore'">
 			      <div ng-if="c.websites.length > 0">
 			      	<div class="columns-container">
-	  		      <div ng-repeat="website in c.websites | orderBy:predicate:reverse">
+	  		      <div class="animate-repeat" ng-repeat="website in c.websites | orderBy:predicate:reverse | limitTo:quantity">
 		  		        <div class="large-8 columns disp" ng-show="isSet(c.id)">
 		  		      	  <div class="rank-row">
 		                  <span class="web-url">

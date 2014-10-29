@@ -1,10 +1,15 @@
-
-			<div class="row">
+<%= render partial: 'layouts/navbar' %>
+		<!-- RANKING CONTAINER OPEN -->
+    
+		<div id="rank-sect" class="element" infinite-scroll="increaseLimit()">
+			<h1 class="div-headers">CATEGORY INDEX OF WEBSITES</h1>
+			<!-- CATEGORIES OPEN -->
+			<div class="row cat-row">
 		  		<div id="categories-sect">
 				  <div class="large-3 columns">
 					  <dl class="sub-nav">
 						<dt>CATEGORIES:</dt>
-                  <hr>
+            <hr>
 			          	<div ng-repeat="c in categoryList">
 			          		<div class="row cat-list">
 								<dd ng-class="{active:isSet(c.id)}" class="cat-list">
@@ -16,19 +21,29 @@
 				  </div>
 				</div>
 			  <div id="rank-disp-sect">
+          <input type="text" ng-model="search.url_title" id="input-search" placeholder="Start typing to search">
 			    <div ng-repeat="c in categoryList" ng-init="predicate = 'url_title'">
 			      <div ng-if="c.websites.length > 0">
-	  		      <div ng-repeat="website in c.websites | orderBy:predicate">
-	  		        <div class="large-8 columns disp" ng-show="isSet(c.id)">
-	  		      	  <div class="rank-row">
-	                  <span class="web-url"><a href="/websites/{{website.id}}">{{website.url_title}}</a></span>
-										<div class="web-ups">
-		  		            <span class="website_{{website.id}}_up">{{ website.ups }}</span>
-		  		            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fi-arrow-up"></i></a>
-										</div>
-	                </div>
-	  		        </div>
+			      	<div class="columns-container">
+	  		      <div class="animate-repeat" ng-repeat="website in c.websites | orderBy:predicate | filter:search | limitTo:quantity">
+		  		        <div class="large-8 columns disp" ng-show="isSet(c.id)">
+		  		      	  <div class="rank-row">
+		                  <span class="web-url">
+												<img class="fav-rank-disp" src={{website.favicon}}>
+		                  	<a href="/websites/{{website.id}}">{{website.url_title}}</a></span>
+
+											<div class="web-ups">
+			  		            <span class="website_{{website.id}}_up">{{ website.ups }}</span>
+			  		            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fi-arrow-up"></i></a>
+			  		          </div>
+		                </div>
+		  		        </div>
 	  		      </div>
-			      </div>
+	  		    </div>
+			     </div>
 			    </div>    
 			  </div>
+			</div>
+			<!-- CATEGORIES CLOSE -->
+		</div>
+		<!-- RANKING CONTAINER CLOSE -->

@@ -90,12 +90,12 @@ ActiveRecord::Schema.define(version: 20141028220257) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "favicon"
-    t.text     "title"
-    t.text     "description"
     t.string   "screenshot_file_name"
     t.string   "screenshot_content_type"
     t.integer  "screenshot_file_size"
     t.datetime "screenshot_updated_at"
+    t.text     "title"
+    t.text     "description"
     t.integer  "company_id"
   end
 

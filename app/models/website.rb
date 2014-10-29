@@ -3,7 +3,6 @@ class Website < ActiveRecord::Base
   require 'date'
   before_save :default_values
   
-  validates_presence_of :title
   validates_uniqueness_of :url
   validates :url, format: { with: /\A(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?\Z/ix, message: 'URL needs to be valid'}
   
@@ -76,7 +75,7 @@ class Website < ActiveRecord::Base
       page = mechanize.get(self.url)
       page.title ? page.title : nil
     else
-      nil
+      self.url.gsub('http://', '').gsub('https://', '')
     end
   end
 
@@ -91,10 +90,10 @@ class Website < ActiveRecord::Base
       elsif page.at("head meta[name='Description']")
         page.at("head meta[name='Description']").attributes["content"].value
       else
-        nil
+        "No Description"
       end
     else
-      nil
+      "No Description"
     end
   end
 

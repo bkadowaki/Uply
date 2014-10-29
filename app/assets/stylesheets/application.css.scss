@@ -509,15 +509,18 @@ footer p {
 .svg-container {
 	color: transparent;
 	text-align: center;
+  width: 95%;
+  height: 200px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 2.5%;
+  margin-bottom: 10px;
+  border: 1px solid black;
 }
-.svg-element {
-	margin-top: 10px;
-	margin-bottom: -65px;
-}
+
 .websites-show-container {
-	width: 100%;
-	padding-left: 100px;
-	padding-right: 100px;
+	width: 95%;
+  margin: 0 auto;
 }
 #website-show-h1 {
 	font-size: 40px;
@@ -681,4 +684,34 @@ footer p {
 .search-lis {
 	margin-left: 5px;
 	list-style-type: none;
+}
+
+// CATEGORIES INDEX
+#input-search {
+  width: 63%;
+}
+
+.scroll-pls {
+  height: 600px;
+  overflow: auto;
+}
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  opacity:0;
+  max-height:0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity:1;
+  max-height:40px;
 }
