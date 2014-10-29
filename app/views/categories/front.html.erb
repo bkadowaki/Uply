@@ -1,7 +1,7 @@
 <!-- FAV ICON GRID OPEN -->
 <div id="icon-grid-container">
 	<div id="icon-grid-inner">
-		<div class="icon-grid-content" ng-repeat="w in websiteList">
+		<div class="icon-grid-content" ng-repeat="w in websiteList | limitTo: 104">
 			<div class="img-container">
 				<img src={{w.favicon}} class="fav-icon-img">
 			</div>

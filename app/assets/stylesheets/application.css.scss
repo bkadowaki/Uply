@@ -19,6 +19,9 @@
 
 body {
 	background-color: #FFFFFF;
+	// text-shadow: 0 0.1px 0.1px #fff;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
 }
 /* MAINMAIN CONTAINER */
 #mainmain {
@@ -287,6 +290,7 @@ h6 {
 	width: 95%;
 	margin-left: 25%;
 	height: 100%;
+	// padding-top: 26px;
 }
 .fav-rank-disp {
 	height: 19px;
@@ -541,6 +545,7 @@ footer p {
 }
 #description {
 	height: 100%;
+	padding-bottom: 15px;
 }
 .desc-img {
 	float: right;
@@ -587,6 +592,9 @@ footer p {
 .company-reg-link {
 	margin-top: 10px;
 	text-align: center;
+} 
+.user-name-sig {
+	font-weight: 700;
 }
 
 // **NEW VIEW**
@@ -594,12 +602,12 @@ footer p {
 .user-cover {
 	background-color: white;
 	height: 400px;
-	border: 1px solid black;
+	border: 1px solid white;
 	background-color: transparent;
 	width: 100%;
 }
 .user-cover-top {
-	border: 1px solid black;
+	border: 1px solid rgba(200, 200, 200, 0.85);
 	margin: 40px;
 	height: 60%;
 	position: relative;
@@ -635,16 +643,21 @@ footer p {
 	color: white;
 }
 .user-cover-bottom {
-	border-top: 1px black solid;
+	border-top: 1px rgba(200, 200, 200, 0.85) solid;
 	height: 20%;
-	margin-top: 40px;
+	margin-top: 60px;
 	margin-left: 40px;
 	margin-right: 40px;
+	padding-top: 25px;
 }
 .user-links {
 	display: inline;
 	position: absolute;
-	padding-top: 3.5%;
+	padding-top: 1.5%;
+}
+.user-links a {
+	color: #33CC00;
+	text-decoration: none;
 }
 #user-left-link {
 	margin-left: 30%;
@@ -661,8 +674,27 @@ footer p {
 }
 .top-users {
 	height: 20%;
-	border: 1px solid black;
+	border: 1px solid rgba(200, 200, 200, 0.85);
 	margin-top: 40px;
+	// color: #717171;
+	color: grey;
+	// text-shadow: 0 1px 1px #fff;
+	font-weight: 300;
+	background-color: white;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+// **NEW VIEW**
+// COMPANY SHOW STYLING
+#company-left-link {
+	margin-left: 40%;
+}
+.new-site-link {
+	bottom: 0;
+	position: absolute;
+	text-decoration: none;
+	color: white;
 }
 
 // **NEW VIEW**
@@ -673,13 +705,17 @@ footer p {
   background-size: cover;
   height: 100%;
   width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .search-results-inner {
 	width: 80%;
 	height: 100%;
-	border: 1px solid black;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding-top: 10px;
+	color: black;
 }
 .search-lis {
 	margin-left: 5px;
@@ -715,3 +751,11 @@ footer p {
   opacity:1;
   max-height:40px;
 }
+// **NEW VIEW**
+// CATEGORIES INDEX STYLING
+// .cat-index-container {
+// 	height: 100%;
+// 	width: 95%;
+// 	margin-left: 25%;
+// 	padding-top: 50px;
+// }

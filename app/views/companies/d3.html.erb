@@ -1,11 +1,20 @@
-{{ companyShow.name }} 
-<br>
-Websites:
-<div ng-repeat="w in companyShow.websites">
-  {{ w.title }}<br>
-  Ups: {{ w.ups }}
-  <div ng-repeat="c in w.comments">
-    {{ c.text }}<br>
-    Ups: {{ c.ups }}
-  </div>
-</div>
+	<!-- TOP OPEN -->
+	<div class="top-users">
+		<div class="user-upd-sites-show" ng-show="set === 1">
+			<div ng-repeat="u in companyShow.websites">
+				<div>
+					{{u.ups}}<br>{{u.title}}<br>
+					<div ng-repeat="c in u.comments">
+						{{c.text}}<br>{{c.ups}}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="user-comments-show" ng-show="set === 2">
+			<div ng-repeat="c in userShow.comments">
+				{{c.text}}<br>{{c.ups}}<br>{{c.website}}<br>
+			</div>
+		</div>
+	</div>
+	<!-- TOP CLOSE -->

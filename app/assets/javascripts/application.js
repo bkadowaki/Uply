@@ -24,8 +24,8 @@
 $(function(){ $(document).foundation(); });
 
 // HOVER EFFECT ON FAVICON GRID
-$(document).ready(function(){
-	$('.icon-grid-content').hover(function(){
-		$(this).toggleClass('change-icon');
-	})
-});
+// $(document).ready(function(){
+// 	$('.icon-grid-content').hover(function(){
+// 		$(this).toggleClass('change-icon');
+// 	})
+// });
