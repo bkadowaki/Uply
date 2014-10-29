@@ -49,13 +49,15 @@ gem 'json'
 gem 'redis'
 gem 'redis-namespace'
 gem 'angular-rails-templates'
-gem 'angular-ui-router-rails', :git => 'git@github.com:rodeschen/angular-ui-router-rails.git'
+gem 'angular-ui-router-rails', :github => 'rodeschen/angular-ui-router-rails'
 gem 'angularjs-rails'
 gem 'metainspector'
 gem 'imgkit'
 gem 'aws-sdk'
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'gon'
+gem 'thin'
+gem 'rails_12factor', group: :production
 
 
 group :development, :test do

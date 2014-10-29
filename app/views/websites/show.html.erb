@@ -16,7 +16,7 @@
 			<div class="large-12 columns web-left-boxes element" id="description">
 				<h6 class="div-headers">Description</h6>
 					<div class="web-content-container">
-						<%= image_tag "realgm.png", :class => "desc-img" %>
+						<%= image_tag @website.screenshot.url(:large), :class => "desc-img" %>
 						<%= @website.description %>
 						<br><br>
 						Website Category: <% @website.categories.each do |c| %>
