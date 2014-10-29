@@ -56,6 +56,7 @@ gem 'imgkit'
 gem 'aws-sdk'
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'gon'
+gem 'thin'
 
 
 group :development, :test do
