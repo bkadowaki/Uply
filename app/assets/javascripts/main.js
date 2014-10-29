@@ -144,6 +144,9 @@ var app = angular.module('uplyApp', ['ui.compat', 'ngResource', 'templates'])
             $scope.userShow = user;
             console.log(user);
         });
+
+        
+        
 	  }]);
     
     app.controller('CompanyCtrl', ['$scope', 'Company', function($scope, Company){

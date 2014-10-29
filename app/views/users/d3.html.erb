@@ -1,3 +1,18 @@
-{{ userShow.first }}
-<br>
-{{ userShow.upd }}
+	<!-- TOP OPEN -->
+	<div class="top-users">
+		<div class="user-upd-sites-show" ng-show="set === 1">
+			<div ng-repeat="u in userShow.upd" ng-show="set === 1">
+				<div class="web-url">
+					{{u.url_title}}<br><br>
+					{{u.ups}}
+				</div>
+			</div>
+		</div>
+
+		<div class="user-comments-show" ng-show="set === 2">
+			<div ng-repeat="c in userShow.comments">
+				{{c.text}}<br>{{c.ups}}<br>{{c.website}}<br>
+			</div>
+		</div>
+	</div>
+	<!-- TOP CLOSE -->
