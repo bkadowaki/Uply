@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/rodeschen/angular-ui-router-rails.git
+  revision: b40db42b97d0dddc9a722ce665012a6c0e8b53ad
+  specs:
+    angular-ui-router-rails (0.0.3)
+
+GIT
   remote: git://github.com/thoughtbot/paperclip.git
   revision: 17cae0e7956e4c78891875ede83f1c4f173bc9ce
   specs:
@@ -7,12 +13,6 @@ GIT
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
-
-GIT
-  remote: git@github.com:rodeschen/angular-ui-router-rails.git
-  revision: b40db42b97d0dddc9a722ce665012a6c0e8b53ad
-  specs:
-    angular-ui-router-rails (0.0.3)
 
 GEM
   remote: https://rubygems.org/
