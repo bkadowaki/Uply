@@ -1,5 +1,8 @@
 class WebsitesController < ApplicationController
   before_action :set_website, only:[:show, :edit, :update, :up]
+  before_action :require_company_owner, only:[:edit, :update, :destroy]
+  before_action :authenticate_company!, only:[:new, :create]
+  before_action :authenticate_user!, only:[:up]
 
   def index
     @websites = Website.all

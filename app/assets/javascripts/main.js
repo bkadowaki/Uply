@@ -1,12 +1,12 @@
-var app = angular.module('uplyApp', ['ui.state', 'ngResource', 'ngAnimate', 'angular-parallax'])
+var app = angular.module('uplyApp', ['ui.state', 'ngResource', 'ngAnimate', 'templates', 'angular-parallax'])
 
 .run(function($rootScope) {
     $rootScope.$on('$viewContentLoaded', function () {
         $(document).foundation();
     });
 });
-//comment
-	  app.controller('NavCtrl', ['$scope','$http', function($scope, $http){
+	  
+    app.controller('NavCtrl', ['$scope','$http', function($scope, $http){
 				$(document).on('scroll', function () {
 				    if ($(this).scrollTop() > 50) {
 				        if (!$('.top-bar').hasClass('expand')) {
@@ -92,7 +92,7 @@ var app = angular.module('uplyApp', ['ui.state', 'ngResource', 'ngAnimate', 'ang
     app.factory('Company', function($resource)
 	  	{
 	  		  return $resource('/api/companies/:id');
-	  	});
+      });
 	  
     app.controller('WebsiteCtrl', ['$scope', 'Website', function($scope, Website){
         $scope.webShow; 
