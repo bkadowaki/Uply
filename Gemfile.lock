@@ -101,6 +101,8 @@ GEM
       http-cookie (~> 1.0.0)
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
+    font-awesome-rails (4.2.0.0)
+      railties (>= 3.2, < 5.0)
     foundation-icons-sass-rails (3.0.0)
       railties (>= 3.1.1)
       sass-rails (>= 3.1.1)
@@ -265,6 +267,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   factory_girl_rails (~> 4.0)
+  font-awesome-rails
   foundation-icons-sass-rails (~> 3.0.0)
   foundation-rails
   gon

@@ -223,6 +223,12 @@ var app = angular.module('uplyApp', ['ui.state', 'ngResource', 'ngAnimate', 'ang
 		  		return $scope.sort === checkedSort;
 		  	};
 
+        $scope.setIcon = function(website){
+          // isIcon = 0;
+          // $scope.isIcon = 1;
+          website.clicked = true;
+        }
+
     }]); 
 
 	  app.controller('LogoCtrl', ['$scope', function($scope){
