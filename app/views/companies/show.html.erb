@@ -3,23 +3,12 @@
 <!-- COMPANY SHOW OPEN -->
 <div class="user-cover">
 	<div class="user-cover-top">
+    <div class="skin"></div>
 		<%= video_tag('balloonsvid.mp4', id: 'videobcg', autoplay: "true", loop: "true")%>
-		<div id="user-thumb">
-			<%= image_tag "upthumb.png" %>
-		</div>
-		<h1 id="user-first"><%#= current_company.name %></h1>
+			<h1 class="welcome">WELCOME <%= image_tag("upthumb.png", width: "50px", height: "50px") %> <%= current_company.name.upcase %></h1>
 		<%= link_to "", edit_company_registration_path, :class => 'fi-widget' %>
-		<%= link_to "Add Company Website", new_website_path, :class => 'new-site-link' %>
-	</div>
-	<div class="user-cover-bottom">
-
-		<div class="user-links" id="company-left-link"><a ng-click="set = 1">Websites & Details</a></div>
-<!-- 		<div class="user-links" id="user-right-link">Website Comments</div>
-	</div> -->
-</div>
-
-
-
+		<%= link_to "Add Company Website", new_website_path, :class => 'new-site-link button [radius round]' %>
+  </div>
 <div class="user-show-container">
 	
 	<div ui-view="company"></div>

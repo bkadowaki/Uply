@@ -1,18 +1,20 @@
 	<!-- TOP OPEN -->
 	<div class="top-users">
-		<div class="user-upd-sites-show" ng-show="set === 1">
-			<div ng-repeat="u in userShow.upd" ng-show="set === 1">
-				<div class="web-url">
-					{{u.url_title}}<br><br>
-					{{u.ups}}
-				</div>
+    <h5>YOUR UP'd SITES({{userShow.websites_ups_count}}):<h5>
+			<div ng-repeat="w in userShow.upd">
+        <h3 class="user-show-items"><a href="/websites/{{w.id}}">{{w.url_title}}</a></h3>
 			</div>
-		</div>
-
-		<div class="user-comments-show" ng-show="set === 2">
-			<div ng-repeat="c in userShow.comments">
-				{{c.text}}<br>{{c.ups}}<br>{{c.website}}<br>
-			</div>
-		</div>
-	</div>
+  </div>
+	<div class="top-users">
+    <h5>WHAT HAVE YOU BEEN DISCUSSING:<h5>
+      <div ng-repeat="c in userShow.comments">
+        <h3 class="user-show-items"><a href="/websites/{{c.id}}"> - {{c.text}}</a></h3>
+      </div>
+  </div>
+	<div class="top-users">
+    <h5>COMMENTS YOU UP'd({{userShow.comments_ups_count}}):<h5>
+      <div ng-repeat="c in userShow.upd_comments">
+        <h3 class="user-show-items"><a href="/websites/{{c.website_id}}"> - {{c.text}}</a></h3>
+      </div>
+  </div>
 	<!-- TOP CLOSE -->
