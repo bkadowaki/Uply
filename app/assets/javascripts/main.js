@@ -5392,6 +5392,22 @@ function d3_behavior_zoomExtentClamp(x, i, k) {
           website.clicked = true;
         }
 
+        $scope.hoverIn = function(w){
+          this.hoverChange = true;
+        };   
+
+        $scope.hoverOut = function(w){
+          this.hoverChange = false;
+        };   
+
+        $scope.gridHoverOn = function(website){
+          this.gridChange = true;
+        };
+
+        $scope.gridHoverOff = function(website){
+          this.gridChange = false;
+        }; 
+
     }]); 
 
 	  app.controller('LogoCtrl', ['$scope', function($scope){
@@ -5402,7 +5418,13 @@ function d3_behavior_zoomExtentClamp(x, i, k) {
 	  			}
 	  			$(window).load(function(){
 	  				moveUp();
-	  			})
+	  			});
+
+          $(document).ready(function(){
+            $('.up-btn').hover(function(){
+              $(this).toggleClass('new-up-btn');
+            })
+          });
 		  	}
 	  ]);
 app.directive('infiniteScroll', [
