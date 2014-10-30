@@ -5,6 +5,7 @@ var app = angular.module('uplyApp', ['ui.state', 'ngResource', 'ngAnimate', 'tem
         $(document).foundation();
     });
 });
+  //need to precompile
 	  
     app.controller('NavCtrl', ['$scope','$http', function($scope, $http){
 				$(document).on('scroll', function () {
