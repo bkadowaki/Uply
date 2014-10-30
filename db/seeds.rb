@@ -146,7 +146,7 @@ Category.create(
             url: "http://about.com"
         },
         {
-            url: "http://craigslist.org"
+            url: "http://tradingview.com"
         },
         {
             url: "http://mlb.com"
