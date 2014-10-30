@@ -1,20 +1,16 @@
 	<!-- TOP OPEN -->
 	<div class="top-users">
-		<div class="user-upd-sites-show" ng-show="set === 1">
+    <h5>THE HARD CORE FACTS:<h5>
 			<div ng-repeat="u in companyShow.websites">
-				<div>
-					{{u.ups}}<br>{{u.title}}<br>
-					<div ng-repeat="c in u.comments">
-						{{c.text}}<br>{{c.ups}}
-					</div>
-				</div>
+        <div ng-if="u.ups == 0">
+          <h2>{{u.url_title}} has {{u.ups}} people who up'd the site and {{u.people_talking}} people talking about it. The hardcore truth: it only gets better from here.</h2>
+        </div>
+        <div ng-if="u.ups > 0 && u.ups < 10">
+          <h2>{{u.url_title}} has {{u.ups}} people who up'd the site and {{u.people_talking}} people talking about it. Good Work! Getting some exposure.</h2>
+        </div>
+        <div ng-if="u.ups > 10">
+          <h2>{{u.url_title}} has {{u.ups}} people who up'd the site and {{u.people_talking}} people talking about it. Now that's what I call metrics.</h2>
+        </div>
 			</div>
-		</div>
+  </div>
 
-		<div class="user-comments-show" ng-show="set === 2">
-			<div ng-repeat="c in userShow.comments">
-				{{c.text}}<br>{{c.ups}}<br>{{c.website}}<br>
-			</div>
-		</div>
-	</div>
-	<!-- TOP CLOSE -->

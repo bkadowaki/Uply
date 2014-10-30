@@ -39,7 +39,7 @@ Category.create(
     Up.destroy_all
     Comment.destroy_all
 
-    Website.create([
+    websites = Website.create([
         { 
             url: "http://realgm.com",
             company_id: 1
@@ -175,111 +175,111 @@ Category.create(
     WebsiteCategory.create([
         {
             category_id: 1,
-            website_id: 1
+            website_id: websites[0].id
         },
         {
             category_id: 17,
-            website_id: 1
+            website_id: websites[0].id
         },
         {
             category_id: 1,
-            website_id: 2
+            website_id: websites[1].id
         },
         {
             category_id: 18,
-            website_id: 2
+            website_id: websites[1].id
         },         
         {
             category_id: 7,
-            website_id: 4
+            website_id: websites[3].id
         },        
         {
             category_id: 18,
-            website_id: 3
+            website_id: websites[2].id
         },
         {
             category_id: 5,
-            website_id: 5
+            website_id: websites[4].id
         },        
         {
             category_id: 5,
-            website_id: 7
+            website_id: websites[6].id
         },
         {
             category_id: 12,
-            website_id: 8
+            website_id: websites[7].id
         },
         {
             category_id: 11,
-            website_id: 9
+            website_id: websites[8].id
         },
         {
             category_id: 11,
-            website_id: 10
+            website_id: websites[9].id
         },
         {
             category_id: 9,
-            website_id: 11
+            website_id: websites[10].id
         },
         {
             category_id: 12,
-            website_id: 12
+            website_id: websites[11].id
         },
         {
             category_id: 3,
-            website_id: 13
+            website_id: websites[12].id
         },
         {
             category_id: 11,
-            website_id: 14
+            website_id: websites[13].id
         },
         {
             category_id: 9,
-            website_id: 15
+            website_id: websites[14].id
         },
         {
             category_id: 10,
-            website_id: 16
+            website_id: websites[15].id
         },
         {
             category_id: 17,
-            website_id: 17
+            website_id: websites[16].id
         },
         {
             category_id: 6,
-            website_id: 18
+            website_id: websites[17].id
         },
         {
             category_id: 11,
-            website_id: 19
+            website_id: websites[18].id
         },
         {
             category_id: 10,
-            website_id: 20
+            website_id: websites[19].id
         },
         {
             category_id: 12,
-            website_id: 21
+            website_id: websites[20].id
         },
         {
             category_id: 12,
-            website_id: 22
+            website_id: websites[21].id
         },
         {
             category_id: 16,
-            website_id: 23
+            website_id: websites[22].id
         },
         {
             category_id: 16,
-            website_id: 24
+            website_id: websites[23].id
         },
         {
             category_id: 5,
-            website_id: 25
+            website_id: websites[24].id
         },
         {
             category_id: 16,
-            website_id: 26
+            website_id: websites[25].id
         }
 
 
@@ -402,7 +402,7 @@ Category.create(
         }
     ]);
 
-    User.create([
+    users = User.create([
         {
             first: "Cool",
             last: "Guy",
@@ -662,17 +662,17 @@ Category.create(
         {
             upable_id: 2,
             upable_type: "Website",
-            user_id: 8
-        },
-        {
-            upable_id: 3,
-            upable_type: "Website",
             user_id: 1
         },
         {
             upable_id: 3,
             upable_type: "Website",
             user_id: 2
+        },
+        {
+            upable_id: 3,
+            upable_type: "Website",
+            user_id: 3
         },
         {
             upable_id: 3,
@@ -862,7 +862,7 @@ Category.create(
         {
             upable_id: 5,
             upable_type: "Comment",
-            user_id: 3
+            user_id: 1
         },
         {
             upable_id: 6,
@@ -872,22 +872,22 @@ Category.create(
         {
             upable_id: 6,
             upable_type: "Comment",
-            user_id: 6
+            user_id: 1
         },
         {
             upable_id: 7,
             upable_type: "Comment",
-            user_id: 7
+            user_id: 1
         },
         {
             upable_id: 7,
             upable_type: "Comment",
-            user_id: 8
+            user_id: 1
         },
         {
             upable_id: 7,
             upable_type: "Comment",
-            user_id: 6
+            user_id: 1
         },
         ]);
 
@@ -900,17 +900,17 @@ Category.create(
         {
             text: "I live on this site.",
             website_id: 1,
-            user_id: 2
+            user_id: 1
         },
         {
             text: "Gilt has the cutest dresses!",
             website_id: 2,
-            user_id: 3
+            user_id: 1
         },
         {
             text: "I definitely use the site, but their customer service can use some improvement.",
             website_id: 2,
-            user_id: 2
+            user_id: 1
         },
         {
             text: "Great designer brand items at a discounted price. Everything is good quality, only downside is you can't try anything on.",
@@ -923,4 +923,3 @@ Category.create(
             user_id: 1
         },
         ]);
-# end

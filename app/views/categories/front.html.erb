@@ -36,20 +36,19 @@
 			<!-- CATEGORIES OPEN -->
 			<div class="row cat-row">
 		  		<div id="categories-sect">
-					  <div class="large-3 columns">
-						  <dl class="sub-nav">
-							<dt>CATEGORIES:</dt>
-				          	<div ng-repeat="c in categoryList">
-				          		<div class="row cat-list">
-												<dd ng-class="{active:isSet(c.id)}" class="cat-list">
-				              			<a ng-click="setClick(c.id)" >{{ c.name }}</a>
-				            		</dd>
-				          		</div>
-				          	</div>
-						  </dl>
-					  </div>
-					</div>
-				<!-- RANK DIS OPEN -->
+				  <div class="large-3 columns">
+					  <dl class="sub-nav">
+						<dt>CATEGORIES:</dt>
+			          	<div ng-repeat="c in categoryList" ng-if="c.name != 'Adult'">
+			          		<div class="row cat-list">
+								<dd ng-class="{active:isSet(c.id)}" class="cat-list">
+			              			<a ng-click="setClick(c.id)" >{{ c.name }}</a>
+			            		</dd>
+			          		</div>
+			          	</div>
+					  </dl>
+				  </div>
+				</div>
 			  <div id="rank-disp-sect">
 			    <div ng-repeat="c in categoryList" ng-init="predicate = 'websiteScore'">
 			      <div ng-if="c.websites.length > 0">

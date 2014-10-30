@@ -12,9 +12,9 @@
  *
  *= require_tree .
  *= require_self
- //= require foundation_and_overrides
  */
 
+ @import "foundation_and_overrides";
  @import 'foundation-icons';
  @import "font-awesome";
 
@@ -689,16 +689,36 @@ footer p {
 }
 .user-cover-top {
 	border: 1px solid rgba(200, 200, 200, 0.85);
-	margin: 40px;
+  margin: auto;
 	height: 60%;
+  width: 80%;
 	position: relative;
 	overflow: hidden;
 	background-color: transparent;
+  text-align: center;
 }
+
+.skin {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background-color: black;
+  opacity: 0.82;
+}
+
+.welcome {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
 #videobcg {
 	width: 103%;
 	z-index: -200;
 	position: absolute;
+	margin-left: -10px;
+  left: 0;
 	height: 110%;
 	background-size: cover;
 }
@@ -754,16 +774,14 @@ footer p {
 	margin-left: 60%;
 }
 .user-show-container {
-	height: 800px;
 	background-color: rgba(200, 200, 200, 0.85);
-	padding-left: 100px;
-	padding-right: 100px;
-	overflow: auto;
+  padding-bottom: 10px;
 }
 .top-users {
-	height: 20%;
+  width: 80%;
+  margin: auto;
 	border: 1px solid rgba(200, 200, 200, 0.85);
-	margin-top: 40px;
+	margin-top: 20px;
 	// color: #717171;
 	color: grey;
 	// text-shadow: 0 1px 1px #fff;
@@ -773,16 +791,20 @@ footer p {
 	border-radius: 5px;
 }
 
+.user-view {
+  height: 60vh;
+  overflow: auto;
+}
+
 // **NEW VIEW**
 // COMPANY SHOW STYLING
 #company-left-link {
 	margin-left: 40%;
 }
 .new-site-link {
-	bottom: 0;
-	position: absolute;
 	text-decoration: none;
 	color: white;
+  margin: auto;
 }
 
 // **NEW VIEW**
