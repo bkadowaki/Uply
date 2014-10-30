@@ -923,4 +923,3 @@ Category.create(
             user_id: 1
         },
         ]);
-end
