@@ -577,317 +577,317 @@ Category.create(
         {
             upable_id: 1,
             upable_type: "Website",
-            user_id: users[0]
+            user_id: 1
         },
         {
             upable_id: 1,
             upable_type: "Website",
-            user_id: users[1]
+            user_id: 2
         },
         {
             upable_id: 1,
             upable_type: "Website",
-            user_id: users[2]
+            user_id: 3
         },
         {
             upable_id: 1,
             upable_type: "Website",
-            user_id: users[3]
+            user_id: 4
         },
         {
             upable_id: 1,
             upable_type: "Website",
-            user_id: users[4]
+            user_id: 5
         },
         {
             upable_id: 1,
             upable_type: "Website",
-            user_id: users[5]
+            user_id: 6
         },
         {
             upable_id: 1,
             upable_type: "Website",
-            user_id: users[6]
+            user_id: 7
         },
         {
             upable_id: 1,
             upable_type: "Website",
-            user_id: users[7]
+            user_id: 8
         },
         {
             upable_id: 1,
             upable_type: "Website",
-            user_id: users[8]
+            user_id: 9
         },
         {
             upable_id: 1,
             upable_type: "Website",
-            user_id: users[9]
+            user_id: 10
         },
         {
             upable_id: 2,
             upable_type: "Website",
-            user_id: users[0]
+            user_id: 1
         },
         {
             upable_id: 2,
             upable_type: "Website",
-            user_id: users[1]
+            user_id: 2
         },
         {
             upable_id: 2,
             upable_type: "Website",
-            user_id: users[2]
+            user_id: 3
         },
         {
             upable_id: 2,
             upable_type: "Website",
-            user_id: users[3]
+            user_id: 4
         },
         {
             upable_id: 2,
             upable_type: "Website",
-            user_id: users[4]
+            user_id: 5
         },
         {
             upable_id: 2,
             upable_type: "Website",
-            user_id: users[5]
+            user_id: 6
         },
         {
             upable_id: 2,
             upable_type: "Website",
-            user_id: users[6]
+            user_id: 7
         },
         {
             upable_id: 2,
             upable_type: "Website",
-            user_id: users[7]
+            user_id: 1
         },
         {
             upable_id: 3,
             upable_type: "Website",
-            user_id: users[0]
+            user_id: 2
         },
         {
             upable_id: 3,
             upable_type: "Website",
-            user_id: users[1]
+            user_id: 3
         },
         {
             upable_id: 3,
             upable_type: "Website",
-            user_id: users[3]
+            user_id: 4
         },
         {
             upable_id: 3,
             upable_type: "Website",
-            user_id: users[4]
+            user_id: 5
         },
         {
             upable_id: 3,
             upable_type: "Website",
-            user_id: users[5]
+            user_id: 6
         },
         {
             upable_id: 3,
             upable_type: "Website",
-            user_id: users[6]
+            user_id: 7
         },
         {
             upable_id: 4,
             upable_type: "Website",
-            user_id: users[0]
+            user_id: 1
         },
         {
             upable_id: 4,
             upable_type: "Website",
-            user_id: users[1]
+            user_id: 2
         },
         {
             upable_id: 4,
             upable_type: "Website",
-            user_id: users[2]
+            user_id: 3
         },
         {
             upable_id: 4,
             upable_type: "Website",
-            user_id: users[3]
+            user_id: 4
         },
         {
             upable_id: 4,
             upable_type: "Website",
-            user_id: users[4]
+            user_id: 5
         },
         {
             upable_id: 4,
             upable_type: "Website",
-            user_id: users[5]
+            user_id: 6
         },
         {
             upable_id: 5,
             upable_type: "Website",
-            user_id: users[0]
+            user_id: 1
         },
         {
             upable_id: 5,
             upable_type: "Website",
-            user_id: users[1]
+            user_id: 2
         },
         {
             upable_id: 6,
             upable_type: "Website",
-            user_id: users[0]
+            user_id: 1
         },
         {
             upable_id: 6,
             upable_type: "Website",
-            user_id: users[1]
+            user_id: 2
         },
         {
             upable_id: 6,
             upable_type: "Website",
-            user_id: users[2]
+            user_id: 3
         },
         {
             upable_id: 6,
             upable_type: "Website",
-            user_id: users[3]
+            user_id: 4
         },
         {
             upable_id: 6,
             upable_type: "Website",
-            user_id: users[4]
+            user_id: 5
         },
         {
             upable_id: 7,
             upable_type: "Website",
-            user_id: users[0]
+            user_id: 1
         },
         {
             upable_id: 7,
             upable_type: "Website",
-            user_id: users[1]
+            user_id: 2
         },
         {
             upable_id: 7,
             upable_type: "Website",
-            user_id: users[2]
+            user_id: 3
         },
         {
             upable_id: 7,
             upable_type: "Website",
-            user_id: users[3]
+            user_id: 4
         },
         {
             upable_id: 7,
             upable_type: "Website",
-            user_id: users[4]
+            user_id: 5
         },
         {
             upable_id: 8,
             upable_type: "Website",
-            user_id: users[0]
+            user_id: 1
         },
         {
             upable_id: 8,
             upable_type: "Website",
-            user_id: users[1]
+            user_id: 2
         },
         {
             upable_id: 8,
             upable_type: "Website",
-            user_id: users[2]
+            user_id: 3
         },
         {
             upable_id: 8,
             upable_type: "Website",
-            user_id: users[3]
+            user_id: 4
         },
         {
             upable_id: 8,
             upable_type: "Website",
-            user_id: users[4]
+            user_id: 5
         },
         {
             upable_id: 8,
             upable_type: "Website",
-            user_id: users[5]
+            user_id: 6
         },
         {
             upable_id: 8,
             upable_type: "Website",
-            user_id: users[6]
+            user_id: 7
         },
         {
             upable_id: 9,
             upable_type: "Website",
-            user_id: users[0]
+            user_id: 1
         },
         {
             upable_id: 9,
             upable_type: "Website",
-            user_id: users[1]
+            user_id: 2
         },
         {
             upable_id: 9,
             upable_type: "Website",
-            user_id: users[2]
+            user_id: 3
         },
         {
             upable_id: 1,
             upable_type: "Comment",
-            user_id: users[0]
+            user_id: 1
         },
         {
             upable_id: 2,
             upable_type: "Comment",
-            user_id: users[0]
+            user_id: 1
         },
         {
             upable_id: 3,
             upable_type: "Comment",
-            user_id: users[0]
+            user_id: 1
         },
         {
             upable_id: 4,
             upable_type: "Comment",
-            user_id: users[0]
+            user_id: 1
         },
         {
             upable_id: 5,
             upable_type: "Comment",
-            user_id: users[0]
+            user_id: 1
         },
         {
             upable_id: 5,
             upable_type: "Comment",
-            user_id: users[2]
+            user_id: 1
         },
         {
             upable_id: 6,
             upable_type: "Comment",
-            user_id: users[0]
+            user_id: 1
         },
         {
             upable_id: 6,
             upable_type: "Comment",
-            user_id: users[5]
+            user_id: 1
         },
         {
             upable_id: 7,
             upable_type: "Comment",
-            user_id: users[6]
+            user_id: 1
         },
         {
             upable_id: 7,
             upable_type: "Comment",
-            user_id: users[7]
+            user_id: 1
         },
         {
             upable_id: 7,
             upable_type: "Comment",
-            user_id: users[5]
+            user_id: 1
         },
         ]);
 
@@ -895,32 +895,32 @@ Category.create(
         {
             text: "RealGM gets the most important sports news without all the in-your-face ads like ESPN.",
             website_id: 1,
-            user_id: users[0]
+            user_id: 1
         },
         {
             text: "I live on this site.",
             website_id: 1,
-            user_id: users[2]
+            user_id: 1
         },
         {
             text: "Gilt has the cutest dresses!",
             website_id: 2,
-            user_id: users[2]
+            user_id: 1
         },
         {
             text: "I definitely use the site, but their customer service can use some improvement.",
             website_id: 2,
-            user_id: users[1]
+            user_id: 1
         },
         {
             text: "Great designer brand items at a discounted price. Everything is good quality, only downside is you can't try anything on.",
             website_id: 2,
-            user_id: users[0]
+            user_id: 1
         },        
         {
             text: "Reddit is my internet home. I consume all my news and entertainment here, AND the comments are hilariously witty--unlike YouTube comments which are just 1960's-style racist.",
             website_id: 6,
-            user_id: users[0]
+            user_id: 1
         },
         ]);
-# end
+end
