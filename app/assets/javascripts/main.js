@@ -100,6 +100,12 @@ var app = angular.module('uplyApp', ['ui.state', 'ngResource', 'ngAnimate', 'tem
         var website = Website.get({ id:gon.websiteId }, function(){
             $scope.webShow = website;
             console.log(website);
+
+        // $scope.setIcon = function(website){
+        //   // isIcon = 0;
+        //   // $scope.isIcon = 1;
+        //   website.clicked = true;
+        // };
         });
 (function(){if (!Date.now) Date.now = function() {
   return +new Date;
@@ -5392,6 +5398,22 @@ function d3_behavior_zoomExtentClamp(x, i, k) {
           website.clicked = true;
         }
 
+        $scope.hoverIn = function(w){
+          this.hoverChange = true;
+        };   
+
+        $scope.hoverOut = function(w){
+          this.hoverChange = false;
+        };   
+
+        $scope.gridHoverOn = function(website){
+          this.gridChange = true;
+        };
+
+        $scope.gridHoverOff = function(website){
+          this.gridChange = false;
+        }; 
+
     }]); 
 
 	  app.controller('LogoCtrl', ['$scope', function($scope){
@@ -5402,7 +5424,13 @@ function d3_behavior_zoomExtentClamp(x, i, k) {
 	  			}
 	  			$(window).load(function(){
 	  				moveUp();
-	  			})
+	  			});
+
+          $(document).ready(function(){
+            $('.up-btn').hover(function(){
+              $(this).toggleClass('new-up-btn');
+            })
+          });
 		  	}
 	  ]);
 app.directive('infiniteScroll', [
