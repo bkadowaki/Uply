@@ -30,7 +30,7 @@ Category.create(
     { name: 'World' }
   ]);
 
-if Rails.env.development?
+# if Rails.env.development?
 
     WebsiteCategory.destroy_all
     Company.destroy_all
@@ -160,207 +160,6 @@ if Rails.env.development?
         {
             url: "http://tumblr.com"
         },
-        # {
-        #     url: "http://sbnation.com"
-        # },
-        # {
-        #     url: "http://usmagazine.com"
-        # },
-        # {
-        #     url: "http://foxnews.com"
-        # },
-        # {
-        #     url: "http://drugs.com"
-        # },
-        # {
-        #     url: "http://theblaze.com"
-        # },
-        # {
-        #     url: "http://legacy.com"
-        # },
-        # {
-        #     url: "http://babycenter.com"
-        # },
-        # {
-        #     url: "http://goodreads.com"
-        # },
-        # {
-        #     url: "http://yellowpages.com"
-        # },
-        # {
-        #     url: "http://imdb.com"
-        # },
-        # {
-        #     url: "http://uproxx.com"
-        # },
-        # {
-        #     url: "http://nytimes.com"
-        # },
-        # {
-        #     url: "http://ehow.com"
-        # },
-        # {
-        #     url: "http://wsj.com"
-        # },
-        # {
-        #     url: "http://eonline.com"
-        # },
-        # {
-        #     url: "http://instagram.com"
-        # },
-        # {
-        #     url: "http://merriam-webster.com"
-        # },
-        # {
-        #     url: "http://livingsocial.com"
-        # },
-        # {
-        #     url: "http://gawker.com"
-        # },
-        # {
-        #     url: "http://flickr.com"
-        # },
-        # {
-        #     url: "http://booking.com"
-        # },
-        # {
-        #     url: "http://gizmodo.com"
-        # },
-        # {
-        #     url: "http://lifehacker.com"
-        # },
-        # {
-        #     url: "http://cbssports.com"
-        # },
-        # {
-        #     url: "http://tripadvisor.com"
-        # },
-        # {
-        #     url: "http://deadspin.com"
-        # },
-        # {
-        #     url: "http://fandango.com"
-        # },
-        # {
-        #     url: "http://wetpaint.com"
-        # },
-        # {
-        #     url: "http://drudgereport.com"
-        # },
-        # {
-        #     url: "http://local.com"
-        # },
-        # {
-        #     url: "http://etsy.com"
-        # },
-        # {
-        #     url: "http://ranker.com"
-        # },
-        # {
-        #     url: "http://topix.com"
-        # },
-        # {
-        #     url: "http://nfl.com"
-        # },
-        # {
-        #     url: "http://radaronline.com"
-        # },
-        # {
-        #     url: "http://theguardian.com"
-        # },
-        # {
-        #     url: "http://suggest.com"
-        # },
-        # {
-        #     url: "http://forbes.com"
-        # },
-        # {
-        #     url: "http://myspace.com"
-        # },
-        # {
-        #     url: "http://dailycooking.com"
-        # },
-        # {
-        #     url: "http://thekitchn.com"
-        # },
-        # {
-        #     url: "http://popsugar.com"
-        # },
-        # {
-        #     url: "http://fixya.com"
-        # },
-        # {
-        #     url: "http://classmates.com"
-        # },
-        # {
-        #     url: "http://foodnetwork.com"
-        # },
-        # {
-        #     url: "http://simplyhired.com"
-        # },
-        # {
-        #     url: "http://christianpost.com"
-        # },
-        # {
-        #     url: "http://fool.com"
-        # },
-        # {
-        #     url: "http://choicehotels.com"
-        # },
-        # {
-        #     url: "http://dailydot.com"
-        # },
-        # {
-        #     url: "http://expedia.com"
-        # },
-        # {
-        #     url: "http://abcnews.com"
-        # },
-        # {
-        #     url: "http://thinkprogress.org"
-        # },
-        # {
-        #     url: "http://mentalfloss.com"
-        # },
-        # {
-        #     url: "http://theweek.com"
-        # },
-        # {
-        #     url: "http://collegehumor.com"
-        # },
-        # {
-        #     url: "http://bossip.com"
-        # },
-        # {
-        #     url: "http://britannica.com"
-        # },
-        # {
-        #     url: "http://bloomberg.com"
-        # },
-        # {
-        #     url: "http://smosh.com"
-        # },
-        # {
-        #     url: "http://allrecipes.com"
-        # },
-        # {
-        #     url: "http://nhl.com"
-        # },
-        # {
-        #     url: "http://wikihow.com"
-        # },
-        # {
-        #     url: "http://dummies.com"
-        # },
-        # {
-        #     url: "http://seattletimes.com"
-        # },
-        # {
-        #     url: "http://peoplefinders.com"
-        # },
-        # {
-        #     url: "http://startribune.com"
-        # },
         {
             url: "http://carmax.com"
         }
@@ -617,8 +416,8 @@ if Rails.env.development?
             last: "Bryant",
             elite: true,
             email: "Kobe@beast.com",
-            password: "idunkonyou",
-            password_confirmation: "idunkonyou"
+            password: "11111111",
+            password_confirmation: "11111111"
         },
         {
             first: "Bob",
@@ -627,6 +426,150 @@ if Rails.env.development?
             email: "bob@loblaw.com",
             password: "password",
             password_confirmation: "password"
+        },
+        {
+            first: "Lamar",
+            last: "Odom",
+            elite: true,
+            email: "lamar@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Shaq",
+            last: "Oneal",
+            elite: true,
+            email: "shaq@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Dante",
+            last: "Culpepper",
+            elite: true,
+            email: "dante@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Smush",
+            last: "Parker",
+            elite: true,
+            email: "smush@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Steve",
+            last: "Nash",
+            elite: true,
+            email: "steve@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Vince",
+            last: "Carter",
+            elite: true,
+            email: "vince@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Tracy",
+            last: "McGrady",
+            elite: true,
+            email: "tracy@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Nick",
+            last: "Van Exel",
+            elite: true,
+            email: "nick@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Brian",
+            last: "Shaw",
+            elite: true,
+            email: "brian@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Charles",
+            last: "Barkley",
+            elite: true,
+            email: "charles@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Allen",
+            last: "Iverson",
+            elite: true,
+            email: "allen@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Reggie",
+            last: "Miller",
+            elite: true,
+            email: "reggie@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Michael",
+            last: "Jordan",
+            elite: true,
+            email: "michael@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Magic",
+            last: "Johnson",
+            elite: true,
+            email: "magic@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Kevin",
+            last: "Durant",
+            elite: true,
+            email: "kevin@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Chris",
+            last: "Bosh",
+            elite: true,
+            email: "chris@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Lebron",
+            last: "James",
+            elite: true,
+            email: "lebron@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
+        },
+        {
+            first: "Kendrick",
+            last: "Lamar",
+            elite: true,
+            email: "kendrick@beast.com",
+            password: "11111111",
+            password_confirmation: "11111111"
         }
         ]); 
 
@@ -639,12 +582,47 @@ if Rails.env.development?
         {
             upable_id: 1,
             upable_type: "Website",
-            user_id: 1
+            user_id: 2
         },
         {
             upable_id: 1,
             upable_type: "Website",
-            user_id: 2
+            user_id: 3
+        },
+        {
+            upable_id: 1,
+            upable_type: "Website",
+            user_id: 4
+        },
+        {
+            upable_id: 1,
+            upable_type: "Website",
+            user_id: 5
+        },
+        {
+            upable_id: 1,
+            upable_type: "Website",
+            user_id: 6
+        },
+        {
+            upable_id: 1,
+            upable_type: "Website",
+            user_id: 7
+        },
+        {
+            upable_id: 1,
+            upable_type: "Website",
+            user_id: 8
+        },
+        {
+            upable_id: 1,
+            upable_type: "Website",
+            user_id: 9
+        },
+        {
+            upable_id: 1,
+            upable_type: "Website",
+            user_id: 10
         },
         {
             upable_id: 2,
@@ -655,6 +633,206 @@ if Rails.env.development?
             upable_id: 2,
             upable_type: "Website",
             user_id: 2
+        },
+        {
+            upable_id: 2,
+            upable_type: "Website",
+            user_id: 3
+        },
+        {
+            upable_id: 2,
+            upable_type: "Website",
+            user_id: 4
+        },
+        {
+            upable_id: 2,
+            upable_type: "Website",
+            user_id: 5
+        },
+        {
+            upable_id: 2,
+            upable_type: "Website",
+            user_id: 6
+        },
+        {
+            upable_id: 2,
+            upable_type: "Website",
+            user_id: 7
+        },
+        {
+            upable_id: 2,
+            upable_type: "Website",
+            user_id: 8
+        },
+        {
+            upable_id: 3,
+            upable_type: "Website",
+            user_id: 1
+        },
+        {
+            upable_id: 3,
+            upable_type: "Website",
+            user_id: 2
+        },
+        {
+            upable_id: 3,
+            upable_type: "Website",
+            user_id: 4
+        },
+        {
+            upable_id: 3,
+            upable_type: "Website",
+            user_id: 5
+        },
+        {
+            upable_id: 3,
+            upable_type: "Website",
+            user_id: 6
+        },
+        {
+            upable_id: 3,
+            upable_type: "Website",
+            user_id: 7
+        },
+        {
+            upable_id: 4,
+            upable_type: "Website",
+            user_id: 1
+        },
+        {
+            upable_id: 4,
+            upable_type: "Website",
+            user_id: 2
+        },
+        {
+            upable_id: 4,
+            upable_type: "Website",
+            user_id: 3
+        },
+        {
+            upable_id: 4,
+            upable_type: "Website",
+            user_id: 4
+        },
+        {
+            upable_id: 4,
+            upable_type: "Website",
+            user_id: 5
+        },
+        {
+            upable_id: 4,
+            upable_type: "Website",
+            user_id: 6
+        },
+        {
+            upable_id: 5,
+            upable_type: "Website",
+            user_id: 1
+        },
+        {
+            upable_id: 5,
+            upable_type: "Website",
+            user_id: 2
+        },
+        {
+            upable_id: 6,
+            upable_type: "Website",
+            user_id: 1
+        },
+        {
+            upable_id: 6,
+            upable_type: "Website",
+            user_id: 2
+        },
+        {
+            upable_id: 6,
+            upable_type: "Website",
+            user_id: 3
+        },
+        {
+            upable_id: 6,
+            upable_type: "Website",
+            user_id: 4
+        },
+        {
+            upable_id: 6,
+            upable_type: "Website",
+            user_id: 5
+        },
+        {
+            upable_id: 7,
+            upable_type: "Website",
+            user_id: 1
+        },
+        {
+            upable_id: 7,
+            upable_type: "Website",
+            user_id: 2
+        },
+        {
+            upable_id: 7,
+            upable_type: "Website",
+            user_id: 3
+        },
+        {
+            upable_id: 7,
+            upable_type: "Website",
+            user_id: 4
+        },
+        {
+            upable_id: 7,
+            upable_type: "Website",
+            user_id: 5
+        },
+        {
+            upable_id: 8,
+            upable_type: "Website",
+            user_id: 1
+        },
+        {
+            upable_id: 8,
+            upable_type: "Website",
+            user_id: 2
+        },
+        {
+            upable_id: 8,
+            upable_type: "Website",
+            user_id: 3
+        },
+        {
+            upable_id: 8,
+            upable_type: "Website",
+            user_id: 4
+        },
+        {
+            upable_id: 8,
+            upable_type: "Website",
+            user_id: 5
+        },
+        {
+            upable_id: 8,
+            upable_type: "Website",
+            user_id: 6
+        },
+        {
+            upable_id: 8,
+            upable_type: "Website",
+            user_id: 7
+        },
+        {
+            upable_id: 9,
+            upable_type: "Website",
+            user_id: 1
+        },
+        {
+            upable_id: 9,
+            upable_type: "Website",
+            user_id: 2
+        },
+        {
+            upable_id: 9,
+            upable_type: "Website",
+            user_id: 3
         },
         {
             upable_id: 1,
@@ -680,6 +858,36 @@ if Rails.env.development?
             upable_id: 5,
             upable_type: "Comment",
             user_id: 1
+        },
+        {
+            upable_id: 5,
+            upable_type: "Comment",
+            user_id: 3
+        },
+        {
+            upable_id: 6,
+            upable_type: "Comment",
+            user_id: 1
+        },
+        {
+            upable_id: 6,
+            upable_type: "Comment",
+            user_id: 6
+        },
+        {
+            upable_id: 7,
+            upable_type: "Comment",
+            user_id: 7
+        },
+        {
+            upable_id: 7,
+            upable_type: "Comment",
+            user_id: 8
+        },
+        {
+            upable_id: 7,
+            upable_type: "Comment",
+            user_id: 6
         },
         ]);
 
@@ -715,4 +923,4 @@ if Rails.env.development?
             user_id: 1
         },
         ]);
-end
+# end

@@ -19,6 +19,11 @@ class CommentsController < ApplicationController
     @up      = Up.create(upable: @comment, user_id: current_user.id)
     
     respond_to do |format|
+      format.html do
+        if !up.valid?
+          flash[:notice] = "You cannot do that"
+        end
+      end
       format.js
     end 
   end

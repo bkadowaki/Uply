@@ -2,7 +2,6 @@ class WebsitesController < ApplicationController
   before_action :set_website, only:[:show, :edit, :update, :up]
   before_action :require_company_owner, only:[:edit, :update, :destroy]
   before_action :authenticate_company!, only:[:new, :create]
-  before_action :authenticate_user!, only:[:up]
 
   def index
     @websites = Website.all
@@ -61,6 +60,11 @@ class WebsitesController < ApplicationController
     @up = Up.create(upable: @website, user_id: current_user.id)
     
     respond_to do |format|
+      format.html do
+        if !up.valid?
+          flash[:notice] = "You cannot do that"
+        end
+      end
       format.js
     end 
   end
