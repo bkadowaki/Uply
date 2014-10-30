@@ -100,6 +100,12 @@ var app = angular.module('uplyApp', ['ui.state', 'ngResource', 'ngAnimate', 'tem
         var website = Website.get({ id:gon.websiteId }, function(){
             $scope.webShow = website;
             console.log(website);
+
+        // $scope.setIcon = function(website){
+        //   // isIcon = 0;
+        //   // $scope.isIcon = 1;
+        //   website.clicked = true;
+        // };
         });
 (function(){if (!Date.now) Date.now = function() {
   return +new Date;

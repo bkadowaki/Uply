@@ -1,7 +1,8 @@
 <%= render partial: 'layouts/navbar' %>
+<div>
 		<!-- RANKING CONTAINER OPEN -->
     <div id="cat-index-container">
-			<div id="rank-sect" class="element" infinite-scroll="increaseLimit()">
+			<div infinite-scroll="increaseLimit()">
 				<h1 class="div-headers">CATEGORY INDEX OF WEBSITES</h1>
 				<!-- CATEGORIES OPEN -->
 				<div class="row cat-row">
@@ -26,7 +27,7 @@
 				      <div ng-if="c.websites.length > 0">
 				      	<div class="columns-container">
 		  		      <div class="animate-repeat" ng-repeat="website in c.websites | orderBy:predicate | filter:search | limitTo:quantity">
-			  		        <div class="large-8 columns disp" ng-show="isSet(c.id)">
+<!-- 			  		        <div class="large-8 columns disp" ng-show="isSet(c.id)">
 			  		      	  <div class="rank-row">
 			                  <span class="web-url">
 													<img class="fav-rank-disp" src={{website.favicon}}>
@@ -37,7 +38,23 @@
 				  		            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fi-arrow-up"></i></a>
 				  		          </div>
 			                </div>
-			  		        </div>
+			  		        </div> -->
+			  		      <div class="large-8 columns disp" ng-show="isSet(c.id)">
+			  		      	<div class="top-line-grid" ng-mouseover="gridHoverOn(website)" ng-mouseleave="gridHoverOff(website)" ng-class="{'top-line-change':	gridChange === true}">
+			  		      	 	<a href="/websites/{{website.id}}">
+			  		      	 		<div class="rank-row">
+				                  <span class="web-url">
+														<img class="fav-rank-disp" src={{website.favicon}}>
+				                  	<span class="dotcom">{{website.url}}</span>
+				                  </span>
+				                 </div>  
+					            </a>
+											<div class="web-ups">
+			  		            <span class="website_{{website.id}}_up here">{{ website.ups }}</span>
+			  		            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fa fa-arrow-circle-o-up rank-arrow" ng-click="setIcon(website)" ng-class="{'fa fa-arrow-circle-up': website.clicked === true}"></i></a>
+	  		          		</div>      	
+		              	</div>
+		            	</div> 
 		  		      </div>
 		  		    </div>
 				     </div>
@@ -45,6 +62,9 @@
 				  </div>
 				</div>
 				<!-- CATEGORIES CLOSE -->
+
+				
 			</div>
 			<!-- RANKING CONTAINER CLOSE -->
 		</div>
+</div>

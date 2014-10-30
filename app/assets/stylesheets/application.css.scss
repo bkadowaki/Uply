@@ -253,8 +253,6 @@ h6 {
 }
 .img-container-change {
 	background-color: #008cba;
-	margin-left: 5px;
-	margin-right: 5px;
 }
 .fav-icon-img {
 	height: 19px;
@@ -295,7 +293,7 @@ h6 {
 	text-align: center;
 }
 #rank-sect {
-	margin-bottom: -30px;
+	margin-bottom: 25px;
 }
 .columns-container {
 	width: 95%;
@@ -324,7 +322,8 @@ h6 {
 	// padding-left: 10px;
 	font-weight: 700;
 	font-family: 'Orbitron', sans-serif;
-	background-color: black;
+	margin-top: 2px;
+	margin-left: -10px;
 }
 
 .rank-row {
@@ -350,7 +349,10 @@ h6 {
 	padding-left: 15px;
 }
 .web-ups {
-	display: inline-block;
+	position: absolute;
+	z-index: 2;
+	margin-top: -36px;
+	right: 26px;
 }
 .here {
 	font-size: 23px;
@@ -633,6 +635,9 @@ footer p {
 	color: white;
 	padding-top: 17%;
 }
+#web-show-icon {
+	font-size: 80px;
+}
 #score-num-disp {
 	font-size: 65px;
 }
@@ -804,6 +809,8 @@ footer p {
 // CATEGORIES INDEX
 #cat-index-container {
 	padding-top: 30px;
+	border: 1px #646E70 solid;
+	width: 100%;
 }
 #input-search {
   width: 63%;
@@ -841,3 +848,8 @@ footer p {
 // 	margin-left: 25%;
 // 	padding-top: 50px;
 // }
+#ball1 {
+	// color: black;
+	// z-index: 10;
+	// margin-top: 80px;
+}

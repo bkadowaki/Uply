@@ -71,7 +71,7 @@
 	            <%#= @website.ups.count %>
 	        </div>
 	          <%= link_to up_website_path(@website), method: 'post', remote: true do %>
-	            <i class="fi-arrow-up"></i>
+	            <i class="fa fa-arrow-circle-o-up rank-arrow" ng-click="newVal = 1" ng-class="{'fa fa-arrow-circle-up': newVal === 1}" id="web-show-icon"></i>
 	          <% end %>
 
 					<div id="score-num-disp" class="website_<%= @website.id %>_up">

@@ -19,60 +19,64 @@
 		<!-- RANKING CONTAINER OPEN -->
 		<div id="rank-sect" class="element" infinite-scroll="increaseLimit()">
 			<h6 class="div-headers">Website Rankings</h6>
-				<!-- SORT OPEN -->
-				<div id="sort-container" class="row">
-					<div class="large-3 columns">
-					</div>
-					<div id="sort-sect" class="large-9 columns">
-						<dl class="sub-nav">
-						  <dt>SORT BY:</dt>
-						  <dd ng-class="{active:isSort(1)}"><a ng-click="setSort(1)">Trending</a></dd>
+					<!-- SORT OPEN -->
+					<div id="sort-container" class="row">
+						<div class="large-3 columns">
+						</div>
+						<div id="sort-sect" class="large-9 columns">
+							<dl class="sub-nav">
+							  <dt>SORT BY:</dt>
+							  <dd ng-class="{active:isSort(1)}"><a ng-click="setSort(1)">Trending</a></dd>
 
-						  <dd ng-class="{active:isSort(2)}"><a ng-click="setSort(2)">Most Ups</a></dd>			  
-		         </dl>
+							  <dd ng-class="{active:isSort(2)}"><a ng-click="setSort(2)">Most Ups</a></dd>			  
+			         </dl>
+						</div>
 					</div>
-				</div>
+					<!-- SORT CLOSE -->
 			<!-- CATEGORIES OPEN -->
 			<div class="row cat-row">
 		  		<div id="categories-sect">
-				  <div class="large-3 columns">
-					  <dl class="sub-nav">
-						<dt>CATEGORIES:</dt>
-			          	<div ng-repeat="c in categoryList">
-			          		<div class="row cat-list">
-								<dd ng-class="{active:isSet(c.id)}" class="cat-list">
-			              			<a ng-click="setClick(c.id)" >{{ c.name }}</a>
-			            		</dd>
-			          		</div>
-			          	</div>
-					  </dl>
-				  </div>
-				</div>
+					  <div class="large-3 columns">
+						  <dl class="sub-nav">
+							<dt>CATEGORIES:</dt>
+				          	<div ng-repeat="c in categoryList">
+				          		<div class="row cat-list">
+												<dd ng-class="{active:isSet(c.id)}" class="cat-list">
+				              			<a ng-click="setClick(c.id)" >{{ c.name }}</a>
+				            		</dd>
+				          		</div>
+				          	</div>
+						  </dl>
+					  </div>
+					</div>
+				<!-- RANK DIS OPEN -->
 			  <div id="rank-disp-sect">
 			    <div ng-repeat="c in categoryList" ng-init="predicate = 'websiteScore'">
 			      <div ng-if="c.websites.length > 0">
 			      	<div class="columns-container">
-	  		      <div class="animate-repeat" ng-repeat="website in c.websites | orderBy:predicate:reverse | limitTo:quantity">
+	  		      	<div class="animate-repeat" ng-repeat="website in c.websites | orderBy:predicate:reverse | limitTo:quantity">
 		  		        <div class="large-8 columns disp" ng-show="isSet(c.id)">
-			  		      	<span class="top-line-grid" ng-mouseover="gridHoverOn(website)" ng-mouseleave="gridHoverOff(website)" ng-class="{'top-line-change':	gridChange === true}">
-			  		      	 	<a href="/websites/{{website.id}}"><div class="rank-row">
-			                  <span class="web-url">
-													<img class="fav-rank-disp" src={{website.favicon}}>
-			                  	<span class="dotcom">{{website.url}}</span></span>
-			                </a>
-
-												<div class="web-ups">
-				  		            <span class="website_{{website.id}}_up here">{{ website.ups }}</span>
-				  		            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fa fa-arrow-circle-o-up rank-arrow" ng-click="setIcon(website)" ng-class="{'fa fa-arrow-circle-up': website.clicked === true}"></i></a>
-				  		          </div>
-			                </div>
-		              	</span>
-		  		        </div>
-	  		      </div>
-	  		    </div>
-			      </div>
-			    </div>    
-			  </div>
+			  		      	<div class="top-line-grid" ng-mouseover="gridHoverOn(website)" ng-mouseleave="gridHoverOff(website)" ng-class="{'top-line-change':	gridChange === true}">
+			  		      	 	<a href="/websites/{{website.id}}">
+			  		      	 		<div class="rank-row">
+				                  <span class="web-url">
+														<img class="fav-rank-disp" src={{website.favicon}}>
+				                  	<span class="dotcom">{{website.url}}</span>
+				                  </span>
+				                 </div>  
+					            </a>
+											<div class="web-ups">
+			  		            <span class="website_{{website.id}}_up here">{{ website.ups }}</span>
+			  		            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fa fa-arrow-circle-o-up rank-arrow" ng-click="setIcon(website)" ng-class="{'fa fa-arrow-circle-up': website.clicked === true}"></i></a>
+	  		          		</div>      	
+		              	</div>
+		            	</div>
+		          	</div>
+		          </div>
+		        </div>
+		  		</div>
+	  		</div>
+				<!-- RANK DISP CLOSE -->
 			</div>
 			<!-- CATEGORIES CLOSE -->
 		</div>
