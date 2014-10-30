@@ -90,78 +90,103 @@ Category.create(
         },        
         {
             url: "http://rollingstone.com",
+            company_id: 1
         },        
         {
             url: "http://rottentomatoes.com",
+            company_id: 1
         },        
         {
             url: "http://tmz.com",
+            company_id: 1
         },        
         {
             url: "http://upworthy.com",
+            company_id: 1
         },        
         {
             url: "http://bleacherreport.com",
+            company_id: 1
         },        
         {
             url: "http://twitch.tv",
+            company_id: 1
         },        
         {
             url: "http://photobucket.com",
+            company_id: 1
         },        
         {
             url: "http://independent.co.uk",
+            company_id: 1
         },        
         {
             url: "http://stackoverflow.com",
+            company_id: 1
         },        
         {
             url: "http://quora.com",
+            company_id: 1
         },        
         {
             url: "http://linkedin.com",
+            company_id: 2
         },        
         {
             url: "http://kickstarter.com",
+            company_id: 2
         },        
         {
             url: "http://macrumors.com",
+            company_id: 2
         },        
         {
             url: "http://yelp.com",
+            company_id: 2
         },
         {
-            url: "http://metacafe.com"
+            url: "http://metacafe.com",
+            company_id: 2
         },
         {
-            url: "http://pinterest.com"
+            url: "http://pinterest.com",
+            company_id: 2
         },
         {
-            url: "http://wikipedia.com"
+            url: "http://wikipedia.com",
+            company_id: 2
         },
         {
-            url: "http://blogger.com"
+            url: "http://blogger.com",
+            company_id: 3
         },
         {
-            url: "http://about.com"
+            url: "http://about.com",
+            company_id: 3
         },
         {
-            url: "http://tradingview.com"
+            url: "http://tradingview.com",
+            company_id: 3
         },
         {
-            url: "http://mlb.com"
+            url: "http://mlb.com",
+            company_id: 3
         },
         {
-            url: "http://examiner.com"
+            url: "http://examiner.com",
+            company_id: 3
         },
         {
-            url: "http://slickdeals.com"
+            url: "http://slickdeals.com",
+            company_id: 3
         },
         {
-            url: "http://tumblr.com"
+            url: "http://tumblr.com",
+            company_id: 3
         },
         {
-            url: "http://carmax.com"
+            url: "http://carmax.com",
+            company_id: 3
         }
         ]);
 
