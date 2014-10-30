@@ -59,7 +59,7 @@
 
 											<div class="web-ups">
 			  		            <span class="website_{{website.id}}_up">{{ website.ups }}</span>
-			  		            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fi-arrow-up"></i></a>
+			  		            <a href="/websites/{{website.id}}/up" data-method="post" data-remote="true"><i class="fa fa-arrow-circle-o-up" ng-click="setIcon(website)" ng-class="{'fa fa-arrow-circle-up': website.clicked === true}"></i></a>
 			  		          </div>
 		                </div>
 		  		        </div>
@@ -81,11 +81,11 @@
 					<div class="row">
 						<div id="website-spotlight" class="large-12 columns element">
 							<h6 class="div-headers">What Others are Saying About...</h6>
-		            <div class="spotlight-url">{{websiteHighestComScore.ups}}<i class="fi-arrow-up"></i> <%= image_tag "upicon.png", :class => "upicon" %>
-		            {{ websiteHighestComScore.url_title }}</div>
+		            <div class="spotlight-url">
+		            {{ websiteHighestComScore.url_title }}  |  <span class="score-box">{{websiteHighestComScore.ups}}<a><i class="fa fa-arrow-circle-o-up"></i></a></span></div>
 		            <hr class="hr1">
 
-		            <div class="spot-comments-header">            {{ websiteHighestComScore.comCount }} COMMENTS:</div>
+		            <div class="spot-comments-header">{{ websiteHighestComScore.comCount }} COMMENTS:</div>
 		            	<div class="comments-container">
 				            <div ng-repeat="c in websiteHighestComScore.comments">
 				              <div>"{{ c.commentsText}}"<br>-{{c.commentsUser}}</div><br>
@@ -126,15 +126,6 @@
 						</div>
 					</div> -->
 					<!-- SOCIAL MEDIA CLOSE -->
-
-<a href="#" data-options="align:left" data-dropdown="drop" class="button">Link Dropdown &raquo;</a>
-<ul id="drop" class="[tiny small medium large content]f-dropdown" data-dropdown-content>
-  <li><a href="#">This is a link</a></li>
-  <li><a href="#">This is another</a></li>
-  <li><a href="#">Yet another</a></li>
-</ul>
-
-
 
 	<!-- RIGHT BOX CLOSE -->
 	</div>

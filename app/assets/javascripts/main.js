@@ -5386,6 +5386,12 @@ function d3_behavior_zoomExtentClamp(x, i, k) {
 		  		return $scope.sort === checkedSort;
 		  	};
 
+        $scope.setIcon = function(website){
+          // isIcon = 0;
+          // $scope.isIcon = 1;
+          website.clicked = true;
+        }
+
     }]); 
 
 	  app.controller('LogoCtrl', ['$scope', function($scope){
